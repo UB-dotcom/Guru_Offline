@@ -7,7 +7,7 @@ Handles offline synchronization and local storage installation of published curr
 import shutil
 import json
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 from OfflineTutorAI.config import PACKAGES_DIR, STUDENT_SYNC_DIR
 from OfflineTutorAI.admin.curriculum_management.manager import CurriculumManager
 
