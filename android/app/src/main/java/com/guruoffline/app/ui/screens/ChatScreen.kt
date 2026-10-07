@@ -1,5 +1,6 @@
 package com.guruoffline.app.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -13,14 +14,18 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.guruoffline.app.R
 import com.guruoffline.app.model.Message
 import com.guruoffline.app.model.MessageSender
 import com.guruoffline.app.profile.ProfileManager
@@ -400,10 +405,25 @@ fun ChatScreen(
                         .clickable { onBack() }
                         .padding(end = 12.dp)
                 )
+                Box(
+                    modifier = Modifier
+                        .size(36.dp)
+                        .clip(RoundedCornerShape(10.dp))
+                        .border(1.dp, Color(0xFFDDD6FE), RoundedCornerShape(10.dp)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.app_logo),
+                        contentDescription = "Guru AI Logo",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                Spacer(modifier = Modifier.width(10.dp))
                 Column {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            text = "✨ Guru AI Tutor",
+                            text = "Guru AI Tutor",
                             fontSize = 17.sp,
                             fontWeight = FontWeight.ExtraBold,
                             color = Color(0xFF1E1B4B)
@@ -455,15 +475,20 @@ fun ChatScreen(
                             .padding(vertical = 16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        // Glowing Robot Mascot Avatar
+                        // Glowing Mascot Avatar
                         Box(
                             modifier = Modifier
-                                .size(90.dp)
-                                .background(Color(0xFFEDE7FE), CircleShape)
-                                .border(2.dp, Color(0xFFDDD6FE), CircleShape),
+                                .size(96.dp)
+                                .clip(RoundedCornerShape(26.dp))
+                                .border(2.dp, Color(0xFFDDD6FE), RoundedCornerShape(26.dp)),
                             contentAlignment = Alignment.Center
                         ) {
-                            Text(text = "🤖", fontSize = 46.sp)
+                            Image(
+                                painter = painterResource(id = R.drawable.app_logo),
+                                contentDescription = "Guru AI Logo",
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
                         }
 
                         Spacer(modifier = Modifier.height(14.dp))
@@ -775,11 +800,16 @@ fun ChatBubble(msg: Message) {
             Box(
                 modifier = Modifier
                     .size(34.dp)
-                    .background(Color(0xFFEDE7FE), CircleShape)
+                    .clip(CircleShape)
                     .border(1.dp, Color(0xFFDDD6FE), CircleShape),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = "🤖", fontSize = 16.sp)
+                Image(
+                    painter = painterResource(id = R.drawable.app_logo),
+                    contentDescription = "Guru AI",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
             }
 
             Spacer(modifier = Modifier.width(8.dp))

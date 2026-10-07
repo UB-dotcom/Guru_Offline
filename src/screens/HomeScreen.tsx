@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { OfflineBanner } from '../components/OfflineBanner';
 import { palette } from '../theme/colors';
@@ -233,9 +234,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
         <View style={styles.topHeaderRow}>
           <View style={styles.userProfileCol}>
             <View style={styles.userAvatar}>
-              <Text style={styles.userAvatarText}>
-                {profile.name ? profile.name.charAt(0).toUpperCase() : 'S'}
-              </Text>
+              <Image
+                source={require('../assets/logo.png')}
+                style={styles.avatarLogoImage}
+                resizeMode="cover"
+              />
             </View>
             <View style={styles.userNameBlock}>
               <Text style={styles.greetingTitle}>
@@ -521,20 +524,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   userAvatar: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 46,
+    height: 46,
+    borderRadius: 14,
     backgroundColor: '#EDE7FE',
     borderWidth: 1.5,
     borderColor: '#DDD6FE',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 10,
+    overflow: 'hidden',
   },
-  userAvatarText: {
-    fontSize: 18,
-    fontWeight: '800',
-    color: palette.primary,
+  avatarLogoImage: {
+    width: '100%',
+    height: '100%',
   },
   userNameBlock: {
     flex: 1,

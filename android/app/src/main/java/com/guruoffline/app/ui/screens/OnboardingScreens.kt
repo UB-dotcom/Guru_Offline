@@ -1,5 +1,6 @@
 package com.guruoffline.app.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -12,11 +13,15 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.guruoffline.app.R
 import com.guruoffline.app.ui.components.OfflineBanner
 import com.guruoffline.app.ui.theme.EmeraldGreen
 import com.guruoffline.app.ui.theme.PrimaryBlue
@@ -36,11 +41,17 @@ fun SplashScreen(onContinue: () -> Unit) {
         ) {
             Box(
                 modifier = Modifier
-                    .size(90.dp)
-                    .background(Color(0xFFDBEAFE), CircleShape),
+                    .size(96.dp)
+                    .clip(RoundedCornerShape(24.dp))
+                    .border(2.dp, Color(0xFFDDD6FE), RoundedCornerShape(24.dp)),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = "🎓", fontSize = 48.sp)
+                Image(
+                    painter = painterResource(id = R.drawable.app_logo),
+                    contentDescription = "Guru AI Logo",
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
+                )
             }
 
             Spacer(modifier = Modifier.height(20.dp))
@@ -117,7 +128,20 @@ fun WelcomeLoginScreen(
             }
         }
 
-        Text(text = "🎒", fontSize = 48.sp)
+        Box(
+            modifier = Modifier
+                .size(76.dp)
+                .clip(RoundedCornerShape(20.dp))
+                .border(2.dp, Color(0xFFDDD6FE), RoundedCornerShape(20.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.app_logo),
+                contentDescription = "Guru AI Logo",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
         Spacer(modifier = Modifier.height(12.dp))
         Text(
             text = "Welcome to Guru",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { TutorMessage } from '../types/tutor';
 import { palette } from '../theme/colors';
 
@@ -91,7 +91,11 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message, onActionPress }
       <View style={styles.guruMessageWrapper}>
         {/* Guru Mascot Avatar */}
         <View style={styles.avatarCircle}>
-          <Text style={styles.avatarEmoji}>🤖</Text>
+          <Image
+            source={require('../assets/logo.png')}
+            style={styles.avatarLogoImage}
+            resizeMode="cover"
+          />
         </View>
 
         <View style={styles.guruBubble}>
@@ -263,9 +267,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 8,
     marginTop: 2,
+    overflow: 'hidden',
   },
-  avatarEmoji: {
-    fontSize: 16,
+  avatarLogoImage: {
+    width: '100%',
+    height: '100%',
   },
   guruBubble: {
     flex: 1,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
+import { View, Text, StyleSheet, Animated, Image } from 'react-native';
 import { palette } from '../theme/colors';
 import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
@@ -43,8 +43,12 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ navigation }) => {
           { opacity: fadeAnim, transform: [{ scale: scaleAnim }] },
         ]}
       >
-        <View style={styles.iconCircle}>
-          <Text style={styles.icon}>🎓</Text>
+        <View style={styles.logoContainer}>
+          <Image
+            source={require('../assets/logo.png')}
+            style={styles.logoImage}
+            resizeMode="cover"
+          />
         </View>
 
         <Text style={styles.title}>GURU OFFLINE</Text>
@@ -70,17 +74,23 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
   },
-  iconCircle: {
-    width: 90,
-    height: 90,
-    borderRadius: 45,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    alignItems: 'center',
-    justifyContent: 'center',
+  logoContainer: {
+    width: 104,
+    height: 104,
+    borderRadius: 28,
+    overflow: 'hidden',
+    borderWidth: 2.5,
+    borderColor: 'rgba(255, 255, 255, 0.45)',
     marginBottom: spacing.base,
+    elevation: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
   },
-  icon: {
-    fontSize: 48,
+  logoImage: {
+    width: '100%',
+    height: '100%',
   },
   title: {
     ...typography.h1,

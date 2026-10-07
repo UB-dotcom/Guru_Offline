@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import { PrimaryButton } from '../components/PrimaryButton';
 import { SecondaryButton } from '../components/SecondaryButton';
 import { palette } from '../theme/colors';
@@ -14,8 +14,12 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.heroSection}>
-        <View style={styles.iconCircle}>
-          <Text style={styles.heroEmoji}>🎓</Text>
+        <View style={styles.logoContainer}>
+          <Image
+            source={require('../assets/logo.png')}
+            style={styles.logoImage}
+            resizeMode="cover"
+          />
         </View>
 
         <Text style={styles.title}>GURU OFFLINE</Text>
@@ -89,17 +93,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: spacing.xl,
   },
-  iconCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: palette.primarySurface,
-    alignItems: 'center',
-    justifyContent: 'center',
+  logoContainer: {
+    width: 88,
+    height: 88,
+    borderRadius: 22,
+    overflow: 'hidden',
+    borderWidth: 2,
+    borderColor: palette.primaryLight || '#9B7EFC',
     marginBottom: spacing.base,
+    elevation: 4,
+    shadowColor: palette.primary,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
   },
-  heroEmoji: {
-    fontSize: 40,
+  logoImage: {
+    width: '100%',
+    height: '100%',
   },
   title: {
     ...typography.h1,

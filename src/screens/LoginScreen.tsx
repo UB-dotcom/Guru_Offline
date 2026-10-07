@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Image,
 } from 'react-native';
 import { PrimaryButton } from '../components/PrimaryButton';
 import { palette } from '../theme/colors';
@@ -44,6 +45,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
+        <View style={styles.logoBadge}>
+          <Image
+            source={require('../assets/logo.png')}
+            style={styles.logoImage}
+            resizeMode="cover"
+          />
+        </View>
         <Text style={styles.title}>Welcome Back 👋</Text>
         <Text style={styles.subtitle}>Sign in to sync your curriculum and progress</Text>
       </View>
@@ -191,15 +199,36 @@ const styles = StyleSheet.create({
   },
   header: {
     marginBottom: spacing.xl,
+    alignItems: 'center',
+  },
+  logoBadge: {
+    width: 64,
+    height: 64,
+    borderRadius: 16,
+    overflow: 'hidden',
+    borderWidth: 1.5,
+    borderColor: palette.primaryLight || '#9B7EFC',
+    marginBottom: spacing.sm,
+    elevation: 3,
+    shadowColor: palette.primary,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
   },
   title: {
     ...typography.h1,
     color: palette.gray900,
+    textAlign: 'center',
   },
   subtitle: {
     ...typography.body,
     color: palette.gray500,
     marginTop: spacing.xs,
+    textAlign: 'center',
   },
   toggleRow: {
     flexDirection: 'row',

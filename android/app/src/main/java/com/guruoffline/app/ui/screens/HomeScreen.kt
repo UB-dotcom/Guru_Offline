@@ -1,5 +1,6 @@
 package com.guruoffline.app.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -12,10 +13,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.guruoffline.app.R
 import com.guruoffline.app.profile.ProfileManager
 import com.guruoffline.app.ui.theme.EmeraldGreen
 import com.guruoffline.app.ui.theme.PrimaryPurple
@@ -186,16 +191,16 @@ fun HomeScreen(
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(44.dp)
-                            .background(Color(0xFFEDE7FE), RoundedCornerShape(22.dp))
-                            .border(1.5.dp, Color(0xFFDDD6FE), RoundedCornerShape(22.dp)),
+                            .size(46.dp)
+                            .clip(RoundedCornerShape(14.dp))
+                            .border(1.5.dp, Color(0xFFDDD6FE), RoundedCornerShape(14.dp)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = profile.studentName.takeIf { it.isNotBlank() }?.first()?.uppercase() ?: "S",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            color = Color(0xFF7C5CFC)
+                        Image(
+                            painter = painterResource(id = R.drawable.app_logo),
+                            contentDescription = "Guru AI Logo",
+                            modifier = Modifier.fillMaxSize(),
+                            contentScale = ContentScale.Crop
                         )
                     }
 
@@ -557,7 +562,19 @@ fun HomeScreen(
                                 modifier = Modifier.padding(top = 2.dp)
                             )
                         }
-                        Text(text = "🤖", fontSize = 28.sp)
+                        Box(
+                            modifier = Modifier
+                                .size(36.dp)
+                                .clip(RoundedCornerShape(10.dp))
+                                .border(1.dp, Color(0xFFDDD6FE), RoundedCornerShape(10.dp))
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.app_logo),
+                                contentDescription = "Guru AI",
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
+                        }
                     }
 
                     Spacer(modifier = Modifier.height(12.dp))
