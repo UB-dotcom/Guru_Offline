@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Guru Offline</string>
-    <string name="offline_badge">📵 Offline Mode (AI running on this device)</string>
-    <string name="online_badge">🌐 Online (Module downloads available)</string>
-    <string name="welcome_headline">Your Personal On-Device AI Tutor</string>
-    <string name="welcome_sub">Learn anywhere. No internet connection required.</string>
-</resources>
