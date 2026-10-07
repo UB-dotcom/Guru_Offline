@@ -1,0 +1,15 @@
+{
+  "chapter_id": 5,
+  "title": "Arithmetic Progressions",
+  "subtopics": [
+    "nth Term of an AP",
+    "Sum of First n Terms"
+  ],
+  "summary": "Arithmetic sequences where consecutive terms differ by a constant common difference d.",
+  "formulas": [
+    "Common difference: d = a_{k+1} - a_k",
+    "nth term: a_n = a + (n - 1)d",
+    "Sum of n terms: S_n = (n / 2)[2a + (n - 1)d] or S_n = (n / 2)[a + l]"
+  ],
+  "text": "An Arithmetic Progression (AP) is a sequence of numbers in which each term after the first is obtained by adding a fixed number d (common difference) to the preceding term. The first term is denoted by a. The nth term is given by a_n = a + (n - 1)d. The sum of the first n terms of an AP is S_n = n/2 * (2a + (n - 1)d) or S_n = n/2 * (a + l), where l is the last term a_n. If a, b, c are in AP, then 2b = a + c."
+}

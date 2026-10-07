@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guru Offline — On-Device AI Tutor Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- LEFT PANEL: Controls, Demo Walkthrough, Hardware Status -->
+    <aside class="control-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-badge">HACKATHON SHOWCASE</div>
+        <h2>Guru Offline</h2>
+        <p class="subtitle">On-Device AI Tutor for ₹8,000 Budget Phones</p>
+      </div>
+
+      <!-- Network Killswitch Section -->
+      <div class="card network-card">
+        <h3>Network Simulation</h3>
+        <p class="helper-text">Turn off Wi-Fi and mobile data to prove zero-internet AI tutoring:</p>
+        
+        <div class="toggle-group">
+          <label class="toggle-label">
+            <span>Wi-Fi</span>
+            <input type="checkbox" id="wifiToggle" onchange="handleNetworkChange()">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-status" id="wifiStatus">OFF</span>
+        </div>
+
+        <div class="toggle-group">
+          <label class="toggle-label">
+            <span>Mobile Data</span>
+            <input type="checkbox" id="dataToggle" onchange="handleNetworkChange()">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-status" id="dataStatus">OFF</span>
+        </div>
+
+        <div class="network-badge offline" id="networkBadge">
+          📵 AIRPLANE / OFFLINE MODE ACTIVE
+        </div>
+      </div>
+
+      <!-- Killer Demo 10-Step Wizard -->
+      <div class="card wizard-card">
+        <div class="wizard-header">
+          <h3>Killer Demo Guide</h3>
+          <span class="step-counter" id="demoStepCounter">Step 1/10</span>
+        </div>
+        <p class="wizard-desc" id="demoStepDesc">Open Guru Offline and explore the home dashboard.</p>
+        <button class="btn btn-primary btn-block" id="demoNextBtn" onclick="advanceDemoStep()">
+          Run Step 1 ➔
+        </button>
+      </div>
+
+      <!-- Hardware Telemetry Dashboard -->
+      <div class="card telemetry-card">
+        <h3>Device Performance (~₹8,000 Phone)</h3>
+        <ul class="telemetry-list">
+          <li>
+            <span>Target SoC:</span>
+            <strong>Helio G25 / G35 (Cortex-A53)</strong>
+          </li>
+          <li>
+            <span>Quantized Model:</span>
+            <strong id="statModel">SmolLM-135M (INT4)</strong>
+          </li>
+          <li>
+            <span>Model Size:</span>
+            <strong id="statModelSize">72.4 MB</strong>
+          </li>
+          <li>
+            <span>Process RAM:</span>
+            <strong id="statRam" class="highlight-ram">19.2 MB</strong>
+          </li>
+          <li>
+            <span>Inference Latency:</span>
+            <strong id="statLatency">0.28 sec</strong>
+          </li>
+          <li>
+            <span>Token Throughput:</span>
+            <strong id="statThroughput">16.5 tok/s</strong>
+          </li>
+          <li>
+            <span>External Packets:</span>
+            <strong class="highlight-success">0 bytes (Isolated)</strong>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 100-Question Benchmark Summary -->
+      <div class="card benchmark-card">
+        <div class="card-header-flex">
+          <h3>100-Q Benchmark</h3>
+          <span class="badge badge-success">Passed</span>
+        </div>
+        <div class="bench-stats-grid">
+          <div class="stat-box">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Offline</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">0.28s</span>
+            <span class="stat-lbl">Avg Latency</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">19.2MB</span>
+            <span class="stat-lbl">Avg RAM</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">72%</span>
+            <span class="stat-lbl">Relevance</span>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm btn-block" onclick="viewBenchmarkReport()">
+          View Full Benchmark Report
+        </button>
+      </div>
+    </aside>
+
+    <!-- CENTER PANEL: Smartphone Bezel Simulator -->
+    <main class="phone-viewport">
+      <div class="smartphone-frame">
+        <!-- Physical Speaker & Camera Notch -->
+        <div class="phone-notch">
+          <div class="speaker"></div>
+          <div class="camera"></div>
+        </div>
+
+        <!-- Android Status Bar -->
+        <div class="android-status-bar">
+          <span class="status-time">12:30</span>
+          <div class="status-icons">
+            <span id="statusBarWifi" class="icon hidden">📶</span>
+            <span id="statusBarData" class="icon hidden">4G</span>
+            <span id="statusBarOffline" class="icon">✈️</span>
+            <span class="icon">🔋 84%</span>
+          </div>
+        </div>
+
+        <!-- Offline Banner (Always visible in app) -->
+        <div class="in-app-offline-banner" id="inAppOfflineBanner">
+          <span class="banner-icon">📵</span>
+          <span class="banner-text">OFFLINE MODE: AI is running on this device</span>
+        </div>
+
+        <!-- Main Screen Container -->
+        <div class="screen-content" id="screenContent">
+
+          <!-- 1. HOME SCREEN -->
+          <div class="screen active" id="screenHome">
+            <div class="home-hero">
+              <span class="tag">AI TUTOR</span>
+              <h2>Guru Offline</h2>
+              <p>Learn school subjects without internet connection</p>
+            </div>
+
+            <div class="active-subject-card">
+              <div class="subject-header">
+                <span class="sub-label">ACTIVE CURRICULUM</span>
+                <span class="sub-badge" id="currentSubjectBadge">Class 10 Science</span>
+              </div>
+              <h3 id="currentTopicName">Force, Newton's Laws & Electricity</h3>
+              <p class="sub-meta">72 MB Offline • NCERT Grounded</p>
+              <button class="btn btn-light" onclick="navigateTo('chat')">
+                Ask Guru Now ➔
+              </button>
+            </div>
+
+            <div class="grid-menu">
+              <div class="menu-card" onclick="navigateTo('chat')">
+                <div class="menu-icon">💬</div>
+                <h4>Ask Guru</h4>
+                <p>Step-by-step tutoring</p>
+              </div>
+              <div class="menu-card" onclick="navigateTo('modules')">
+                <div class="menu-icon">📚</div>
+                <h4>My Subjects</h4>
+                <p>Modules & Downloads</p>
+              </div>
+              <div class="menu-card" onclick="navigateTo('practice')">
+                <div class="menu-icon">✏️</div>
+                <h4>Practice</h4>
+                <p>Topic exercises</p>
+              </div>
+              <div class="menu-card" onclick="navigateTo('quiz')">
+                <div class="menu-icon">🎯</div>
+                <h4>Quiz Mode</h4>
+                <p>5-question tests</p>
+              </div>
+              <div class="menu-card" onclick="navigateTo('progress')">
+                <div class="menu-icon">📊</div>
+                <h4>Progress</h4>
+                <p>Learning scores</p>
+              </div>
+              <div class="menu-card" onclick="navigateTo('performance')">
+                <div class="menu-icon">⚡</div>
+                <h4>Performance</h4>
+                <p>RAM & Latency</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. CHAT SCREEN -->
+          <div class="screen" id="screenChat">
+            <div class="chat-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <div class="chat-title-group">
+                <h3>Guru Tutor (Offline)</h3>
+                <span class="status-sub" id="chatSubTitle">Class 10 Science • Local SLM Active</span>
+              </div>
+              <button class="icon-btn" onclick="toggleInspector()" title="Inspect RAG Context">🔍</button>
+            </div>
+
+            <div class="chat-history" id="chatHistory">
+              <!-- Messages will be injected dynamically -->
+            </div>
+
+            <!-- Follow-up Action Pills -->
+            <div class="action-pills-container">
+              <button class="pill" onclick="sendFollowUp('Explain More Simply')">Explain More Simply</button>
+              <button class="pill" onclick="sendFollowUp('Give Another Example')">Give Another Example</button>
+              <button class="pill" onclick="navigateTo('practice')">Practice</button>
+              <button class="pill" onclick="navigateTo('quiz')">Quiz</button>
+              <button class="pill" onclick="sendFollowUp('Ask Follow-up')">Ask Follow-up</button>
+            </div>
+
+            <!-- Input area -->
+            <div class="chat-input-bar">
+              <input type="text" id="chatInput" placeholder="Ask a curriculum question..." onkeydown="handleInputKey(event)">
+              <button class="send-btn" onclick="sendStudentQuery()">Send</button>
+            </div>
+          </div>
+
+          <!-- 3. MODULES SCREEN -->
+          <div class="screen" id="screenModules">
+            <div class="screen-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <h3>Curriculum Modules</h3>
+            </div>
+            <div class="screen-body">
+              <p class="screen-intro">Download required curriculum modules when internet is available, then learn completely offline.</p>
+              
+              <div class="module-card installed" id="modCardMath10">
+                <div class="mod-top">
+                  <div>
+                    <h4>Class 10 Mathematics</h4>
+                    <span class="mod-size">72 MB • v1.0</span>
+                  </div>
+                  <span class="status-tag installed" id="tagMath10">✓ Installed</span>
+                </div>
+                <p class="mod-topics">Real Numbers, Quadratic Equations, Arithmetic Progressions, Trigonometry, Coordinate Geometry</p>
+                <div class="mod-footer">
+                  <span class="offline-ready">✓ Available Offline</span>
+                  <button class="btn btn-sm btn-outline" onclick="selectActiveModule('class10_math')">Select Subject</button>
+                </div>
+              </div>
+
+              <div class="module-card installed" id="modCardSci10">
+                <div class="mod-top">
+                  <div>
+                    <h4>Class 10 Science</h4>
+                    <span class="mod-size">81 MB • v1.0</span>
+                  </div>
+                  <span class="status-tag installed" id="tagSci10">✓ Installed</span>
+                </div>
+                <p class="mod-topics">Chemical Reactions, Acids & Bases, Life Processes, Light, Electricity, Newton's Laws</p>
+                <div class="mod-footer">
+                  <span class="offline-ready">✓ Available Offline</span>
+                  <button class="btn btn-sm btn-outline" onclick="selectActiveModule('class10_science')">Select Subject</button>
+                </div>
+              </div>
+
+              <div class="module-card" id="modCardMath5">
+                <div class="mod-top">
+                  <div>
+                    <h4>Class 5 Mathematics</h4>
+                    <span class="mod-size">45 MB • v1.0</span>
+                  </div>
+                  <button class="btn btn-sm btn-primary" id="btnDownloadMath5" onclick="downloadModuleUI('class5_math')">Download</button>
+                </div>
+                <p class="mod-topics">Large Numbers, Fractions, Shapes & Angles, Perimeter & Area, Speed & Time</p>
+                <div class="progress-bar-wrap hidden" id="progMath5">
+                  <div class="progress-bar-fill" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <div class="module-card" id="modCardCs">
+                <div class="mod-top">
+                  <div>
+                    <h4>BCA / CS Programming</h4>
+                    <span class="mod-size">65 MB • v1.0</span>
+                  </div>
+                  <button class="btn btn-sm btn-primary" id="btnDownloadCs" onclick="downloadModuleUI('bca_cs')">Download</button>
+                </div>
+                <p class="mod-topics">Python Fundamentals, OOP, Stacks & Queues, Sorting & Search Algorithms</p>
+                <div class="progress-bar-wrap hidden" id="progCs">
+                  <div class="progress-bar-fill" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. PRACTICE SCREEN -->
+          <div class="screen" id="screenPractice">
+            <div class="screen-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <h3>Practice Mode</h3>
+            </div>
+            <div class="screen-body">
+              <div class="practice-card">
+                <span class="topic-tag">Physics / Speed & Motion</span>
+                <p class="practice-q">A car travels at 20 m/s for 5 seconds. What distance does it travel?</p>
+                <div class="mcq-options" id="practiceOptions">
+                  <button class="mcq-btn" onclick="selectPracticeAnswer(this, 'A')">A) 50 m</button>
+                  <button class="mcq-btn" onclick="selectPracticeAnswer(this, 'B')">B) 100 m</button>
+                  <button class="mcq-btn" onclick="selectPracticeAnswer(this, 'C')">C) 150 m</button>
+                  <button class="mcq-btn" onclick="selectPracticeAnswer(this, 'D')">D) 200 m</button>
+                </div>
+                <div class="practice-feedback hidden" id="practiceFeedback">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. QUIZ SCREEN -->
+          <div class="screen" id="screenQuiz">
+            <div class="screen-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <h3>5-Question Quiz</h3>
+            </div>
+            <div class="screen-body" id="quizBody">
+              <!-- Dynamically populated quiz questions & results -->
+            </div>
+          </div>
+
+          <!-- 6. PROGRESS SCREEN -->
+          <div class="screen" id="screenProgress">
+            <div class="screen-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <h3>Learning Progress</h3>
+            </div>
+            <div class="screen-body">
+              <div class="progress-item">
+                <div class="progress-label">
+                  <span>Class 10 Mathematics</span>
+                  <strong>80%</strong>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+                <span class="progress-sub">48 questions attempted • 85% quiz average</span>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-label">
+                  <span>Class 10 Science</span>
+                  <strong>60%</strong>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <span class="progress-sub">36 questions attempted • 78% quiz average</span>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-label">
+                  <span>Class 5 Mathematics</span>
+                  <strong>25%</strong>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 25%"></div>
+                </div>
+                <span class="progress-sub">12 questions attempted • 90% quiz average</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. PERFORMANCE DASHBOARD SCREEN -->
+          <div class="screen" id="screenPerformance">
+            <div class="screen-header">
+              <button class="back-btn" onclick="navigateTo('home')">←</button>
+              <h3>Developer Performance</h3>
+            </div>
+            <div class="screen-body">
+              <div class="perf-stats-card">
+                <div class="perf-row">
+                  <span>Model Size:</span>
+                  <strong>72.4 MB</strong>
+                </div>
+                <div class="perf-row">
+                  <span>RAM Usage:</span>
+                  <strong id="perfRamVal">19.2 MB (Safe)</strong>
+                </div>
+                <div class="perf-row">
+                  <span>Response Time:</span>
+                  <strong id="perfLatencyVal">0.28 seconds</strong>
+                </div>
+                <div class="perf-row">
+                  <span>Internet:</span>
+                  <strong class="highlight-success" id="perfNetVal">OFFLINE</strong>
+                </div>
+                <div class="perf-row">
+                  <span>Current Module:</span>
+                  <strong id="perfModVal">Class 10 Science</strong>
+                </div>
+              </div>
+
+              <div class="budget-card">
+                <h4>Budget Verification (₹8,000 Device)</h4>
+                <p>• Total RAM: 2,048 MB</p>
+                <p>• Safe App Budget: 748 MB</p>
+                <p>• Guru Actual RSS: ~19 MB</p>
+                <p>• <strong>Remaining Headroom: > 700 MB</strong></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Android Bottom Navigation Bar -->
+        <nav class="android-nav-bar">
+          <button class="nav-item active" id="navHome" onclick="navigateTo('home')">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+          </button>
+          <button class="nav-item" id="navChat" onclick="navigateTo('chat')">
+            <span class="nav-icon">💬</span>
+            <span class="nav-text">Chat</span>
+          </button>
+          <button class="nav-item" id="navModules" onclick="navigateTo('modules')">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">Modules</span>
+          </button>
+          <button class="nav-item" id="navPractice" onclick="navigateTo('practice')">
+            <span class="nav-icon">✏️</span>
+            <span class="nav-text">Practice</span>
+          </button>
+          <button class="nav-item" id="navProgress" onclick="navigateTo('progress')">
+            <span class="nav-icon">📊</span>
+            <span class="nav-text">Progress</span>
+          </button>
+        </nav>
+      </div>
+    </main>
+
+    <!-- RIGHT PANEL: RAG Context & Safety Inspector -->
+    <aside class="inspector-sidebar" id="inspectorSidebar">
+      <div class="sidebar-header">
+        <div class="brand-badge">TELEMETRY & RAG INSPECTOR</div>
+        <h3>Curriculum Grounding</h3>
+        <p class="subtitle">On-Device Retrieval-Augmented Generation Trace</p>
+      </div>
+
+      <div class="card">
+        <h4>Last Query RAG Retrieval</h4>
+        <div id="inspectorRagContent">
+          <p class="text-muted">No query executed yet. Ask a question or click a demo step to view retrieved curriculum chunks.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Safety Guardrail Status</h4>
+        <div id="inspectorSafetyContent">
+          <p class="status-pill status-safe">✓ Local Safety Layer: All clear</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Killer Demo Script (10 Steps)</h4>
+        <ol class="demo-script-list">
+          <li class="demo-script-item" id="scriptItem1">1. Open Guru Offline</li>
+          <li class="demo-script-item" id="scriptItem2">2. Select Class 10 Math</li>
+          <li class="demo-script-item" id="scriptItem3">3. Download Module (Online)</li>
+          <li class="demo-script-item" id="scriptItem4">4. Turn OFF Wi-Fi & Mobile Data</li>
+          <li class="demo-script-item" id="scriptItem5">5. Ask "Explain quadratic equations"</li>
+          <li class="demo-script-item" id="scriptItem6">6. Review Step-by-Step Answer</li>
+          <li class="demo-script-item" id="scriptItem7">7. Ask "Explain it more simply"</li>
+          <li class="demo-script-item" id="scriptItem8">8. Click Practice Mode</li>
+          <li class="demo-script-item" id="scriptItem9">9. Complete a question</li>
+          <li class="demo-script-item" id="scriptItem10">10. Show Performance Dashboard</li>
+        </ol>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

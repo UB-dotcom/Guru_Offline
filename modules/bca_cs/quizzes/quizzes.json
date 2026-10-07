@@ -1,0 +1,73 @@
+[
+  {
+    "quiz_id": "QUIZ-CS-01",
+    "title": "BCA Computer Science Assessment",
+    "questions": [
+      {
+        "q_id": 1,
+        "topic": "Algorithms",
+        "question": "What is the worst-case time complexity of Binary Search?",
+        "options": [
+          "A) O(1)",
+          "B) O(n)",
+          "C) O(log n)",
+          "D) O(n^2)"
+        ],
+        "correct": "C",
+        "explanation": "Binary search divides the search interval in half with each comparison, yielding O(log n) time complexity."
+      },
+      {
+        "q_id": 2,
+        "topic": "OOP",
+        "question": "Which OOP principle involves hiding internal implementation details and exposing only necessary interfaces?",
+        "options": [
+          "A) Encapsulation",
+          "B) Inheritance",
+          "C) Recursion",
+          "D) Iteration"
+        ],
+        "correct": "A",
+        "explanation": "Encapsulation bundles data with code and restricts unauthorized external access."
+      },
+      {
+        "q_id": 3,
+        "topic": "Data Structures",
+        "question": "In a Queue, the insertion operation at the rear is called:",
+        "options": [
+          "A) Pop",
+          "B) Enqueue",
+          "C) Dequeue",
+          "D) Peek"
+        ],
+        "correct": "B",
+        "explanation": "Enqueue adds an element to the rear of the queue; Dequeue removes from front."
+      },
+      {
+        "q_id": 4,
+        "topic": "Algorithms",
+        "question": "Which sorting algorithm operates on the divide-and-conquer paradigm with O(n log n) average time complexity?",
+        "options": [
+          "A) Bubble Sort",
+          "B) Selection Sort",
+          "C) Merge Sort",
+          "D) Insertion Sort"
+        ],
+        "correct": "C",
+        "explanation": "Merge Sort recursively divides the list into halves, sorts them, and merges them in O(n log n)."
+      },
+      {
+        "q_id": 5,
+        "topic": "Python",
+        "question": "What is the output of len([1, 2, 3, [4, 5]]) in Python?",
+        "options": [
+          "A) 5",
+          "B) 4",
+          "C) 3",
+          "D) Error"
+        ],
+        "correct": "B",
+        "explanation": "The list contains 4 elements: three integers (1, 2, 3) and one nested list ([4, 5])."
+      }
+    ]
+  }
+]

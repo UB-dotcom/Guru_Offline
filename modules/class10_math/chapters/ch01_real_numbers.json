@@ -1,0 +1,15 @@
+{
+  "chapter_id": 1,
+  "title": "Real Numbers",
+  "subtopics": [
+    "Euclid's Division Lemma",
+    "Fundamental Theorem of Arithmetic",
+    "Revisiting Irrational Numbers"
+  ],
+  "summary": "Every composite number can be expressed as a product of primes uniquely. Proving irrationality of sqrt(2), sqrt(3), sqrt(5).",
+  "formulas": [
+    "Dividend = (Divisor \u00d7 Quotient) + Remainder, where 0 <= r < b",
+    "HCF(a, b) \u00d7 LCM(a, b) = a \u00d7 b"
+  ],
+  "text": "The Fundamental Theorem of Arithmetic states that every composite number can be factored as a product of prime numbers, and this factorization is unique apart from the order of prime factors. For any two positive integers a and b, HCF(a, b) * LCM(a, b) = a * b. A real number is irrational if it cannot be written as p/q where p and q are coprime integers and q != 0. To prove sqrt(2) is irrational, assume sqrt(2) = a/b where a and b are coprime. 2 = a^2/b^2, so a^2 = 2b^2. Thus 2 divides a^2 and 2 divides a. Let a = 2c, then 4c^2 = 2b^2 => b^2 = 2c^2. Thus 2 divides b as well, contradicting that a and b are coprime."
+}

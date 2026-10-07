@@ -1,0 +1,27 @@
+[
+  {
+    "example_id": "EX-S10-01",
+    "chapter": "Force and Newton's Laws of Motion",
+    "question": "Explain Newton's second law with formula and an example.",
+    "step_by_step": [
+      "Step 1: Statement \u2014 Newton's Second Law states that the rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction of force.",
+      "Step 2: Mathematical Derivation \u2014 Momentum p = m * v. Initial momentum = m*u, Final momentum = m*v. Change in momentum = m(v - u). Rate of change = m(v - u)/t = m*a (since acceleration a = (v - u)/t). Therefore, Force F = m * a.",
+      "Step 3: Units \u2014 Force is measured in Newtons (N), where 1 N = 1 kg * 1 m/s^2.",
+      "Step 4: Real-life Example \u2014 A cricket fielder pulls his hands backward while catching a fast ball. By pulling his hands back, he increases the time interval t over which velocity becomes zero. As t increases, acceleration a decreases, and hence the stopping force F = m*a exerted on his hands is greatly reduced, preventing injury.",
+      "Final answer: F = m*a. Force equals mass times acceleration."
+    ]
+  },
+  {
+    "example_id": "EX-S10-02",
+    "chapter": "Electricity",
+    "question": "A 10 ohm resistor and a 20 ohm resistor are connected in parallel to a 6V battery. Find the equivalent resistance and total current.",
+    "step_by_step": [
+      "Step 1: Identify given values: R1 = 10 ohms, R2 = 20 ohms, V = 6 Volts.",
+      "Step 2: Formula for parallel resistors: 1 / R_eq = 1 / R1 + 1 / R2 = 1/10 + 1/20.",
+      "Step 3: Common denominator is 20: 1 / R_eq = (2 + 1) / 20 = 3 / 20.",
+      "Step 4: Invert to find R_eq: R_eq = 20 / 3 ohms = 6.67 ohms.",
+      "Step 5: Calculate total current using Ohm's Law: I = V / R_eq = 6 / (20/3) = 6 * 3 / 20 = 18 / 20 = 0.9 Amperes.",
+      "Final answer: Equivalent resistance is 6.67 ohms, and total current drawn is 0.9 A."
+    ]
+  }
+]

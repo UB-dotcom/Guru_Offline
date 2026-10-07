@@ -1,0 +1,24 @@
+[
+  {
+    "example_id": "EX-M5-01",
+    "chapter": "Speed, Distance and Time",
+    "question": "A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+    "step_by_step": [
+      "Step 1: Identify given information \u2014 Speed = 20 m/s, Time = 5 seconds.",
+      "Step 2: Recall the formula \u2014 Distance = Speed \u00d7 Time.",
+      "Step 3: Multiply values \u2014 Distance = 20 \u00d7 5 = 100 meters.",
+      "Final answer: The car travels 100 meters."
+    ]
+  },
+  {
+    "example_id": "EX-M5-02",
+    "chapter": "Perimeter and Area",
+    "question": "Find the perimeter and area of a rectangle with length 8 cm and breadth 5 cm.",
+    "step_by_step": [
+      "Step 1: Note length L = 8 cm, breadth B = 5 cm.",
+      "Step 2: Perimeter = 2 \u00d7 (L + B) = 2 \u00d7 (8 + 5) = 2 \u00d7 13 = 26 cm.",
+      "Step 3: Area = L \u00d7 B = 8 \u00d7 5 = 40 sq cm.",
+      "Final answer: Perimeter is 26 cm, Area is 40 sq cm."
+    ]
+  }
+]

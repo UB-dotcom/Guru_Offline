@@ -1,0 +1,15 @@
+{
+  "chapter_id": 2,
+  "title": "Object-Oriented Programming (OOP)",
+  "subtopics": [
+    "Classes and Objects",
+    "Encapsulation",
+    "Inheritance",
+    "Polymorphism"
+  ],
+  "summary": "The 4 pillars of OOP: Abstraction, Encapsulation, Inheritance, Polymorphism.",
+  "formulas": [
+    "class Child(Parent): inheritance syntax"
+  ],
+  "text": "Object-Oriented Programming organizes code into reusable blueprints called classes and instances called objects. Encapsulation bundles data and methods together and restricts direct access to internal state using private variables (_var, __var). Inheritance allows a child class to inherit attributes and methods from a parent class. Polymorphism allows methods in different classes to share the same name but provide customized behavior."
+}

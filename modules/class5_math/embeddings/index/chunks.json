@@ -1,0 +1,51 @@
+[
+  {
+    "chunk_id": "math5_ch_1",
+    "type": "chapter",
+    "topic": "Large Numbers and Place Value",
+    "title": "Large Numbers and Place Value",
+    "content": "Large Numbers and Place Value: Numbers up to 10 lakhs and 1 crore. Ones, tens, hundreds, thousands, lakhs.. Formulas: 1 Lakh = 100,000 1 Crore = 100 Lakhs = 10,000,000. In the Indian place value system, numbers are partitioned using periods: Ones period (ones, tens, hundreds), Thousands period (thousands, ten thousands), Lakhs period (lakhs, ten lakhs), and Crores period. Commas separate the periods: for example, 25,48,930 is 25 lakh 48 thousand 930."
+  },
+  {
+    "chunk_id": "math5_ch_2",
+    "type": "chapter",
+    "topic": "Fractions and Decimals",
+    "title": "Fractions and Decimals",
+    "content": "Fractions and Decimals: Parts of a whole. Adding and subtracting like and unlike fractions.. Formulas: Fraction = Numerator / Denominator Equivalent fraction: a/b = (a*k)/(b*k). A fraction represents part of a whole. In fraction a/b, a is numerator and b is denominator. If numerator < denominator, it is a proper fraction (like 3/4). If numerator >= denominator, it is improper (like 7/4). Decimals are fractions whose denominator is a power of 10 (like 0.5 = 5/10 = 1/2)."
+  },
+  {
+    "chunk_id": "math5_ch_3",
+    "type": "chapter",
+    "topic": "Shapes and Angles",
+    "title": "Shapes and Angles",
+    "content": "Shapes and Angles: Right angles (90 deg), acute (< 90 deg), obtuse (> 90 deg), straight (180 deg).. Formulas: Right angle = 90 degrees Straight line = 180 degrees. An angle is formed when two rays meet at a common vertex. A right angle is exactly 90 degrees (like corner of a page). An acute angle is less than 90 degrees. An obtuse angle is between 90 and 180 degrees. A straight angle equals 180 degrees."
+  },
+  {
+    "chunk_id": "math5_ch_4",
+    "type": "chapter",
+    "topic": "Perimeter and Area",
+    "title": "Perimeter and Area",
+    "content": "Perimeter and Area: Perimeter is distance around boundary. Area is surface enclosed.. Formulas: Perimeter of Rectangle = 2 \u00d7 (Length + Breadth) Perimeter of Square = 4 \u00d7 Side Area of Rectangle = Length \u00d7 Breadth Area of Square = Side \u00d7 Side. Perimeter is the total boundary distance around a closed figure. For a rectangle with length L and breadth B, Perimeter = 2*(L + B). For a square of side S, Perimeter = 4*S. Area is the region enclosed within the boundary. Area of rectangle = Length * Breadth. Area of square = Side * Side. Area is measured in square units (e.g. sq cm, sq m)."
+  },
+  {
+    "chunk_id": "math5_ch_5",
+    "type": "chapter",
+    "topic": "Speed, Distance and Time",
+    "title": "Speed, Distance and Time",
+    "content": "Speed, Distance and Time: Relationship between distance traveled, time taken, and rate of speed.. Formulas: Speed = Distance / Time Distance = Speed \u00d7 Time Time = Distance / Speed. Speed is the distance covered per unit of time. If a vehicle covers 100 kilometres in 2 hours, its speed is 100 / 2 = 50 km/h. To find distance when speed and time are known: Distance = Speed * Time. To find time: Time = Distance / Speed."
+  },
+  {
+    "chunk_id": "EX-M5-01",
+    "type": "example",
+    "topic": "Speed, Distance and Time",
+    "title": "Example: A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+    "content": "Example on Speed, Distance and Time: A car travels at 20 m/s for 5 seconds. What distance does it travel? Steps: Step 1: Identify given information \u2014 Speed = 20 m/s, Time = 5 seconds. Step 2: Recall the formula \u2014 Distance = Speed \u00d7 Time. Step 3: Multiply values \u2014 Distance = 20 \u00d7 5 = 100 meters. Final answer: The car travels 100 meters."
+  },
+  {
+    "chunk_id": "EX-M5-02",
+    "type": "example",
+    "topic": "Perimeter and Area",
+    "title": "Example: Find the perimeter and area of a rectangle with length 8 cm and breadth 5 cm.",
+    "content": "Example on Perimeter and Area: Find the perimeter and area of a rectangle with length 8 cm and breadth 5 cm. Steps: Step 1: Note length L = 8 cm, breadth B = 5 cm. Step 2: Perimeter = 2 \u00d7 (L + B) = 2 \u00d7 (8 + 5) = 2 \u00d7 13 = 26 cm. Step 3: Area = L \u00d7 B = 8 \u00d7 5 = 40 sq cm. Final answer: Perimeter is 26 cm, Area is 40 sq cm."
+  }
+]

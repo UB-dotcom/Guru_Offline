@@ -1,0 +1,20 @@
+{
+  "chapter_id": 7,
+  "title": "Introduction to Trigonometry",
+  "subtopics": [
+    "Trigonometric Ratios",
+    "Trigonometric Ratios of Specific Angles",
+    "Trigonometric Identities"
+  ],
+  "summary": "Ratios of sides in a right-angled triangle, values at 0, 30, 45, 60, 90 degrees.",
+  "formulas": [
+    "sin(theta) = Opposite / Hypotenuse",
+    "cos(theta) = Adjacent / Hypotenuse",
+    "tan(theta) = Opposite / Adjacent = sin(theta) / cos(theta)",
+    "cosec(theta) = 1/sin(theta), sec(theta) = 1/cos(theta), cot(theta) = 1/tan(theta)",
+    "sin^2(theta) + cos^2(theta) = 1",
+    "1 + tan^2(theta) = sec^2(theta)",
+    "1 + cot^2(theta) = cosec^2(theta)"
+  ],
+  "text": "Trigonometry studies relationships between side lengths and angles of triangles. In a right-angled triangle ABC right-angled at B: sin A = opposite side / hypotenuse, cos A = adjacent side / hypotenuse, tan A = opposite / adjacent. Specific values: sin(30) = 1/2, sin(45) = 1/sqrt(2), sin(60) = sqrt(3)/2, sin(90) = 1. cos(0) = 1, cos(30) = sqrt(3)/2, cos(45) = 1/sqrt(2), cos(60) = 1/2, cos(90) = 0. tan(45) = 1, tan(30) = 1/sqrt(3), tan(60) = sqrt(3). Fundamental identities: sin^2(A) + cos^2(A) = 1 for all 0 <= A <= 90."
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "quiz_id": "QUIZ-S10-01",
+    "title": "Class 10 Science Mastery Quiz",
+    "questions": [
+      {
+        "q_id": 1,
+        "topic": "Force and Newton's Laws",
+        "question": "Which law of Newton provides the quantitative definition of force (F = ma)?",
+        "options": [
+          "A) First Law",
+          "B) Second Law",
+          "C) Third Law",
+          "D) Law of Gravitation"
+        ],
+        "correct": "B",
+        "explanation": "Newton's Second Law states that force equals rate of change of momentum (F = m * a)."
+      },
+      {
+        "q_id": 2,
+        "topic": "Light",
+        "question": "What type of mirror is used as a rear-view mirror in vehicles?",
+        "options": [
+          "A) Concave mirror",
+          "B) Plane mirror",
+          "C) Convex mirror",
+          "D) Cylindrical mirror"
+        ],
+        "correct": "C",
+        "explanation": "Convex mirrors produce virtual, erect, and diminished images, providing a much wider field of view."
+      },
+      {
+        "q_id": 3,
+        "topic": "Acids and Bases",
+        "question": "What is the pH value of pure neutral water at 25 degrees Celsius?",
+        "options": [
+          "A) 0",
+          "B) 7",
+          "C) 14",
+          "D) 1"
+        ],
+        "correct": "B",
+        "explanation": "Neutral substances have pH = 7. Below 7 is acidic and above 7 is alkaline/basic."
+      },
+      {
+        "q_id": 4,
+        "topic": "Life Processes",
+        "question": "Where does the aerobic breakdown of pyruvate into carbon dioxide, water, and energy take place?",
+        "options": [
+          "A) Cytoplasm",
+          "B) Mitochondria",
+          "C) Chloroplast",
+          "D) Nucleus"
+        ],
+        "correct": "B",
+        "explanation": "The aerobic phase of cellular respiration occurs within the mitochondria."
+      },
+      {
+        "q_id": 5,
+        "topic": "Electricity",
+        "question": "The commercial unit of electric energy is kilowatt-hour (kWh). 1 kWh is equal to how many Joules?",
+        "options": [
+          "A) 3.6 \u00d7 10^5 J",
+          "B) 3.6 \u00d7 10^6 J",
+          "C) 1000 J",
+          "D) 3600 J"
+        ],
+        "correct": "B",
+        "explanation": "1 kWh = 1000 W \u00d7 3600 seconds = 3,600,000 J = 3.6 \u00d7 10^6 Joules."
+      }
+    ]
+  }
+]

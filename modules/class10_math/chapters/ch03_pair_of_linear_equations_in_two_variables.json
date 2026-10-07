@@ -1,0 +1,17 @@
+{
+  "chapter_id": 3,
+  "title": "Pair of Linear Equations in Two Variables",
+  "subtopics": [
+    "Graphical Method",
+    "Substitution Method",
+    "Elimination Method",
+    "Cross-Multiplication Method"
+  ],
+  "summary": "Systems of equations a1*x + b1*y + c1 = 0 and a2*x + b2*y + c2 = 0.",
+  "formulas": [
+    "Unique solution: a1/a2 != b1/b2 (Intersecting lines, consistent)",
+    "Infinitely many solutions: a1/a2 = b1/b2 = c1/c2 (Coincident lines, dependent consistent)",
+    "No solution: a1/a2 = b1/b2 != c1/c2 (Parallel lines, inconsistent)"
+  ],
+  "text": "A linear equation in two variables represents a straight line in the Cartesian plane. A pair of linear equations can be solved algebraically using Substitution or Elimination. In substitution, express one variable in terms of the other and substitute into the other equation. In elimination, multiply equations by constants so coefficients of one variable match, then add or subtract."
+}

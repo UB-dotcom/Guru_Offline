@@ -1,0 +1,18 @@
+{
+  "chapter_id": 1,
+  "title": "Chemical Reactions and Equations",
+  "subtopics": [
+    "Chemical Equations",
+    "Balancing Equations",
+    "Types of Chemical Reactions",
+    "Corrosion and Rancidity"
+  ],
+  "summary": "Chemical changes represented by balanced equations obeying conservation of mass.",
+  "formulas": [
+    "Combination: A + B -> AB",
+    "Decomposition: AB -> A + B (thermal, electrolytic, photolytic)",
+    "Displacement: A + BC -> AC + B",
+    "Double Displacement: AB + CD -> AD + CB"
+  ],
+  "text": "A chemical reaction involves breaking old chemical bonds and forming new bonds to produce new substances. According to the law of conservation of mass, matter can neither be created nor destroyed in a chemical reaction. Therefore, the total number of atoms of each element remains identical on both reactant and product sides. Types of reactions: 1) Combination reaction: two or more substances combine to form a single product, e.g. CaO + H2O -> Ca(OH)2. 2) Decomposition reaction: a single reactant breaks down into simpler products, e.g. 2FeSO4 -> Fe2O3 + SO2 + SO3. 3) Displacement reaction: a more reactive element displaces a less reactive element from its salt solution, e.g. Fe + CuSO4 -> FeSO4 + Cu. 4) Double displacement: exchange of ions occurs, e.g. Na2SO4 + BaCl2 -> BaSO4(white ppt) + 2NaCl. 5) Redox reaction: Oxidation is gain of oxygen or loss of hydrogen/electrons; Reduction is gain of hydrogen/electrons or loss of oxygen."
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "chunk_id": "sci10_ch_1",
+    "type": "chapter",
+    "topic": "Chemical Reactions and Equations",
+    "title": "Chemical Reactions and Equations",
+    "content": "Chemical Reactions and Equations: Chemical changes represented by balanced equations obeying conservation of mass.. Formulas: Combination: A + B -> AB Decomposition: AB -> A + B (thermal, electrolytic, photolytic) Displacement: A + BC -> AC + B Double Displacement: AB + CD -> AD + CB. A chemical reaction involves breaking old chemical bonds and forming new bonds to produce new substances. According to the law of conservation of mass, matter can neither be created nor destroyed in a chemical reaction. Therefore, the total number of atoms of each element remains identical on both reactant and product sides. Types of reactions: 1) Combination reaction: two or more substances combine to form a single product, e.g. CaO + H2O -> Ca(OH)2. 2) Decomposition reaction: a single reactant breaks down into simpler products, e.g. 2FeSO4 -> Fe2O3 + SO2 + SO3. 3) Displacement reaction: a more reactive element displaces a less reactive element from its salt solution, e.g. Fe + CuSO4 -> FeSO4 + Cu. 4) Double displacement: exchange of ions occurs, e.g. Na2SO4 + BaCl2 -> BaSO4(white ppt) + 2NaCl. 5) Redox reaction: Oxidation is gain of oxygen or loss of hydrogen/electrons; Reduction is gain of hydrogen/electrons or loss of oxygen."
+  },
+  {
+    "chunk_id": "sci10_ch_2",
+    "type": "chapter",
+    "topic": "Acids, Bases and Salts",
+    "title": "Acids, Bases and Salts",
+    "content": "Acids, Bases and Salts: Acids produce H+(aq) ions, bases produce OH-(aq) ions. Neutralization reaction.. Formulas: Acid + Metal -> Salt + Hydrogen gas (H2) Acid + Base -> Salt + Water (Neutralization: H+ + OH- -> H2O) pH = -log[H+]; pH < 7 is acidic, pH = 7 neutral, pH > 7 basic Bleaching powder: CaOCl2; Baking soda: NaHCO3; Plaster of Paris: CaSO4.1/2H2O. Acids are substances that taste sour and turn blue litmus red. In aqueous solution, acids release H+ or hydronium (H3O+) ions. Bases are bitter, soapy to touch, and turn red litmus blue; they release OH- ions. The pH scale measures hydrogen ion concentration from 0 (strongly acidic) to 14 (strongly basic). Neutral water has pH 7. In our digestive system, stomach releases hydrochloric acid (HCl) with pH 1.2 to 2 to activate pepsin. Antacids like Magnesium Hydroxide (Milk of Magnesia) neutralize excess stomach acid. When Plaster of Paris CaSO4.1/2H2O reacts with water, it hardens into Gypsum CaSO4.2H2O."
+  },
+  {
+    "chunk_id": "sci10_ch_3",
+    "type": "chapter",
+    "topic": "Life Processes",
+    "title": "Life Processes",
+    "content": "Life Processes: Basic metabolic functions essential to maintain life in organisms.. Formulas: Photosynthesis: 6CO2 + 12H2O + Sunlight + Chlorophyll -> C6H12O6 + 6O2 + 6H2O Aerobic respiration: Glucose + 6O2 -> 6CO2 + 6H2O + 38 ATP Anaerobic respiration in muscle: Glucose -> Lactic acid + 2 ATP (causes cramps). Life processes are essential processes that sustain living organisms: nutrition, respiration, transport, and excretion. In autotrophic nutrition (green plants), chlorophyll traps solar energy to convert water and carbon dioxide into glucose, releasing oxygen. Respiration breaks down glucose to release ATP energy: aerobic respiration takes place in mitochondria producing CO2, H2O, and 36-38 ATP; anaerobic respiration in yeast produces ethanol and CO2. Human circulatory system consists of a four-chambered heart, blood (RBCs, WBCs, platelets, plasma), and blood vessels (arteries carry oxygenated blood under high pressure away from heart; veins carry deoxygenated blood back). Excretion in humans is carried out by kidneys containing millions of nephron filtering units."
+  },
+  {
+    "chunk_id": "sci10_ch_4",
+    "type": "chapter",
+    "topic": "Light - Reflection and Refraction",
+    "title": "Light - Reflection and Refraction",
+    "content": "Light - Reflection and Refraction: Behavior of light rays, mirror formula, lens formula, and magnification.. Formulas: Laws of Reflection: Angle of incidence (i) = Angle of reflection (r) Mirror Formula: 1/f = 1/v + 1/u (f = focal length, v = image distance, u = object distance) Mirror Magnification: m = -v/u = h'/h Snell's Law: sin(i) / sin(r) = constant = n21 (Refractive index) Lens Formula: 1/f = 1/v - 1/u Lens Magnification: m = v/u = h'/h Power of Lens: P = 1 / f(in metres), measured in Dioptres (D). Light travels in straight lines in a homogeneous medium. Reflection is the bouncing back of light from a smooth surface. Concave mirrors form real, inverted images for most positions, but form virtual, erect, magnified images when an object is between pole P and focus F (used by dentists and shaving mirrors). Convex mirrors always form virtual, erect, and diminished images with a wide field of view (used as rear-view mirrors). Refraction is the bending of light when it passes obliquely from one transparent medium to another due to change in speed. Convex lenses converge light; concave lenses diverge light. A convex lens of focal length +0.5 m has power P = 1/0.5 = +2 D."
+  },
+  {
+    "chunk_id": "sci10_ch_5",
+    "type": "chapter",
+    "topic": "Electricity",
+    "title": "Electricity",
+    "content": "Electricity: Flow of charge, potential difference, resistance, series and parallel circuits, Joule's law.. Formulas: Current: I = Q / t (Amperes, A = Coulombs/second) Potential difference: V = W / Q (Volts, V = Joules/Coulomb) Ohm's Law: V = I * R (where R is constant electrical resistance in Ohms, Omega) Resistance formula: R = rho * (l / A) (rho = resistivity in Ohm-meter) Series: R_total = R1 + R2 + R3 Parallel: 1/R_total = 1/R1 + 1/R2 + 1/R3 Joule's Heating: H = I^2 * R * t Electric Power: P = V * I = I^2 * R = V^2 / R (Watts). Electric current is the rate of flow of electric charges through a conductor. Ohm's Law states that the current flowing through a conductor is directly proportional to the potential difference across its ends, provided temperature remains constant: V = I*R. Resistance depends on length l (R proportional to l), cross-sectional area A (R inversely proportional to A), and nature of material (resistivity rho). In series circuits, current is identical through all components, while total resistance is the algebraic sum. In parallel circuits, voltage is identical across each branch, and equivalent resistance is lower than the smallest branch resistance. Joule's heating effect H = I^2*R*t is used in electric irons, heaters, and safety fuses."
+  },
+  {
+    "chunk_id": "sci10_ch_6",
+    "type": "chapter",
+    "topic": "Force and Newton's Laws of Motion",
+    "title": "Force and Newton's Laws of Motion",
+    "content": "Force and Newton's Laws of Motion: The fundamental principles governing force, mass, acceleration, and interaction.. Formulas: Momentum: p = m * v (kg m/s) Newton's Second Law: Force = rate of change of momentum = d(mv)/dt = m * a Formula: F = m * a (Newton, N = kg m/s^2) Newton's Third Law: F_AB = - F_BA (Action and reaction are equal and opposite) Law of Conservation of Momentum: m1*u1 + m2*u2 = m1*v1 + m2*v2. Newton's Laws of Motion form the cornerstone of classical physics. 1) First Law (Law of Inertia): An object remains in a state of rest or of uniform motion in a straight line unless acted upon by an unbalanced external force. Inertia is the natural tendency of an object to resist changes in its state of motion; mass is a quantitative measure of inertia. 2) Second Law of Motion: The rate of change of momentum of an object is directly proportional to the applied unbalanced force and occurs in the direction of the force. Since momentum p = m*v, F = d(mv)/dt = m*(v - u)/t = m*a. Hence Force = Mass \u00d7 Acceleration (F = m*a). One Newton is the force that produces an acceleration of 1 m/s^2 on a 1 kg body. For example, a cricket fielder pulls their hands backwards while catching a fast ball to increase impact time, reducing acceleration and thereby reducing the impact force. 3) Third Law of Motion: To every action, there is always an equal and opposite reaction. When object A exerts a force on object B, object B simultaneously exerts an equal magnitude force in the opposite direction on object A."
+  },
+  {
+    "chunk_id": "EX-S10-01",
+    "type": "example",
+    "topic": "Force and Newton's Laws of Motion",
+    "title": "Example: Explain Newton's second law with formula and an example.",
+    "content": "Example on Force and Newton's Laws of Motion: Explain Newton's second law with formula and an example. Steps: Step 1: Statement \u2014 Newton's Second Law states that the rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction of force. Step 2: Mathematical Derivation \u2014 Momentum p = m * v. Initial momentum = m*u, Final momentum = m*v. Change in momentum = m(v - u). Rate of change = m(v - u)/t = m*a (since acceleration a = (v - u)/t). Therefore, Force F = m * a. Step 3: Units \u2014 Force is measured in Newtons (N), where 1 N = 1 kg * 1 m/s^2. Step 4: Real-life Example \u2014 A cricket fielder pulls his hands backward while catching a fast ball. By pulling his hands back, he increases the time interval t over which velocity becomes zero. As t increases, acceleration a decreases, and hence the stopping force F = m*a exerted on his hands is greatly reduced, preventing injury. Final answer: F = m*a. Force equals mass times acceleration."
+  },
+  {
+    "chunk_id": "EX-S10-02",
+    "type": "example",
+    "topic": "Electricity",
+    "title": "Example: A 10 ohm resistor and a 20 ohm resistor are connected in parallel to a 6V battery. Find the equivalent resistance and total current.",
+    "content": "Example on Electricity: A 10 ohm resistor and a 20 ohm resistor are connected in parallel to a 6V battery. Find the equivalent resistance and total current. Steps: Step 1: Identify given values: R1 = 10 ohms, R2 = 20 ohms, V = 6 Volts. Step 2: Formula for parallel resistors: 1 / R_eq = 1 / R1 + 1 / R2 = 1/10 + 1/20. Step 3: Common denominator is 20: 1 / R_eq = (2 + 1) / 20 = 3 / 20. Step 4: Invert to find R_eq: R_eq = 20 / 3 ohms = 6.67 ohms. Step 5: Calculate total current using Ohm's Law: I = V / R_eq = 6 / (20/3) = 6 * 3 / 20 = 18 / 20 = 0.9 Amperes. Final answer: Equivalent resistance is 6.67 ohms, and total current drawn is 0.9 A."
+  }
+]

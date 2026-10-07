@@ -1,0 +1,15 @@
+{
+  "chapter_id": 1,
+  "title": "Large Numbers and Place Value",
+  "subtopics": [
+    "Indian Place Value System",
+    "Comparing Numbers",
+    "Rounding Off"
+  ],
+  "summary": "Numbers up to 10 lakhs and 1 crore. Ones, tens, hundreds, thousands, lakhs.",
+  "formulas": [
+    "1 Lakh = 100,000",
+    "1 Crore = 100 Lakhs = 10,000,000"
+  ],
+  "text": "In the Indian place value system, numbers are partitioned using periods: Ones period (ones, tens, hundreds), Thousands period (thousands, ten thousands), Lakhs period (lakhs, ten lakhs), and Crores period. Commas separate the periods: for example, 25,48,930 is 25 lakh 48 thousand 930."
+}

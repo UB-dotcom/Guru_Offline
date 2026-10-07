@@ -1,0 +1,1595 @@
+{
+  "total_docs": 5,
+  "avg_dl": 79.0,
+  "doc_lengths": [
+    64,
+    66,
+    75,
+    82,
+    108
+  ],
+  "idf": {
+    "python": 1.3863,
+    "programming": 0.8755,
+    "fundamentals": 1.3863,
+    "core": 1.3863,
+    "syntax": 1.3863,
+    "dynamic": 1.3863,
+    "typing": 1.3863,
+    "if-else": 1.3863,
+    "conditionals": 1.3863,
+    "loops..": 1.3863,
+    "formulas": 0.2877,
+    "time": 0.8755,
+    "complexity": 1.3863,
+    "constant": 1.3863,
+    "linear": 0.539,
+    "loop.": 1.3863,
+    "high-level": 1.3863,
+    "interpreted": 1.3863,
+    "language.": 1.3863,
+    "fundamental": 1.3863,
+    "data": 0.539,
+    "types": 1.3863,
+    "include": 1.3863,
+    "int": 1.3863,
+    "float": 1.3863,
+    "str": 1.3863,
+    "bool": 1.3863,
+    "list": 0.8755,
+    "dict": 1.3863,
+    "set": 0.8755,
+    "tuple.": 1.3863,
+    "control": 1.3863,
+    "flow": 1.3863,
+    "structures": 0.8755,
+    "allow": 1.3863,
+    "decision": 1.3863,
+    "making": 1.3863,
+    "using": 0.8755,
+    "elif": 1.3863,
+    "else": 1.3863,
+    "statements.": 1.3863,
+    "loops": 1.3863,
+    "repetitive": 1.3863,
+    "execution": 1.3863,
+    "item": 1.3863,
+    "iterable": 1.3863,
+    "iterates": 1.3863,
+    "sequences": 1.3863,
+    "condition": 1.3863,
+    "executes": 1.3863,
+    "long": 1.3863,
+    "boolean": 1.3863,
+    "expression": 1.3863,
+    "evaluates": 1.3863,
+    "true.": 1.3863,
+    "object-oriented": 1.3863,
+    "oop": 1.3863,
+    "pillars": 1.3863,
+    "abstraction": 1.3863,
+    "encapsulation": 1.3863,
+    "inheritance": 1.3863,
+    "polymorphism..": 1.3863,
+    "class": 1.3863,
+    "child": 1.3863,
+    "parent": 1.3863,
+    "syntax.": 1.3863,
+    "organizes": 1.3863,
+    "code": 1.3863,
+    "reusable": 1.3863,
+    "blueprints": 1.3863,
+    "called": 1.3863,
+    "classes": 1.3863,
+    "instances": 1.3863,
+    "objects.": 1.3863,
+    "bundles": 1.3863,
+    "methods": 1.3863,
+    "together": 1.3863,
+    "restricts": 1.3863,
+    "direct": 1.3863,
+    "access": 1.3863,
+    "internal": 1.3863,
+    "state": 1.3863,
+    "private": 1.3863,
+    "variables": 1.3863,
+    "_var": 1.3863,
+    "__var": 1.3863,
+    "allows": 1.3863,
+    "inherit": 1.3863,
+    "attributes": 1.3863,
+    "class.": 1.3863,
+    "polymorphism": 1.3863,
+    "different": 1.3863,
+    "share": 1.3863,
+    "name": 1.3863,
+    "provide": 1.3863,
+    "customized": 1.3863,
+    "behavior.": 1.3863,
+    "stacks": 1.3863,
+    "queues": 1.3863,
+    "operate": 1.3863,
+    "last-in": 1.3863,
+    "first-out": 1.3863,
+    "push": 1.3863,
+    "pop": 1.3863,
+    "first-in": 1.3863,
+    "enqueue": 1.3863,
+    "dequeue": 1.3863,
+    "..": 1.3863,
+    "stack": 1.3863,
+    "queue": 1.3863,
+    "structure": 1.3863,
+    "following": 1.3863,
+    "last-in-first-out": 1.3863,
+    "lifo": 1.3863,
+    "elements": 0.8755,
+    "added": 1.3863,
+    "removed": 1.3863,
+    "top.": 1.3863,
+    "real-world": 1.3863,
+    "uses": 0.8755,
+    "function": 1.3863,
+    "call": 1.3863,
+    "undo": 1.3863,
+    "operations": 1.3863,
+    "parenthesis": 1.3863,
+    "matching.": 1.3863,
+    "first-in-first-out": 1.3863,
+    "fifo": 1.3863,
+    "rear": 1.3863,
+    "front": 1.3863,
+    "cpu": 1.3863,
+    "scheduling": 1.3863,
+    "printer": 1.3863,
+    "task": 1.3863,
+    "queues.": 1.3863,
+    "searching": 0.8755,
+    "sorting": 0.8755,
+    "algorithms": 0.8755,
+    "finding": 1.3863,
+    "organizing": 1.3863,
+    "arrays..": 1.3863,
+    "binary": 0.8755,
+    "search": 0.8755,
+    "log": 1.3863,
+    "requires": 1.3863,
+    "sorted": 0.8755,
+    "array": 0.8755,
+    "bubble": 1.3863,
+    "sort": 1.3863,
+    "n^2": 1.3863,
+    "merge": 1.3863,
+    "divide": 1.3863,
+    "conquer.": 1.3863,
+    "locate": 1.3863,
+    "target": 0.8755,
+    "key": 1.3863,
+    "collection.": 1.3863,
+    "scans": 1.3863,
+    "every": 1.3863,
+    "element": 1.3863,
+    "time.": 1.3863,
+    "divides": 1.3863,
+    "half": 1.3863,
+    "repeatedly": 1.3863,
+    "steps": 0.8755,
+    "swapping": 1.3863,
+    "adjacent": 1.3863,
+    "order": 1.3863,
+    "worst": 1.3863,
+    "case.": 1.3863,
+    "divide-and-conquer": 1.3863,
+    "recursively": 1.3863,
+    "two": 1.3863,
+    "halves": 1.3863,
+    "sorts": 1.3863,
+    "merges": 1.3863,
+    "example": 1.3863,
+    "work": 1.3863,
+    "12": 1.3863,
+    "16": 1.3863,
+    "23": 1.3863,
+    "38": 1.3863,
+    "find": 1.3863,
+    "step": 1.3863,
+    "low": 1.3863,
+    "high": 1.3863,
+    "length": 1.3863,
+    "sorted.": 1.3863,
+    "midpoint": 1.3863,
+    "mid": 1.3863,
+    "//": 1.3863,
+    "3.": 1.3863,
+    "value": 1.3863,
+    "arr": 1.3863,
+    "12.": 1.3863,
+    "compare": 1.3863,
+    "since": 1.3863,
+    "must": 1.3863,
+    "right": 1.3863,
+    "half.": 1.3863,
+    "4.": 1.3863,
+    "new": 1.3863,
+    "5.": 1.3863,
+    "23.": 1.3863,
+    "left": 1.3863,
+    "16.": 1.3863,
+    "match": 1.3863,
+    "found": 1.3863,
+    "final": 1.3863,
+    "answer": 1.3863,
+    "index": 1.3863,
+    "iterations.": 1.3863
+  },
+  "inverted_index": {
+    "python": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      }
+    ],
+    "programming": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 4
+      }
+    ],
+    "fundamentals": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      }
+    ],
+    "core": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "syntax": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "dynamic": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "typing": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "if-else": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "conditionals": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "loops..": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "formulas": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "time": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 4
+      }
+    ],
+    "complexity": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "constant": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "linear": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "loop.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "high-level": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "interpreted": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "language.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "fundamental": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "data": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 5
+      }
+    ],
+    "types": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "include": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "int": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "float": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "str": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "bool": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "list": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "dict": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "set": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "tuple.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "control": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "flow": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "structures": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "allow": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "decision": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "making": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "using": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "elif": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "else": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "statements.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "loops": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "repetitive": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "execution": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "item": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "iterable": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "iterates": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "sequences": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "condition": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "executes": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "long": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "boolean": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "expression": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "evaluates": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "true.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "object-oriented": [
+      {
+        "doc_id": 1,
+        "tf": 4
+      }
+    ],
+    "oop": [
+      {
+        "doc_id": 1,
+        "tf": 4
+      }
+    ],
+    "pillars": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "abstraction": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "encapsulation": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "inheritance": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      }
+    ],
+    "polymorphism..": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "class": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "child": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "parent": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "syntax.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "organizes": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "code": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "reusable": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "blueprints": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "called": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "classes": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "instances": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "objects.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "bundles": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "methods": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      }
+    ],
+    "together": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "restricts": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "direct": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "access": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "internal": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "state": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "private": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "variables": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "_var": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "__var": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "allows": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "inherit": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "attributes": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "class.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "polymorphism": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "different": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "share": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "name": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "provide": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "customized": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "behavior.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "stacks": [
+      {
+        "doc_id": 2,
+        "tf": 4
+      }
+    ],
+    "queues": [
+      {
+        "doc_id": 2,
+        "tf": 4
+      }
+    ],
+    "operate": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "last-in": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "first-out": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "push": [
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "pop": [
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "first-in": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "enqueue": [
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "dequeue": [
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "..": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "stack": [
+      {
+        "doc_id": 2,
+        "tf": 3
+      }
+    ],
+    "queue": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "structure": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "following": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "last-in-first-out": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "lifo": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "elements": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "added": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "removed": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "top.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "real-world": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "uses": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "function": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "call": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "undo": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "operations": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "parenthesis": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "matching.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "first-in-first-out": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "fifo": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "rear": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "front": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "cpu": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "scheduling": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "printer": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "task": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "queues.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "searching": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "sorting": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "algorithms": [
+      {
+        "doc_id": 3,
+        "tf": 5
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "finding": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "organizing": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "arrays..": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "binary": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "search": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "log": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      }
+    ],
+    "requires": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "sorted": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "array": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "bubble": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "sort": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      }
+    ],
+    "n^2": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "merge": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "divide": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "conquer.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "locate": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "target": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 6
+      }
+    ],
+    "key": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "collection.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "scans": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "every": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "element": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "time.": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "divides": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "half": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "repeatedly": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "steps": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "swapping": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "adjacent": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "order": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "worst": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "case.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "divide-and-conquer": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "recursively": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "two": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "halves": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "sorts": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "merges": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "example": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "work": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "12": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "16": [
+      {
+        "doc_id": 4,
+        "tf": 9
+      }
+    ],
+    "23": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "38": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "find": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "step": [
+      {
+        "doc_id": 4,
+        "tf": 6
+      }
+    ],
+    "low": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "high": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "length": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "sorted.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "midpoint": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "mid": [
+      {
+        "doc_id": 4,
+        "tf": 5
+      }
+    ],
+    "//": [
+      {
+        "doc_id": 4,
+        "tf": 4
+      }
+    ],
+    "3.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "value": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "arr": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "12.": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "compare": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "since": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "must": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "right": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "half.": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "4.": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "new": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "5.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "23.": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "left": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "16.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "match": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "found": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "final": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "answer": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "index": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "iterations.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ]
+  }
+}

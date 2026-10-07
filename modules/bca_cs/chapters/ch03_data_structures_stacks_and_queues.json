@@ -1,0 +1,15 @@
+{
+  "chapter_id": 3,
+  "title": "Data Structures: Stacks and Queues",
+  "subtopics": [
+    "LIFO Principle",
+    "FIFO Principle",
+    "Array Implementation"
+  ],
+  "summary": "Stacks operate on Last-In First-Out (push, pop). Queues operate on First-In First-Out (enqueue, dequeue).",
+  "formulas": [
+    "Stack: push O(1), pop O(1)",
+    "Queue: enqueue O(1), dequeue O(1)"
+  ],
+  "text": "A Stack is a linear data structure following Last-In-First-Out (LIFO). Elements are added (push) and removed (pop) from the top. Real-world uses: function call stack, undo operations, parenthesis matching. A Queue is a linear data structure following First-In-First-Out (FIFO). Elements are added at rear (enqueue) and removed from front (dequeue). Real-world uses: CPU scheduling, printer task queues."
+}

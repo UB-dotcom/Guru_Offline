@@ -1,0 +1,20 @@
+{
+  "chapter_id": 4,
+  "title": "Quadratic Equations",
+  "subtopics": [
+    "Standard Form",
+    "Solution by Factorisation",
+    "Quadratic Formula",
+    "Nature of Roots"
+  ],
+  "summary": "Solving ax^2 + bx + c = 0, discriminant D = b^2 - 4ac, nature of roots.",
+  "formulas": [
+    "Standard Form: ax^2 + bx + c = 0, a != 0",
+    "Discriminant: D = b^2 - 4ac",
+    "Quadratic Formula: x = (-b \u00b1 sqrt(b^2 - 4ac)) / (2a)",
+    "Two distinct real roots if D > 0",
+    "Two equal real roots if D = 0",
+    "No real roots (complex roots) if D < 0"
+  ],
+  "text": "A quadratic equation in variable x is an equation of the form ax^2 + bx + c = 0 where a, b, c are real numbers and a != 0. To solve by factorization, split the middle term bx into two terms whose product is a*c and sum is b. The quadratic formula derived by completing the square gives the roots directly: x = (-b +- sqrt(D)) / (2a) where D = b^2 - 4ac. When D > 0, roots are real and distinct. When D = 0, roots are real and equal (x = -b / 2a). When D < 0, there are no real roots."
+}

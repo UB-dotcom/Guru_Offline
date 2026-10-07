@@ -1,0 +1,2056 @@
+{
+  "summary": {
+    "benchmark_timestamp": "2026-10-07 17:13:41",
+    "total_questions": 100,
+    "offline_operation_rate": "100%",
+    "model_name": "SmolLM-135M-Q4",
+    "model_size_mb": 72.4,
+    "accuracy_pct": 63.0,
+    "average_curriculum_relevance_pct": 71.8,
+    "latency_stats": {
+      "average_sec": 0.28,
+      "min_sec": 0.28,
+      "max_sec": 0.28
+    },
+    "memory_stats": {
+      "average_ram_mb": 19.2,
+      "peak_ram_mb": 19.4
+    },
+    "target_phone_compatibility": "Fully compatible with Rs. 8,000 Android phones (2GB RAM)"
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "module_id": "class10_math",
+      "question": "Solve 2x + 5 = 15 step by step",
+      "category": "Algebra",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.82,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "step",
+        "subtract",
+        "divide",
+        "5"
+      ],
+      "expected_keywords": [
+        "step",
+        "subtract",
+        "divide",
+        "5"
+      ],
+      "retrieved_chunk": "Example: Solve 2x^2 - 5x + 3 = 0 by factorization.",
+      "is_offline": true
+    },
+    {
+      "id": "Q002",
+      "module_id": "class10_math",
+      "question": "What is the quadratic formula?",
+      "category": "Quadratic Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.82,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "-b",
+        "2a"
+      ],
+      "expected_keywords": [
+        "-b",
+        "b^2 - 4ac",
+        "2a"
+      ],
+      "retrieved_chunk": "Quadratic Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q003",
+      "module_id": "class10_math",
+      "question": "Explain the nature of roots using the discriminant D",
+      "category": "Quadratic Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.85,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "discriminant",
+        "d > 0",
+        "d = 0",
+        "real"
+      ],
+      "expected_keywords": [
+        "discriminant",
+        "d > 0",
+        "d = 0",
+        "real"
+      ],
+      "retrieved_chunk": "Quadratic Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q004",
+      "module_id": "class10_math",
+      "question": "What is the formula for the nth term of an AP?",
+      "category": "Arithmetic Progressions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.85,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "a_n",
+        "a + (n - 1)d",
+        "common difference"
+      ],
+      "expected_keywords": [
+        "a_n",
+        "a + (n - 1)d",
+        "common difference"
+      ],
+      "retrieved_chunk": "Example: Find the 10th term of the AP: 2, 7, 12, ...",
+      "is_offline": true
+    },
+    {
+      "id": "Q005",
+      "module_id": "class10_math",
+      "question": "How do you find the sum of first n terms of an AP?",
+      "category": "Arithmetic Progressions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.85,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "s_n",
+        "2a + (n - 1)d"
+      ],
+      "expected_keywords": [
+        "s_n",
+        "n/2",
+        "2a + (n - 1)d"
+      ],
+      "retrieved_chunk": "Arithmetic Progressions",
+      "is_offline": true
+    },
+    {
+      "id": "Q006",
+      "module_id": "class10_math",
+      "question": "State the distance formula in coordinate geometry",
+      "category": "Coordinate Geometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.85,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "sqrt",
+        "(x2 - x1)^2",
+        "(y2 - y1)^2"
+      ],
+      "expected_keywords": [
+        "sqrt",
+        "(x2 - x1)^2",
+        "(y2 - y1)^2"
+      ],
+      "retrieved_chunk": "Coordinate Geometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q007",
+      "module_id": "class10_math",
+      "question": "Explain the section formula for internal division",
+      "category": "Coordinate Geometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.85,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "m1",
+        "m2"
+      ],
+      "expected_keywords": [
+        "m1",
+        "m2",
+        "ratio"
+      ],
+      "retrieved_chunk": "Coordinate Geometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q008",
+      "module_id": "class10_math",
+      "question": "State the fundamental identity of trigonometry relating sin and cos",
+      "category": "Trigonometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.86,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "sin^2",
+        "cos^2",
+        "1"
+      ],
+      "expected_keywords": [
+        "sin^2",
+        "cos^2",
+        "1"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q009",
+      "module_id": "class10_math",
+      "question": "What is the value of tan 45 degrees?",
+      "category": "Trigonometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.86,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "1",
+        "ratio"
+      ],
+      "expected_keywords": [
+        "1",
+        "ratio"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q010",
+      "module_id": "class10_math",
+      "question": "State the Fundamental Theorem of Arithmetic",
+      "category": "Real Numbers",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.86,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "composite",
+        "prime",
+        "factor",
+        "unique"
+      ],
+      "expected_keywords": [
+        "composite",
+        "prime",
+        "factor",
+        "unique"
+      ],
+      "retrieved_chunk": "Real Numbers",
+      "is_offline": true
+    },
+    {
+      "id": "Q011",
+      "module_id": "class10_math",
+      "question": "Why is square root of 2 an irrational number?",
+      "category": "Real Numbers",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.86,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "coprime",
+        "contradiction",
+        "irrational"
+      ],
+      "retrieved_chunk": "Real Numbers",
+      "is_offline": true
+    },
+    {
+      "id": "Q012",
+      "module_id": "class10_math",
+      "question": "What is the relationship between HCF and LCM of two numbers?",
+      "category": "Real Numbers",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.86,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "hcf",
+        "lcm",
+        "product",
+        "a * b"
+      ],
+      "expected_keywords": [
+        "hcf",
+        "lcm",
+        "product",
+        "a * b"
+      ],
+      "retrieved_chunk": "Real Numbers",
+      "is_offline": true
+    },
+    {
+      "id": "Q013",
+      "module_id": "class10_math",
+      "question": "Explain the relationship between zeroes and coefficients of quadratic ax^2 + bx + c",
+      "category": "Polynomials",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "-b/a",
+        "c/a",
+        "alpha",
+        "beta"
+      ],
+      "retrieved_chunk": "Polynomials",
+      "is_offline": true
+    },
+    {
+      "id": "Q014",
+      "module_id": "class10_math",
+      "question": "When does a pair of linear equations have no solution?",
+      "category": "Linear Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "parallel",
+        "inconsistent",
+        "a1/a2"
+      ],
+      "expected_keywords": [
+        "parallel",
+        "inconsistent",
+        "a1/a2"
+      ],
+      "retrieved_chunk": "Pair of Linear Equations in Two Variables",
+      "is_offline": true
+    },
+    {
+      "id": "Q015",
+      "module_id": "class10_math",
+      "question": "When does a pair of linear equations have infinitely many solutions?",
+      "category": "Linear Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "coincident",
+        "dependent",
+        "c1/c2"
+      ],
+      "expected_keywords": [
+        "coincident",
+        "dependent",
+        "c1/c2"
+      ],
+      "retrieved_chunk": "Pair of Linear Equations in Two Variables",
+      "is_offline": true
+    },
+    {
+      "id": "Q016",
+      "module_id": "class10_math",
+      "question": "Solve 3x - 9 = 0",
+      "category": "Algebra",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "3",
+        "step",
+        "x = 3"
+      ],
+      "expected_keywords": [
+        "3",
+        "step",
+        "x = 3"
+      ],
+      "retrieved_chunk": "Example: Solve 2x^2 - 5x + 3 = 0 by factorization.",
+      "is_offline": true
+    },
+    {
+      "id": "Q017",
+      "module_id": "class10_math",
+      "question": "Find the roots of x^2 - 5x + 6 = 0",
+      "category": "Quadratic Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "factor",
+        "2",
+        "3",
+        "roots"
+      ],
+      "expected_keywords": [
+        "factor",
+        "2",
+        "3",
+        "roots"
+      ],
+      "retrieved_chunk": "Example: Solve 2x^2 - 5x + 3 = 0 by factorization.",
+      "is_offline": true
+    },
+    {
+      "id": "Q018",
+      "module_id": "class10_math",
+      "question": "What is the common difference of 3, 7, 11, 15?",
+      "category": "Arithmetic Progressions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "difference"
+      ],
+      "expected_keywords": [
+        "4",
+        "difference"
+      ],
+      "retrieved_chunk": "Arithmetic Progressions",
+      "is_offline": true
+    },
+    {
+      "id": "Q019",
+      "module_id": "class10_math",
+      "question": "Calculate distance between origin (0,0) and point (3,4)",
+      "category": "Coordinate Geometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "sqrt"
+      ],
+      "expected_keywords": [
+        "5",
+        "sqrt",
+        "3^2 + 4^2"
+      ],
+      "retrieved_chunk": "Coordinate Geometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q020",
+      "module_id": "class10_math",
+      "question": "What is sin 30 degrees?",
+      "category": "Trigonometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "1/2",
+        "0.5"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q021",
+      "module_id": "class10_math",
+      "question": "What is cos 60 degrees?",
+      "category": "Trigonometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "1/2",
+        "0.5"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q022",
+      "module_id": "class10_math",
+      "question": "State the identity relating 1 + tan^2(theta)",
+      "category": "Trigonometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.87,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "sec^2"
+      ],
+      "expected_keywords": [
+        "sec^2",
+        "identity"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q023",
+      "module_id": "class10_math",
+      "question": "Find midpoint of line segment joining (2, 4) and (6, 8)",
+      "category": "Coordinate Geometry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "midpoint"
+      ],
+      "expected_keywords": [
+        "4",
+        "6",
+        "midpoint"
+      ],
+      "retrieved_chunk": "Coordinate Geometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q024",
+      "module_id": "class10_math",
+      "question": "What is the degree of a quadratic polynomial?",
+      "category": "Polynomials",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "2"
+      ],
+      "expected_keywords": [
+        "2",
+        "degree"
+      ],
+      "retrieved_chunk": "Polynomials",
+      "is_offline": true
+    },
+    {
+      "id": "Q025",
+      "module_id": "class10_math",
+      "question": "Solve 4x + 8 = 24",
+      "category": "Algebra",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "4",
+        "subtract",
+        "divide"
+      ],
+      "expected_keywords": [
+        "4",
+        "subtract",
+        "divide"
+      ],
+      "retrieved_chunk": "Example: Solve 2x^2 - 5x + 3 = 0 by factorization.",
+      "is_offline": true
+    },
+    {
+      "id": "Q026",
+      "module_id": "class10_math",
+      "question": "If an AP has a = 1 and d = 2, find the 5th term",
+      "category": "Arithmetic Progressions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "formula"
+      ],
+      "expected_keywords": [
+        "9",
+        "formula"
+      ],
+      "retrieved_chunk": "Example: Find the 10th term of the AP: 2, 7, 12, ...",
+      "is_offline": true
+    },
+    {
+      "id": "Q027",
+      "module_id": "class10_math",
+      "question": "What is the discriminant of x^2 - 4x + 4 = 0?",
+      "category": "Quadratic Equations",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "0",
+        "equal"
+      ],
+      "expected_keywords": [
+        "0",
+        "b^2 - 4ac",
+        "equal"
+      ],
+      "retrieved_chunk": "Quadratic Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q028",
+      "module_id": "class10_math",
+      "question": "Can the probability of an event be greater than 1?",
+      "category": "Probability",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "no",
+        "0 and 1",
+        "probability"
+      ],
+      "retrieved_chunk": "Real Numbers",
+      "is_offline": true
+    },
+    {
+      "id": "Q029",
+      "module_id": "class10_math",
+      "question": "State Basic Proportionality Theorem (Thales theorem)",
+      "category": "Triangles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "ratio"
+      ],
+      "expected_keywords": [
+        "parallel",
+        "proportional",
+        "ratio"
+      ],
+      "retrieved_chunk": "Real Numbers",
+      "is_offline": true
+    },
+    {
+      "id": "Q030",
+      "module_id": "class10_math",
+      "question": "What is the sum of angles in a triangle?",
+      "category": "Triangles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 18.88,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "degrees"
+      ],
+      "expected_keywords": [
+        "180",
+        "degrees"
+      ],
+      "retrieved_chunk": "Introduction to Trigonometry",
+      "is_offline": true
+    },
+    {
+      "id": "Q031",
+      "module_id": "class10_science",
+      "question": "Explain Newton's second law of motion with formula",
+      "category": "Physics - Mechanics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.22,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "force",
+        "mass",
+        "acceleration"
+      ],
+      "expected_keywords": [
+        "force",
+        "mass",
+        "acceleration",
+        "f = m * a"
+      ],
+      "retrieved_chunk": "Example: Explain Newton's second law with formula and an example.",
+      "is_offline": true
+    },
+    {
+      "id": "Q032",
+      "module_id": "class10_science",
+      "question": "What is Newton's first law of motion?",
+      "category": "Physics - Mechanics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "inertia",
+        "rest",
+        "uniform",
+        "unbalanced"
+      ],
+      "expected_keywords": [
+        "inertia",
+        "rest",
+        "uniform",
+        "unbalanced"
+      ],
+      "retrieved_chunk": "Force and Newton's Laws of Motion",
+      "is_offline": true
+    },
+    {
+      "id": "Q033",
+      "module_id": "class10_science",
+      "question": "What is Newton's third law of motion?",
+      "category": "Physics - Mechanics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "action",
+        "reaction",
+        "equal",
+        "opposite"
+      ],
+      "expected_keywords": [
+        "action",
+        "reaction",
+        "equal",
+        "opposite"
+      ],
+      "retrieved_chunk": "Force and Newton's Laws of Motion",
+      "is_offline": true
+    },
+    {
+      "id": "Q034",
+      "module_id": "class10_science",
+      "question": "Why does a cricket fielder pull his hands backwards while catching a ball?",
+      "category": "Physics - Mechanics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "force",
+        "momentum",
+        "acceleration"
+      ],
+      "expected_keywords": [
+        "time",
+        "force",
+        "momentum",
+        "acceleration"
+      ],
+      "retrieved_chunk": "Force and Newton's Laws of Motion",
+      "is_offline": true
+    },
+    {
+      "id": "Q035",
+      "module_id": "class10_science",
+      "question": "State Ohm's Law and its formula",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "current",
+        "resistance"
+      ],
+      "expected_keywords": [
+        "v = i * r",
+        "potential",
+        "current",
+        "resistance"
+      ],
+      "retrieved_chunk": "Example: A 10 ohm resistor and a 20 ohm resistor are connected in parallel to a 6V battery. Find the equivalent resistance and total current.",
+      "is_offline": true
+    },
+    {
+      "id": "Q036",
+      "module_id": "class10_science",
+      "question": "How do you calculate equivalent resistance in series?",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "r1 + r2",
+        "series"
+      ],
+      "expected_keywords": [
+        "r1 + r2",
+        "series",
+        "sum"
+      ],
+      "retrieved_chunk": "Electricity",
+      "is_offline": true
+    },
+    {
+      "id": "Q037",
+      "module_id": "class10_science",
+      "question": "How do you calculate equivalent resistance in parallel?",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "parallel"
+      ],
+      "expected_keywords": [
+        "1/r",
+        "parallel",
+        "reciprocal"
+      ],
+      "retrieved_chunk": "Example: A 10 ohm resistor and a 20 ohm resistor are connected in parallel to a 6V battery. Find the equivalent resistance and total current.",
+      "is_offline": true
+    },
+    {
+      "id": "Q038",
+      "module_id": "class10_science",
+      "question": "State Joule's law of heating",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "h = i^2 * r * t",
+        "heat"
+      ],
+      "expected_keywords": [
+        "h = i^2 * r * t",
+        "heat",
+        "square",
+        "time"
+      ],
+      "retrieved_chunk": "Electricity",
+      "is_offline": true
+    },
+    {
+      "id": "Q039",
+      "module_id": "class10_science",
+      "question": "State the Mirror Formula and sign convention",
+      "category": "Physics - Optics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "1/f = 1/v + 1/u",
+        "focal",
+        "distance"
+      ],
+      "expected_keywords": [
+        "1/f = 1/v + 1/u",
+        "focal",
+        "distance"
+      ],
+      "retrieved_chunk": "Light - Reflection and Refraction",
+      "is_offline": true
+    },
+    {
+      "id": "Q040",
+      "module_id": "class10_science",
+      "question": "State Snell's Law of refraction",
+      "category": "Physics - Optics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "sin(i) / sin(r)",
+        "refractive",
+        "constant"
+      ],
+      "expected_keywords": [
+        "sin(i) / sin(r)",
+        "refractive",
+        "constant"
+      ],
+      "retrieved_chunk": "Light - Reflection and Refraction",
+      "is_offline": true
+    },
+    {
+      "id": "Q041",
+      "module_id": "class10_science",
+      "question": "What is the power of a lens and its SI unit?",
+      "category": "Physics - Optics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "dioptre",
+        "1/f",
+        "metres"
+      ],
+      "expected_keywords": [
+        "dioptre",
+        "1/f",
+        "metres"
+      ],
+      "retrieved_chunk": "Light - Reflection and Refraction",
+      "is_offline": true
+    },
+    {
+      "id": "Q042",
+      "module_id": "class10_science",
+      "question": "Why are convex mirrors used as rear-view mirrors?",
+      "category": "Physics - Optics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.23,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "convex",
+        "erect",
+        "field of view",
+        "diminished"
+      ],
+      "retrieved_chunk": "Light - Reflection and Refraction",
+      "is_offline": true
+    },
+    {
+      "id": "Q043",
+      "module_id": "class10_science",
+      "question": "What is a chemical combination reaction? Give an example.",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.24,
+      "is_correct": false,
+      "relevance_score": 55.0,
+      "matched_keywords": [
+        "reaction"
+      ],
+      "expected_keywords": [
+        "combine",
+        "single product",
+        "cao",
+        "reaction"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q044",
+      "module_id": "class10_science",
+      "question": "What is a decomposition reaction?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.24,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "breaks down",
+        "heat",
+        "simpler products"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q045",
+      "module_id": "class10_science",
+      "question": "What is a displacement reaction?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.24,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "more reactive",
+        "displaces",
+        "less reactive"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q046",
+      "module_id": "class10_science",
+      "question": "Define oxidation and reduction in terms of oxygen gain/loss",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.24,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "oxidation",
+        "gain of oxygen",
+        "reduction",
+        "loss"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q047",
+      "module_id": "class10_science",
+      "question": "What is the pH scale and what does pH 7 mean?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "ph",
+        "neutral",
+        "7"
+      ],
+      "expected_keywords": [
+        "ph",
+        "neutral",
+        "hydrogen ion",
+        "7"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q048",
+      "module_id": "class10_science",
+      "question": "What is the chemical formula of baking soda?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "nahco3",
+        "sodium hydrogen carbonate"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q049",
+      "module_id": "class10_science",
+      "question": "What happens when Plaster of Paris mixes with water?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "caso4"
+      ],
+      "expected_keywords": [
+        "gypsum",
+        "hard",
+        "caso4"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q050",
+      "module_id": "class10_science",
+      "question": "Explain the equation for photosynthesis",
+      "category": "Biology",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "co2",
+        "h2o",
+        "glucose",
+        "chlorophyll",
+        "oxygen"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q051",
+      "module_id": "class10_science",
+      "question": "What is the difference between aerobic and anaerobic respiration?",
+      "category": "Biology",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "oxygen",
+        "atp",
+        "lactic acid"
+      ],
+      "expected_keywords": [
+        "oxygen",
+        "mitochondria",
+        "atp",
+        "lactic acid"
+      ],
+      "retrieved_chunk": "Life Processes",
+      "is_offline": true
+    },
+    {
+      "id": "Q052",
+      "module_id": "class10_science",
+      "question": "What is the function of nephrons in the human body?",
+      "category": "Biology",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "kidney",
+        "filtration",
+        "urine",
+        "excretion"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q053",
+      "module_id": "class10_science",
+      "question": "What are the main functions of xylem and phloem?",
+      "category": "Biology",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 52.0,
+      "matched_keywords": [
+        "water"
+      ],
+      "expected_keywords": [
+        "xylem",
+        "water",
+        "phloem",
+        "food",
+        "transport"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q054",
+      "module_id": "class10_science",
+      "question": "What is the unit of electric current?",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "ampere"
+      ],
+      "expected_keywords": [
+        "ampere",
+        "coulombs per second"
+      ],
+      "retrieved_chunk": "Electricity",
+      "is_offline": true
+    },
+    {
+      "id": "Q055",
+      "module_id": "class10_science",
+      "question": "What is the commercial unit of electrical energy?",
+      "category": "Physics - Electricity",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "kilowatt-hour",
+        "kwh",
+        "3.6"
+      ],
+      "retrieved_chunk": "Life Processes",
+      "is_offline": true
+    },
+    {
+      "id": "Q056",
+      "module_id": "class10_science",
+      "question": "What gas is produced when acid reacts with metal?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "hydrogen",
+        "h2",
+        "gas"
+      ],
+      "expected_keywords": [
+        "hydrogen",
+        "h2",
+        "gas"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q057",
+      "module_id": "class10_science",
+      "question": "What is rancidity and how can it be prevented?",
+      "category": "Chemistry",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.25,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "oxidation",
+        "fat",
+        "antioxidants",
+        "nitrogen"
+      ],
+      "retrieved_chunk": "Chemical Reactions and Equations",
+      "is_offline": true
+    },
+    {
+      "id": "Q058",
+      "module_id": "class10_science",
+      "question": "What is momentum and what is its SI unit?",
+      "category": "Physics - Mechanics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.26,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "mass",
+        "velocity",
+        "kg m/s"
+      ],
+      "retrieved_chunk": "Example: Explain Newton's second law with formula and an example.",
+      "is_offline": true
+    },
+    {
+      "id": "Q059",
+      "module_id": "class10_science",
+      "question": "What is the lens formula?",
+      "category": "Physics - Optics",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.26,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "1/f = 1/v - 1/u",
+        "lens"
+      ],
+      "expected_keywords": [
+        "1/f = 1/v - 1/u",
+        "lens"
+      ],
+      "retrieved_chunk": "Light - Reflection and Refraction",
+      "is_offline": true
+    },
+    {
+      "id": "Q060",
+      "module_id": "class10_science",
+      "question": "Why does stomach produce hydrochloric acid?",
+      "category": "Biology",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.26,
+      "is_correct": false,
+      "relevance_score": 55.0,
+      "matched_keywords": [
+        "acidic"
+      ],
+      "expected_keywords": [
+        "hcl",
+        "pepsin",
+        "acidic",
+        "digestion"
+      ],
+      "retrieved_chunk": "Acids, Bases and Salts",
+      "is_offline": true
+    },
+    {
+      "id": "Q061",
+      "module_id": "class5_math",
+      "question": "A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+      "category": "Speed Distance Time",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 80.0,
+      "matched_keywords": [
+        "100",
+        "meters"
+      ],
+      "expected_keywords": [
+        "100",
+        "speed * time",
+        "meters"
+      ],
+      "retrieved_chunk": "Example: A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+      "is_offline": true
+    },
+    {
+      "id": "Q062",
+      "module_id": "class5_math",
+      "question": "What is the formula for speed?",
+      "category": "Speed Distance Time",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "speed"
+      ],
+      "expected_keywords": [
+        "distance / time",
+        "speed"
+      ],
+      "retrieved_chunk": "Example: A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+      "is_offline": true
+    },
+    {
+      "id": "Q063",
+      "module_id": "class5_math",
+      "question": "How do you calculate distance when speed and time are given?",
+      "category": "Speed Distance Time",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "multiply"
+      ],
+      "expected_keywords": [
+        "speed * time",
+        "multiply"
+      ],
+      "retrieved_chunk": "Example: A car travels at 20 m/s for 5 seconds. What distance does it travel?",
+      "is_offline": true
+    },
+    {
+      "id": "Q064",
+      "module_id": "class5_math",
+      "question": "What is the perimeter of a rectangle?",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "boundary"
+      ],
+      "expected_keywords": [
+        "2 * (length + breadth)",
+        "boundary"
+      ],
+      "retrieved_chunk": "Perimeter and Area",
+      "is_offline": true
+    },
+    {
+      "id": "Q065",
+      "module_id": "class5_math",
+      "question": "What is the area of a rectangle?",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "square"
+      ],
+      "expected_keywords": [
+        "length * breadth",
+        "square"
+      ],
+      "retrieved_chunk": "Perimeter and Area",
+      "is_offline": true
+    },
+    {
+      "id": "Q066",
+      "module_id": "class5_math",
+      "question": "What is the perimeter of a square with side 6 cm?",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "24",
+        "4 * side"
+      ],
+      "retrieved_chunk": "Perimeter and Area",
+      "is_offline": true
+    },
+    {
+      "id": "Q067",
+      "module_id": "class5_math",
+      "question": "What is the area of a square with side 5 cm?",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "25",
+        "side * side"
+      ],
+      "retrieved_chunk": "Perimeter and Area",
+      "is_offline": true
+    },
+    {
+      "id": "Q068",
+      "module_id": "class5_math",
+      "question": "What is a right angle?",
+      "category": "Shapes and Angles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "90",
+        "degrees"
+      ],
+      "expected_keywords": [
+        "90",
+        "degrees"
+      ],
+      "retrieved_chunk": "Shapes and Angles",
+      "is_offline": true
+    },
+    {
+      "id": "Q069",
+      "module_id": "class5_math",
+      "question": "What is an acute angle?",
+      "category": "Shapes and Angles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "degrees"
+      ],
+      "expected_keywords": [
+        "less than 90",
+        "degrees"
+      ],
+      "retrieved_chunk": "Shapes and Angles",
+      "is_offline": true
+    },
+    {
+      "id": "Q070",
+      "module_id": "class5_math",
+      "question": "What is an obtuse angle?",
+      "category": "Shapes and Angles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "between 90 and 180",
+        "greater than 90"
+      ],
+      "retrieved_chunk": "Shapes and Angles",
+      "is_offline": true
+    },
+    {
+      "id": "Q071",
+      "module_id": "class5_math",
+      "question": "How many thousands are there in 1 Lakh?",
+      "category": "Large Numbers",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "100",
+        "100,000"
+      ],
+      "expected_keywords": [
+        "100",
+        "100,000"
+      ],
+      "retrieved_chunk": "Large Numbers and Place Value",
+      "is_offline": true
+    },
+    {
+      "id": "Q072",
+      "module_id": "class5_math",
+      "question": "How many lakhs are in 1 Crore?",
+      "category": "Large Numbers",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "100",
+        "crore"
+      ],
+      "expected_keywords": [
+        "100",
+        "crore"
+      ],
+      "retrieved_chunk": "Large Numbers and Place Value",
+      "is_offline": true
+    },
+    {
+      "id": "Q073",
+      "module_id": "class5_math",
+      "question": "What is a proper fraction?",
+      "category": "Fractions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.32,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "fraction"
+      ],
+      "expected_keywords": [
+        "numerator < denominator",
+        "fraction"
+      ],
+      "retrieved_chunk": "Fractions and Decimals",
+      "is_offline": true
+    },
+    {
+      "id": "Q074",
+      "module_id": "class5_math",
+      "question": "What is 1/4 + 2/4?",
+      "category": "Fractions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "3/4",
+        "add"
+      ],
+      "retrieved_chunk": "Large Numbers and Place Value",
+      "is_offline": true
+    },
+    {
+      "id": "Q075",
+      "module_id": "class5_math",
+      "question": "Convert 0.5 into a simple fraction",
+      "category": "Fractions",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "1/2",
+        "5/10"
+      ],
+      "expected_keywords": [
+        "1/2",
+        "5/10"
+      ],
+      "retrieved_chunk": "Fractions and Decimals",
+      "is_offline": true
+    },
+    {
+      "id": "Q076",
+      "module_id": "class5_math",
+      "question": "If a cyclist rides 30 km in 2 hours, what is their speed?",
+      "category": "Speed Distance Time",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "km/h"
+      ],
+      "expected_keywords": [
+        "15",
+        "km/h"
+      ],
+      "retrieved_chunk": "Speed, Distance and Time",
+      "is_offline": true
+    },
+    {
+      "id": "Q077",
+      "module_id": "class5_math",
+      "question": "What is a straight angle in degrees?",
+      "category": "Shapes and Angles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "180",
+        "degrees"
+      ],
+      "expected_keywords": [
+        "180",
+        "degrees"
+      ],
+      "retrieved_chunk": "Shapes and Angles",
+      "is_offline": true
+    },
+    {
+      "id": "Q078",
+      "module_id": "class5_math",
+      "question": "Find perimeter of a rectangle with length 10 m and breadth 4 m",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "formula"
+      ],
+      "expected_keywords": [
+        "28",
+        "formula"
+      ],
+      "retrieved_chunk": "Example: Find the perimeter and area of a rectangle with length 8 cm and breadth 5 cm.",
+      "is_offline": true
+    },
+    {
+      "id": "Q079",
+      "module_id": "class5_math",
+      "question": "Find area of a rectangle with length 10 m and breadth 4 m",
+      "category": "Perimeter and Area",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "40"
+      ],
+      "expected_keywords": [
+        "40",
+        "sq m"
+      ],
+      "retrieved_chunk": "Example: Find the perimeter and area of a rectangle with length 8 cm and breadth 5 cm.",
+      "is_offline": true
+    },
+    {
+      "id": "Q080",
+      "module_id": "class5_math",
+      "question": "How many sides does a pentagon have?",
+      "category": "Shapes and Angles",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.33,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "5",
+        "sides"
+      ],
+      "retrieved_chunk": "Perimeter and Area",
+      "is_offline": true
+    },
+    {
+      "id": "Q081",
+      "module_id": "bca_cs",
+      "question": "Explain how Binary Search works and state its time complexity",
+      "category": "Algorithms",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.41,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "divide",
+        "sorted",
+        "o(log n)"
+      ],
+      "expected_keywords": [
+        "divide",
+        "mid",
+        "sorted",
+        "o(log n)"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q082",
+      "module_id": "bca_cs",
+      "question": "What is the time complexity of Linear Search?",
+      "category": "Algorithms",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.41,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "o(n)",
+        "linear"
+      ],
+      "expected_keywords": [
+        "o(n)",
+        "linear"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q083",
+      "module_id": "bca_cs",
+      "question": "What principle does a Stack follow?",
+      "category": "Data Structures",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.41,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "lifo",
+        "push",
+        "pop"
+      ],
+      "expected_keywords": [
+        "lifo",
+        "last in first out",
+        "push",
+        "pop"
+      ],
+      "retrieved_chunk": "Data Structures: Stacks and Queues",
+      "is_offline": true
+    },
+    {
+      "id": "Q084",
+      "module_id": "bca_cs",
+      "question": "What principle does a Queue follow?",
+      "category": "Data Structures",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "enqueue",
+        "dequeue"
+      ],
+      "expected_keywords": [
+        "fifo",
+        "first in first out",
+        "enqueue",
+        "dequeue"
+      ],
+      "retrieved_chunk": "Data Structures: Stacks and Queues",
+      "is_offline": true
+    },
+    {
+      "id": "Q085",
+      "module_id": "bca_cs",
+      "question": "What are the four main pillars of Object-Oriented Programming?",
+      "category": "OOP",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "abstraction"
+      ],
+      "expected_keywords": [
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "abstraction"
+      ],
+      "retrieved_chunk": "Object-Oriented Programming (OOP)",
+      "is_offline": true
+    },
+    {
+      "id": "Q086",
+      "module_id": "bca_cs",
+      "question": "Explain encapsulation in OOP with an example",
+      "category": "OOP",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "data",
+        "methods",
+        "bundle",
+        "private"
+      ],
+      "expected_keywords": [
+        "data",
+        "methods",
+        "bundle",
+        "private"
+      ],
+      "retrieved_chunk": "Object-Oriented Programming (OOP)",
+      "is_offline": true
+    },
+    {
+      "id": "Q087",
+      "module_id": "bca_cs",
+      "question": "What is inheritance in OOP?",
+      "category": "OOP",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": true,
+      "relevance_score": 85.0,
+      "matched_keywords": [
+        "child",
+        "parent",
+        "class"
+      ],
+      "expected_keywords": [
+        "child",
+        "parent",
+        "reuse",
+        "class"
+      ],
+      "retrieved_chunk": "Object-Oriented Programming (OOP)",
+      "is_offline": true
+    },
+    {
+      "id": "Q088",
+      "module_id": "bca_cs",
+      "question": "What is polymorphism in Python?",
+      "category": "OOP",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "same method",
+        "different",
+        "poly"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    },
+    {
+      "id": "Q089",
+      "module_id": "bca_cs",
+      "question": "How does Bubble Sort work and what is its worst-case complexity?",
+      "category": "Algorithms",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "o(n^2)"
+      ],
+      "expected_keywords": [
+        "swap",
+        "adjacent",
+        "o(n^2)"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q090",
+      "module_id": "bca_cs",
+      "question": "Explain Merge Sort and its divide-and-conquer approach",
+      "category": "Algorithms",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "divide",
+        "conquer",
+        "merge",
+        "o(n log n)"
+      ],
+      "expected_keywords": [
+        "divide",
+        "conquer",
+        "merge",
+        "o(n log n)"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q091",
+      "module_id": "bca_cs",
+      "question": "What is a recursive function in Python?",
+      "category": "Python Programming",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "calls itself",
+        "base case",
+        "recursion"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    },
+    {
+      "id": "Q092",
+      "module_id": "bca_cs",
+      "question": "What is the difference between a list and a tuple in Python?",
+      "category": "Python Programming",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.42,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "mutable",
+        "immutable",
+        "brackets"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    },
+    {
+      "id": "Q093",
+      "module_id": "bca_cs",
+      "question": "What does a while loop do in Python?",
+      "category": "Python Programming",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "condition"
+      ],
+      "expected_keywords": [
+        "condition",
+        "executes",
+        "true"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    },
+    {
+      "id": "Q094",
+      "module_id": "bca_cs",
+      "question": "What is a dictionary in Python?",
+      "category": "Python Programming",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "key"
+      ],
+      "expected_keywords": [
+        "key",
+        "value",
+        "hash"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    },
+    {
+      "id": "Q095",
+      "module_id": "bca_cs",
+      "question": "What is the worst-case time complexity of Merge Sort?",
+      "category": "Algorithms",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "o(n log n)"
+      ],
+      "expected_keywords": [
+        "o(n log n)",
+        "complexity"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q096",
+      "module_id": "bca_cs",
+      "question": "What is an array and what is its index of the first element?",
+      "category": "Data Structures",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "0",
+        "zero",
+        "contiguous"
+      ],
+      "retrieved_chunk": "Searching and Sorting Algorithms",
+      "is_offline": true
+    },
+    {
+      "id": "Q097",
+      "module_id": "bca_cs",
+      "question": "What is a class vs an object?",
+      "category": "OOP",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": true,
+      "relevance_score": 100.0,
+      "matched_keywords": [
+        "blueprint",
+        "instance",
+        "class"
+      ],
+      "expected_keywords": [
+        "blueprint",
+        "instance",
+        "class"
+      ],
+      "retrieved_chunk": "Object-Oriented Programming (OOP)",
+      "is_offline": true
+    },
+    {
+      "id": "Q098",
+      "module_id": "bca_cs",
+      "question": "Give a real-world example of a Stack data structure",
+      "category": "Data Structures",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": false,
+      "relevance_score": 40.0,
+      "matched_keywords": [],
+      "expected_keywords": [
+        "undo",
+        "call stack",
+        "plates"
+      ],
+      "retrieved_chunk": "Data Structures: Stacks and Queues",
+      "is_offline": true
+    },
+    {
+      "id": "Q099",
+      "module_id": "bca_cs",
+      "question": "Give a real-world example of a Queue data structure",
+      "category": "Data Structures",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": false,
+      "relevance_score": 60.0,
+      "matched_keywords": [
+        "line"
+      ],
+      "expected_keywords": [
+        "printer",
+        "line",
+        "scheduling"
+      ],
+      "retrieved_chunk": "Data Structures: Stacks and Queues",
+      "is_offline": true
+    },
+    {
+      "id": "Q100",
+      "module_id": "bca_cs",
+      "question": "What keyword is used to define a function in Python?",
+      "category": "Python Programming",
+      "latency_sec": 0.28,
+      "ram_rss_mb": 19.43,
+      "is_correct": true,
+      "relevance_score": 70.0,
+      "matched_keywords": [
+        "def"
+      ],
+      "expected_keywords": [
+        "def",
+        "function"
+      ],
+      "retrieved_chunk": "Python Programming Fundamentals",
+      "is_offline": true
+    }
+  ]
+}

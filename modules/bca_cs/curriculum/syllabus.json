@@ -1,0 +1,11 @@
+{
+  "syllabus_code": "CS-BCA-2026",
+  "total_chapters": 5,
+  "learning_objectives": [
+    "Write modular code using Python loops, functions, and control flow",
+    "Apply recursion and understand call stack execution",
+    "Implement OOP concepts: classes, inheritance, encapsulation, polymorphism",
+    "Design Stack (LIFO) and Queue (FIFO) data structures",
+    "Analyze time and space complexity of sorting (Bubble, Merge) and search algorithms"
+  ]
+}

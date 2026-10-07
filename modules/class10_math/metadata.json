@@ -1,0 +1,22 @@
+{
+  "module_id": "class10_math",
+  "name": "Class 10 Mathematics",
+  "class": 10,
+  "subject": "Mathematics",
+  "language": "English",
+  "version": "1.0",
+  "size_mb": 72,
+  "author": "NCERT / National Curriculum Framework",
+  "topics": [
+    "Real Numbers",
+    "Polynomials",
+    "Linear Equations",
+    "Quadratic Equations",
+    "Arithmetic Progressions",
+    "Triangles",
+    "Coordinate Geometry",
+    "Trigonometry",
+    "Circles",
+    "Statistics & Probability"
+  ]
+}

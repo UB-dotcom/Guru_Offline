@@ -1,0 +1,4234 @@
+{
+  "total_docs": 8,
+  "avg_dl": 126.375,
+  "doc_lengths": [
+    135,
+    125,
+    122,
+    135,
+    119,
+    166,
+    113,
+    96
+  ],
+  "idf": {
+    "chemical": 1.7918,
+    "reactions": 1.7918,
+    "equations": 1.7918,
+    "changes": 1.2809,
+    "represented": 1.7918,
+    "balanced": 1.7918,
+    "obeying": 1.7918,
+    "conservation": 1.2809,
+    "mass..": 1.7918,
+    "formulas": 0.3254,
+    "combination": 1.7918,
+    "ab": 1.7918,
+    "decomposition": 1.7918,
+    "thermal": 1.7918,
+    "electrolytic": 1.7918,
+    "photolytic": 1.7918,
+    "displacement": 1.7918,
+    "bc": 1.7918,
+    "ac": 1.7918,
+    "double": 1.7918,
+    "cd": 1.7918,
+    "ad": 1.7918,
+    "cb.": 1.7918,
+    "reaction": 1.2809,
+    "involves": 1.7918,
+    "breaking": 1.7918,
+    "old": 1.7918,
+    "bonds": 1.7918,
+    "forming": 1.7918,
+    "new": 1.7918,
+    "produce": 1.2809,
+    "substances.": 1.7918,
+    "according": 1.7918,
+    "law": 0.3254,
+    "mass": 0.9445,
+    "matter": 1.7918,
+    "can": 1.7918,
+    "neither": 1.7918,
+    "created": 1.7918,
+    "destroyed": 1.7918,
+    "reaction.": 1.2809,
+    "therefore": 1.2809,
+    "total": 0.9445,
+    "number": 1.7918,
+    "atoms": 1.7918,
+    "element": 1.7918,
+    "remains": 0.9445,
+    "identical": 1.2809,
+    "reactant": 1.7918,
+    "product": 1.7918,
+    "sides.": 1.7918,
+    "types": 1.7918,
+    "two": 1.7918,
+    "substances": 1.2809,
+    "combine": 1.7918,
+    "form": 0.9445,
+    "single": 1.7918,
+    "e.g.": 1.7918,
+    "cao": 1.7918,
+    "h2o": 0.9445,
+    "ca": 1.7918,
+    "oh": 1.7918,
+    "2.": 1.7918,
+    "breaks": 1.2809,
+    "simpler": 1.7918,
+    "products": 1.7918,
+    "2feso4": 1.7918,
+    "fe2o3": 1.7918,
+    "so2": 1.7918,
+    "so3.": 1.7918,
+    "reactive": 1.7918,
+    "displaces": 1.7918,
+    "less": 1.7918,
+    "salt": 1.2809,
+    "solution": 1.2809,
+    "fe": 1.7918,
+    "cuso4": 1.7918,
+    "feso4": 1.7918,
+    "cu.": 1.7918,
+    "exchange": 1.7918,
+    "ions": 1.2809,
+    "occurs": 1.2809,
+    "na2so4": 1.7918,
+    "bacl2": 1.7918,
+    "baso4": 1.7918,
+    "white": 1.7918,
+    "ppt": 1.7918,
+    "2nacl.": 1.7918,
+    "redox": 1.7918,
+    "oxidation": 1.7918,
+    "gain": 1.7918,
+    "oxygen": 1.7918,
+    "loss": 1.7918,
+    "hydrogen/electrons": 1.7918,
+    "reduction": 1.7918,
+    "oxygen.": 1.2809,
+    "acids": 1.7918,
+    "bases": 1.7918,
+    "salts": 1.7918,
+    "h+": 1.7918,
+    "aq": 1.7918,
+    "oh-": 1.7918,
+    "ions.": 1.7918,
+    "neutralization": 1.7918,
+    "reaction..": 1.7918,
+    "acid": 1.2809,
+    "metal": 1.7918,
+    "hydrogen": 1.7918,
+    "gas": 1.7918,
+    "h2": 1.7918,
+    "base": 1.7918,
+    "water": 1.2809,
+    "ph": 1.7918,
+    "-log": 1.7918,
+    "acidic": 1.7918,
+    "neutral": 1.7918,
+    "basic": 1.2809,
+    "bleaching": 1.7918,
+    "powder": 1.7918,
+    "caocl2": 1.7918,
+    "baking": 1.7918,
+    "soda": 1.7918,
+    "nahco3": 1.7918,
+    "plaster": 1.7918,
+    "paris": 1.7918,
+    "caso4.1/2h2o.": 1.7918,
+    "taste": 1.7918,
+    "sour": 1.7918,
+    "turn": 1.7918,
+    "blue": 1.7918,
+    "litmus": 1.7918,
+    "red.": 1.7918,
+    "aqueous": 1.7918,
+    "release": 1.2809,
+    "hydronium": 1.7918,
+    "h3o+": 1.7918,
+    "bitter": 1.7918,
+    "soapy": 1.7918,
+    "touch": 1.7918,
+    "red": 1.7918,
+    "scale": 1.7918,
+    "measures": 1.7918,
+    "ion": 1.7918,
+    "concentration": 1.7918,
+    "strongly": 1.7918,
+    "14": 1.7918,
+    "7.": 1.7918,
+    "digestive": 1.7918,
+    "system": 1.2809,
+    "stomach": 1.7918,
+    "releases": 1.7918,
+    "hydrochloric": 1.7918,
+    "hcl": 1.7918,
+    "1.2": 1.7918,
+    "activate": 1.7918,
+    "pepsin.": 1.7918,
+    "antacids": 1.7918,
+    "like": 1.7918,
+    "magnesium": 1.7918,
+    "hydroxide": 1.7918,
+    "milk": 1.7918,
+    "magnesia": 1.7918,
+    "neutralize": 1.7918,
+    "excess": 1.7918,
+    "acid.": 1.7918,
+    "caso4.1/2h2o": 1.7918,
+    "reacts": 1.7918,
+    "hardens": 1.7918,
+    "gypsum": 1.7918,
+    "caso4.2h2o.": 1.7918,
+    "life": 1.7918,
+    "processes": 1.7918,
+    "metabolic": 1.7918,
+    "functions": 1.7918,
+    "essential": 1.7918,
+    "maintain": 1.7918,
+    "organisms..": 1.7918,
+    "photosynthesis": 1.7918,
+    "6co2": 1.7918,
+    "12h2o": 1.7918,
+    "sunlight": 1.7918,
+    "chlorophyll": 1.7918,
+    "c6h12o6": 1.7918,
+    "6o2": 1.7918,
+    "6h2o": 1.7918,
+    "aerobic": 1.7918,
+    "respiration": 1.7918,
+    "glucose": 1.7918,
+    "38": 1.7918,
+    "atp": 1.7918,
+    "anaerobic": 1.7918,
+    "muscle": 1.7918,
+    "lactic": 1.7918,
+    "causes": 1.7918,
+    "cramps": 1.7918,
+    "sustain": 1.7918,
+    "living": 1.7918,
+    "organisms": 1.7918,
+    "nutrition": 1.7918,
+    "transport": 1.7918,
+    "excretion.": 1.7918,
+    "autotrophic": 1.7918,
+    "green": 1.7918,
+    "plants": 1.7918,
+    "traps": 1.7918,
+    "solar": 1.7918,
+    "energy": 1.7918,
+    "convert": 1.7918,
+    "carbon": 1.7918,
+    "dioxide": 1.7918,
+    "releasing": 1.7918,
+    "takes": 1.2809,
+    "place": 1.2809,
+    "mitochondria": 1.7918,
+    "producing": 1.7918,
+    "co2": 1.7918,
+    "36-38": 1.7918,
+    "yeast": 1.7918,
+    "produces": 1.2809,
+    "ethanol": 1.7918,
+    "co2.": 1.7918,
+    "human": 1.7918,
+    "circulatory": 1.7918,
+    "consists": 1.7918,
+    "four-chambered": 1.7918,
+    "heart": 1.7918,
+    "blood": 1.7918,
+    "rbcs": 1.7918,
+    "wbcs": 1.7918,
+    "platelets": 1.7918,
+    "plasma": 1.7918,
+    "vessels": 1.7918,
+    "arteries": 1.7918,
+    "carry": 1.7918,
+    "oxygenated": 1.7918,
+    "high": 1.7918,
+    "pressure": 1.7918,
+    "away": 1.7918,
+    "veins": 1.7918,
+    "deoxygenated": 1.7918,
+    "back": 0.9445,
+    "excretion": 1.7918,
+    "humans": 1.7918,
+    "carried": 1.7918,
+    "kidneys": 1.7918,
+    "containing": 1.7918,
+    "millions": 1.7918,
+    "nephron": 1.7918,
+    "filtering": 1.7918,
+    "units.": 1.7918,
+    "light": 1.7918,
+    "reflection": 1.7918,
+    "refraction": 1.7918,
+    "behavior": 1.7918,
+    "rays": 1.7918,
+    "mirror": 1.7918,
+    "formula": 0.4925,
+    "lens": 1.7918,
+    "magnification..": 1.7918,
+    "laws": 0.9445,
+    "angle": 1.7918,
+    "incidence": 1.7918,
+    "1/f": 1.7918,
+    "1/v": 1.7918,
+    "1/u": 1.7918,
+    "focal": 1.7918,
+    "length": 1.2809,
+    "image": 1.7918,
+    "distance": 1.7918,
+    "object": 0.9445,
+    "magnification": 1.7918,
+    "-v/u": 1.7918,
+    "/h": 1.7918,
+    "snell": 1.7918,
+    "sin": 1.7918,
+    "constant": 1.2809,
+    "n21": 1.7918,
+    "refractive": 1.7918,
+    "index": 1.7918,
+    "v/u": 1.7918,
+    "power": 1.2809,
+    "metres": 1.7918,
+    "measured": 1.2809,
+    "dioptres": 1.7918,
+    "travels": 1.7918,
+    "straight": 1.2809,
+    "lines": 1.7918,
+    "homogeneous": 1.7918,
+    "medium.": 1.7918,
+    "bouncing": 1.7918,
+    "smooth": 1.7918,
+    "surface.": 1.7918,
+    "concave": 1.7918,
+    "mirrors": 1.7918,
+    "real": 1.7918,
+    "inverted": 1.7918,
+    "images": 1.7918,
+    "positions": 1.7918,
+    "virtual": 1.7918,
+    "erect": 1.7918,
+    "magnified": 1.7918,
+    "pole": 1.7918,
+    "focus": 1.7918,
+    "used": 1.2809,
+    "dentists": 1.7918,
+    "shaving": 1.7918,
+    "convex": 1.7918,
+    "always": 1.2809,
+    "diminished": 1.7918,
+    "wide": 1.7918,
+    "field": 1.7918,
+    "view": 1.7918,
+    "rear-view": 1.7918,
+    "bending": 1.7918,
+    "passes": 1.7918,
+    "obliquely": 1.7918,
+    "one": 1.2809,
+    "transparent": 1.7918,
+    "medium": 1.7918,
+    "another": 1.7918,
+    "due": 1.7918,
+    "change": 0.9445,
+    "speed.": 1.7918,
+    "lenses": 1.7918,
+    "converge": 1.7918,
+    "diverge": 1.7918,
+    "light.": 1.7918,
+    "+0.5": 1.7918,
+    "1/0.5": 1.7918,
+    "+2": 1.7918,
+    "d.": 1.7918,
+    "electricity": 1.2809,
+    "flow": 1.7918,
+    "charge": 1.7918,
+    "potential": 1.7918,
+    "difference": 1.7918,
+    "resistance": 1.2809,
+    "series": 1.7918,
+    "parallel": 1.2809,
+    "circuits": 1.7918,
+    "joule": 1.7918,
+    "law..": 1.7918,
+    "current": 1.2809,
+    "amperes": 1.7918,
+    "coulombs/second": 1.7918,
+    "volts": 1.7918,
+    "joules/coulomb": 1.7918,
+    "ohm": 1.2809,
+    "electrical": 1.7918,
+    "ohms": 1.2809,
+    "omega": 1.7918,
+    "rho": 1.7918,
+    "resistivity": 1.7918,
+    "ohm-meter": 1.7918,
+    "r_total": 1.7918,
+    "r1": 1.2809,
+    "r2": 1.2809,
+    "r3": 1.7918,
+    "1/r_total": 1.7918,
+    "1/r1": 1.7918,
+    "1/r2": 1.7918,
+    "1/r3": 1.7918,
+    "heating": 1.7918,
+    "i^2": 1.7918,
+    "electric": 1.7918,
+    "v^2": 1.7918,
+    "watts": 1.7918,
+    "rate": 0.9445,
+    "charges": 1.7918,
+    "conductor.": 1.7918,
+    "states": 1.2809,
+    "flowing": 1.7918,
+    "conductor": 1.7918,
+    "directly": 0.9445,
+    "proportional": 0.9445,
+    "across": 1.7918,
+    "ends": 1.7918,
+    "provided": 1.7918,
+    "temperature": 1.7918,
+    "i*r.": 1.7918,
+    "depends": 1.7918,
+    "cross-sectional": 1.7918,
+    "area": 1.7918,
+    "inversely": 1.7918,
+    "nature": 1.7918,
+    "material": 1.7918,
+    "components": 1.7918,
+    "algebraic": 1.7918,
+    "sum.": 1.7918,
+    "voltage": 1.7918,
+    "branch": 1.7918,
+    "equivalent": 1.2809,
+    "lower": 1.7918,
+    "smallest": 1.7918,
+    "resistance.": 1.7918,
+    "effect": 1.7918,
+    "i^2*r*t": 1.7918,
+    "irons": 1.7918,
+    "heaters": 1.7918,
+    "safety": 1.7918,
+    "fuses.": 1.7918,
+    "force": 1.2809,
+    "newton": 1.2809,
+    "motion": 1.2809,
+    "fundamental": 1.7918,
+    "principles": 1.7918,
+    "governing": 1.7918,
+    "acceleration": 1.2809,
+    "interaction..": 1.7918,
+    "momentum": 1.2809,
+    "kg": 1.2809,
+    "m/s": 1.7918,
+    "second": 1.2809,
+    "mv": 1.7918,
+    "/dt": 1.7918,
+    "m/s^2": 1.7918,
+    "third": 1.7918,
+    "f_ab": 1.7918,
+    "f_ba": 1.7918,
+    "action": 1.7918,
+    "equal": 1.7918,
+    "opposite": 1.7918,
+    "m1*u1": 1.7918,
+    "m2*u2": 1.7918,
+    "m1*v1": 1.7918,
+    "m2*v2.": 1.7918,
+    "cornerstone": 1.7918,
+    "classical": 1.7918,
+    "physics.": 1.7918,
+    "first": 1.7918,
+    "inertia": 1.7918,
+    "state": 1.7918,
+    "rest": 1.7918,
+    "uniform": 1.7918,
+    "line": 1.7918,
+    "unless": 1.7918,
+    "acted": 1.7918,
+    "upon": 1.7918,
+    "unbalanced": 1.2809,
+    "external": 1.7918,
+    "force.": 1.2809,
+    "natural": 1.7918,
+    "tendency": 1.7918,
+    "resist": 1.7918,
+    "quantitative": 1.7918,
+    "measure": 1.7918,
+    "inertia.": 1.7918,
+    "applied": 1.2809,
+    "direction": 1.2809,
+    "since": 1.2809,
+    "m*v": 1.7918,
+    "m*": 1.7918,
+    "/t": 1.2809,
+    "m*a.": 1.2809,
+    "hence": 1.2809,
+    "m*a": 1.2809,
+    "body.": 1.7918,
+    "example": 0.9445,
+    "cricket": 1.2809,
+    "fielder": 1.2809,
+    "pulls": 1.2809,
+    "hands": 1.2809,
+    "backwards": 1.7918,
+    "catching": 1.2809,
+    "fast": 1.2809,
+    "ball": 1.7918,
+    "increase": 1.7918,
+    "impact": 1.7918,
+    "time": 1.2809,
+    "reducing": 1.7918,
+    "thereby": 1.7918,
+    "every": 1.7918,
+    "exerts": 1.7918,
+    "simultaneously": 1.7918,
+    "magnitude": 1.7918,
+    "a.": 0.9445,
+    "explain": 1.7918,
+    "example.": 1.7918,
+    "steps": 1.2809,
+    "step": 1.2809,
+    "statement": 1.7918,
+    "mathematical": 1.7918,
+    "derivation": 1.7918,
+    "v.": 1.7918,
+    "initial": 1.7918,
+    "m*u": 1.7918,
+    "final": 1.2809,
+    "m*v.": 1.7918,
+    "units": 1.7918,
+    "newtons": 1.7918,
+    "m/s^2.": 1.7918,
+    "real-life": 1.7918,
+    "backward": 1.7918,
+    "ball.": 1.7918,
+    "pulling": 1.7918,
+    "increases": 1.7918,
+    "interval": 1.7918,
+    "velocity": 1.7918,
+    "becomes": 1.7918,
+    "zero.": 1.7918,
+    "decreases": 1.7918,
+    "stopping": 1.7918,
+    "exerted": 1.7918,
+    "greatly": 1.7918,
+    "reduced": 1.7918,
+    "preventing": 1.7918,
+    "injury.": 1.7918,
+    "answer": 1.2809,
+    "equals": 1.7918,
+    "times": 1.7918,
+    "acceleration.": 1.7918,
+    "10": 1.7918,
+    "resistor": 1.7918,
+    "20": 1.7918,
+    "connected": 1.7918,
+    "6v": 1.7918,
+    "battery.": 1.7918,
+    "find": 1.7918,
+    "current.": 1.7918,
+    "identify": 1.7918,
+    "given": 1.7918,
+    "values": 1.7918,
+    "volts.": 1.7918,
+    "resistors": 1.7918,
+    "r_eq": 1.7918,
+    "1/10": 1.7918,
+    "1/20.": 1.7918,
+    "common": 1.7918,
+    "denominator": 1.7918,
+    "20.": 1.7918,
+    "invert": 1.7918,
+    "6.67": 1.7918,
+    "ohms.": 1.7918,
+    "calculate": 1.7918,
+    "using": 1.7918,
+    "20/3": 1.7918,
+    "18": 1.7918,
+    "0.9": 1.7918,
+    "amperes.": 1.7918,
+    "drawn": 1.7918
+  },
+  "inverted_index": {
+    "chemical": [
+      {
+        "doc_id": 0,
+        "tf": 7
+      }
+    ],
+    "reactions": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      }
+    ],
+    "equations": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      }
+    ],
+    "changes": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "represented": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "balanced": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "obeying": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "conservation": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "mass..": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "formulas": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "combination": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "ab": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      }
+    ],
+    "decomposition": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "thermal": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "electrolytic": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "photolytic": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "displacement": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      }
+    ],
+    "bc": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ac": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "double": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "cd": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ad": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "cb.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "reaction": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "involves": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "breaking": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "old": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "bonds": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "forming": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "new": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "produce": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "substances.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "according": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "law": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 7
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "mass": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 3
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "matter": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "can": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "neither": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "created": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "destroyed": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "reaction.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "therefore": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "total": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "number": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "atoms": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "element": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      }
+    ],
+    "remains": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "identical": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "reactant": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "product": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "sides.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "types": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "two": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "substances": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "combine": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "form": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "single": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "e.g.": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      }
+    ],
+    "cao": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "h2o": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "ca": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "oh": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "2.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "breaks": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "simpler": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "products": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "2feso4": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "fe2o3": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "so2": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "so3.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "reactive": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "displaces": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "less": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "salt": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "solution": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "fe": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "cuso4": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "feso4": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "cu.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "exchange": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ions": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "occurs": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "na2so4": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "bacl2": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "baso4": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "white": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ppt": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "2nacl.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "redox": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "oxidation": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "gain": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "oxygen": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "loss": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "hydrogen/electrons": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "reduction": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "oxygen.": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "acids": [
+      {
+        "doc_id": 1,
+        "tf": 6
+      }
+    ],
+    "bases": [
+      {
+        "doc_id": 1,
+        "tf": 5
+      }
+    ],
+    "salts": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      }
+    ],
+    "h+": [
+      {
+        "doc_id": 1,
+        "tf": 4
+      }
+    ],
+    "aq": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "oh-": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      }
+    ],
+    "ions.": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      }
+    ],
+    "neutralization": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "reaction..": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "acid": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "metal": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "hydrogen": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "gas": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "h2": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "base": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "water": [
+      {
+        "doc_id": 1,
+        "tf": 3
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "ph": [
+      {
+        "doc_id": 1,
+        "tf": 7
+      }
+    ],
+    "-log": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "acidic": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "neutral": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "basic": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "bleaching": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "powder": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "caocl2": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "baking": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "soda": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "nahco3": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "plaster": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "paris": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "caso4.1/2h2o.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "taste": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "sour": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "turn": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "blue": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "litmus": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "red.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "aqueous": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "release": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "hydronium": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "h3o+": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "bitter": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "soapy": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "touch": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "red": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "scale": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "measures": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "ion": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "concentration": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "strongly": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "14": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "7.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "digestive": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "system": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "stomach": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "releases": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "hydrochloric": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "hcl": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "1.2": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "activate": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "pepsin.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "antacids": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "like": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "magnesium": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "hydroxide": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "milk": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "magnesia": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "neutralize": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "excess": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "acid.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "caso4.1/2h2o": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "reacts": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "hardens": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "gypsum": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "caso4.2h2o.": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "life": [
+      {
+        "doc_id": 2,
+        "tf": 5
+      }
+    ],
+    "processes": [
+      {
+        "doc_id": 2,
+        "tf": 5
+      }
+    ],
+    "metabolic": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "functions": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "essential": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "maintain": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "organisms..": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "photosynthesis": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "6co2": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "12h2o": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "sunlight": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "chlorophyll": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "c6h12o6": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "6o2": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "6h2o": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "aerobic": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "respiration": [
+      {
+        "doc_id": 2,
+        "tf": 6
+      }
+    ],
+    "glucose": [
+      {
+        "doc_id": 2,
+        "tf": 4
+      }
+    ],
+    "38": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "atp": [
+      {
+        "doc_id": 2,
+        "tf": 4
+      }
+    ],
+    "anaerobic": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "muscle": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "lactic": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "causes": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "cramps": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "sustain": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "living": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "organisms": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "nutrition": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "transport": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "excretion.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "autotrophic": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "green": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "plants": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "traps": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "solar": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "energy": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "convert": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "carbon": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "dioxide": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "releasing": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "takes": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "place": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "mitochondria": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "producing": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "co2": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "36-38": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "yeast": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "produces": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "ethanol": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "co2.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "human": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "circulatory": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "consists": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "four-chambered": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "heart": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "blood": [
+      {
+        "doc_id": 2,
+        "tf": 4
+      }
+    ],
+    "rbcs": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "wbcs": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "platelets": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "plasma": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "vessels": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "arteries": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "carry": [
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "oxygenated": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "high": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "pressure": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "away": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "veins": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "deoxygenated": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "back": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "excretion": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "humans": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "carried": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "kidneys": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "containing": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "millions": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "nephron": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "filtering": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "units.": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "light": [
+      {
+        "doc_id": 3,
+        "tf": 8
+      }
+    ],
+    "reflection": [
+      {
+        "doc_id": 3,
+        "tf": 6
+      }
+    ],
+    "refraction": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      }
+    ],
+    "behavior": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "rays": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "mirror": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "formula": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "lens": [
+      {
+        "doc_id": 3,
+        "tf": 5
+      }
+    ],
+    "magnification..": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "laws": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 4
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "angle": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "incidence": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "1/f": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "1/v": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "1/u": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "focal": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "length": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "image": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "distance": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "object": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 7
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "magnification": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "-v/u": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "/h": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "snell": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "sin": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "constant": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "n21": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "refractive": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "index": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "v/u": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "power": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "metres": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "measured": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "dioptres": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "travels": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "straight": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "lines": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "homogeneous": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "medium.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "bouncing": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "smooth": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "surface.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "concave": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "mirrors": [
+      {
+        "doc_id": 3,
+        "tf": 4
+      }
+    ],
+    "real": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "inverted": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "images": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "positions": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "virtual": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "erect": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "magnified": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "pole": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "focus": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "used": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "dentists": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "shaving": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "convex": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "always": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "diminished": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "wide": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "field": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "view": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "rear-view": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "bending": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "passes": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "obliquely": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "one": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "transparent": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "medium": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "another": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "due": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "change": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      }
+    ],
+    "speed.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "lenses": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "converge": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "diverge": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "light.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "+0.5": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "1/0.5": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "+2": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "d.": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "electricity": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "flow": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "charge": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "potential": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "difference": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "resistance": [
+      {
+        "doc_id": 4,
+        "tf": 6
+      },
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "series": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "parallel": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "circuits": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "joule": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "law..": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "current": [
+      {
+        "doc_id": 4,
+        "tf": 4
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "amperes": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "coulombs/second": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "volts": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "joules/coulomb": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "ohm": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 5
+      }
+    ],
+    "electrical": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "ohms": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "omega": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "rho": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "resistivity": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "ohm-meter": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "r_total": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "r1": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "r2": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "r3": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "1/r_total": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "1/r1": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "1/r2": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "1/r3": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "heating": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "i^2": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "electric": [
+      {
+        "doc_id": 4,
+        "tf": 4
+      }
+    ],
+    "v^2": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "watts": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "rate": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "charges": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "conductor.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "states": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "flowing": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "conductor": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "directly": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "proportional": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "across": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "ends": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "provided": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "temperature": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "i*r.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "depends": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "cross-sectional": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "area": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "inversely": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "nature": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "material": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "components": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "algebraic": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "sum.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "voltage": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "branch": [
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "equivalent": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "lower": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "smallest": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "resistance.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "effect": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "i^2*r*t": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "irons": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "heaters": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "safety": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "fuses.": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "force": [
+      {
+        "doc_id": 5,
+        "tf": 10
+      },
+      {
+        "doc_id": 6,
+        "tf": 7
+      }
+    ],
+    "newton": [
+      {
+        "doc_id": 5,
+        "tf": 8
+      },
+      {
+        "doc_id": 6,
+        "tf": 5
+      }
+    ],
+    "motion": [
+      {
+        "doc_id": 5,
+        "tf": 8
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "fundamental": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "principles": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "governing": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "acceleration": [
+      {
+        "doc_id": 5,
+        "tf": 4
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "interaction..": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "momentum": [
+      {
+        "doc_id": 5,
+        "tf": 5
+      },
+      {
+        "doc_id": 6,
+        "tf": 5
+      }
+    ],
+    "kg": [
+      {
+        "doc_id": 5,
+        "tf": 3
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "m/s": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "second": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      }
+    ],
+    "mv": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "/dt": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "m/s^2": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "third": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "f_ab": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "f_ba": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "action": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "equal": [
+      {
+        "doc_id": 5,
+        "tf": 3
+      }
+    ],
+    "opposite": [
+      {
+        "doc_id": 5,
+        "tf": 3
+      }
+    ],
+    "m1*u1": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "m2*u2": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "m1*v1": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "m2*v2.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "cornerstone": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "classical": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "physics.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "first": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "inertia": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "state": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "rest": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "uniform": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "line": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "unless": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "acted": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "upon": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "unbalanced": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "external": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "force.": [
+      {
+        "doc_id": 5,
+        "tf": 3
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "natural": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "tendency": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "resist": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "quantitative": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "measure": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "inertia.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "applied": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "direction": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "since": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "m*v": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "m*": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "/t": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "m*a.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "hence": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "m*a": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "body.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "example": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "cricket": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "fielder": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "pulls": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "hands": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      }
+    ],
+    "backwards": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "catching": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "fast": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "ball": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "increase": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "impact": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "time": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "reducing": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "thereby": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "every": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "exerts": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "simultaneously": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "magnitude": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "a.": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "explain": [
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "example.": [
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "steps": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "step": [
+      {
+        "doc_id": 6,
+        "tf": 4
+      },
+      {
+        "doc_id": 7,
+        "tf": 5
+      }
+    ],
+    "statement": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "mathematical": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "derivation": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "v.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "initial": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "m*u": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "final": [
+      {
+        "doc_id": 6,
+        "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "m*v.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "units": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "newtons": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "m/s^2.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "real-life": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "backward": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "ball.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "pulling": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "increases": [
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "interval": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "velocity": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "becomes": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "zero.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "decreases": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "stopping": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "exerted": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "greatly": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "reduced": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "preventing": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "injury.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "answer": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "equals": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "times": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "acceleration.": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "10": [
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "resistor": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "20": [
+      {
+        "doc_id": 7,
+        "tf": 8
+      }
+    ],
+    "connected": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "6v": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "battery.": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "find": [
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "current.": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "identify": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "given": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "values": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "volts.": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "resistors": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "r_eq": [
+      {
+        "doc_id": 7,
+        "tf": 5
+      }
+    ],
+    "1/10": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "1/20.": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "common": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "denominator": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "20.": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "invert": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "6.67": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "ohms.": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "calculate": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "using": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "20/3": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "18": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "0.9": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "amperes.": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "drawn": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ]
+  }
+}

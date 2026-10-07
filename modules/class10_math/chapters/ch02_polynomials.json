@@ -1,0 +1,16 @@
+{
+  "chapter_id": 2,
+  "title": "Polynomials",
+  "subtopics": [
+    "Zeroes of a Polynomial",
+    "Relationship between Zeroes and Coefficients",
+    "Division Algorithm"
+  ],
+  "summary": "Relationship between roots alpha, beta and coefficients of quadratic ax^2 + bx + c.",
+  "formulas": [
+    "Sum of zeroes: alpha + beta = -b/a",
+    "Product of zeroes: alpha * beta = c/a",
+    "Cubic zeroes: alpha + beta + gamma = -b/a, alpha*beta + beta*gamma + gamma*alpha = c/a, alpha*beta*gamma = -d/a"
+  ],
+  "text": "A polynomial p(x) of degree n has at most n real zeroes. For a quadratic polynomial ax^2 + bx + c where a != 0, if alpha and beta are zeroes: Sum of roots alpha + beta = -b / a. Product of roots alpha * beta = c / a. If zeroes are known, the polynomial can be written as k[x^2 - (alpha + beta)x + (alpha * beta)]. Graphically, the zeroes of p(x) are the x-coordinates of points where the graph y = p(x) intersects the x-axis."
+}

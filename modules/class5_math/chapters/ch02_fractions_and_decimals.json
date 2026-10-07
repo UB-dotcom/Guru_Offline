@@ -1,0 +1,15 @@
+{
+  "chapter_id": 2,
+  "title": "Fractions and Decimals",
+  "subtopics": [
+    "Proper, Improper, Mixed Fractions",
+    "Addition of Fractions",
+    "Decimals in Everyday Life"
+  ],
+  "summary": "Parts of a whole. Adding and subtracting like and unlike fractions.",
+  "formulas": [
+    "Fraction = Numerator / Denominator",
+    "Equivalent fraction: a/b = (a*k)/(b*k)"
+  ],
+  "text": "A fraction represents part of a whole. In fraction a/b, a is numerator and b is denominator. If numerator < denominator, it is a proper fraction (like 3/4). If numerator >= denominator, it is improper (like 7/4). Decimals are fractions whose denominator is a power of 10 (like 0.5 = 5/10 = 1/2)."
+}

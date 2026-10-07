@@ -1,0 +1,14 @@
+{
+  "chapter_id": 1,
+  "title": "Python Programming Fundamentals",
+  "subtopics": [
+    "Variables and Data Types",
+    "Control Flow",
+    "Loops"
+  ],
+  "summary": "Core syntax, dynamic typing, if-else conditionals, for and while loops.",
+  "formulas": [
+    "Time complexity: O(1) constant, O(n) linear loop"
+  ],
+  "text": "Python is a high-level interpreted programming language. Fundamental data types include int, float, str, bool, list, dict, set, tuple. Control flow structures allow decision making using if, elif, and else statements. Loops allow repetitive execution: 'for item in iterable' iterates over sequences, while 'while condition' executes as long as the boolean expression evaluates to True."
+}

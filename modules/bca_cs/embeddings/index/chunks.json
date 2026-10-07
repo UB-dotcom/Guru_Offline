@@ -1,0 +1,37 @@
+[
+  {
+    "chunk_id": "cs_ch_1",
+    "type": "chapter",
+    "topic": "Python Programming Fundamentals",
+    "title": "Python Programming Fundamentals",
+    "content": "Python Programming Fundamentals: Core syntax, dynamic typing, if-else conditionals, for and while loops.. Formulas: Time complexity: O(1) constant, O(n) linear loop. Python is a high-level interpreted programming language. Fundamental data types include int, float, str, bool, list, dict, set, tuple. Control flow structures allow decision making using if, elif, and else statements. Loops allow repetitive execution: 'for item in iterable' iterates over sequences, while 'while condition' executes as long as the boolean expression evaluates to True."
+  },
+  {
+    "chunk_id": "cs_ch_2",
+    "type": "chapter",
+    "topic": "Object-Oriented Programming (OOP)",
+    "title": "Object-Oriented Programming (OOP)",
+    "content": "Object-Oriented Programming (OOP): The 4 pillars of OOP: Abstraction, Encapsulation, Inheritance, Polymorphism.. Formulas: class Child(Parent): inheritance syntax. Object-Oriented Programming organizes code into reusable blueprints called classes and instances called objects. Encapsulation bundles data and methods together and restricts direct access to internal state using private variables (_var, __var). Inheritance allows a child class to inherit attributes and methods from a parent class. Polymorphism allows methods in different classes to share the same name but provide customized behavior."
+  },
+  {
+    "chunk_id": "cs_ch_3",
+    "type": "chapter",
+    "topic": "Data Structures: Stacks and Queues",
+    "title": "Data Structures: Stacks and Queues",
+    "content": "Data Structures: Stacks and Queues: Stacks operate on Last-In First-Out (push, pop). Queues operate on First-In First-Out (enqueue, dequeue).. Formulas: Stack: push O(1), pop O(1) Queue: enqueue O(1), dequeue O(1). A Stack is a linear data structure following Last-In-First-Out (LIFO). Elements are added (push) and removed (pop) from the top. Real-world uses: function call stack, undo operations, parenthesis matching. A Queue is a linear data structure following First-In-First-Out (FIFO). Elements are added at rear (enqueue) and removed from front (dequeue). Real-world uses: CPU scheduling, printer task queues."
+  },
+  {
+    "chunk_id": "cs_ch_4",
+    "type": "chapter",
+    "topic": "Searching and Sorting Algorithms",
+    "title": "Searching and Sorting Algorithms",
+    "content": "Searching and Sorting Algorithms: Algorithms for finding and organizing elements in arrays.. Formulas: Binary Search: O(log n) time, requires sorted array Linear Search: O(n) time Bubble Sort: O(n^2) time Merge Sort: O(n log n) time, divide and conquer. Searching algorithms locate a target key in a collection. Linear search scans every element in O(n) time. Binary search divides sorted array in half repeatedly in O(log n) time. Bubble sort repeatedly steps through list, swapping adjacent elements that are out of order with O(n^2) worst case. Merge sort uses divide-and-conquer: recursively divides array into two halves, sorts each half, and merges them in O(n log n) time."
+  },
+  {
+    "chunk_id": "EX-CS-01",
+    "type": "example",
+    "topic": "Searching and Sorting Algorithms",
+    "title": "Example: How does Binary Search work on a sorted array [2, 5, 8, 12, 16, 23, 38] to find target 16?",
+    "content": "Example on Searching and Sorting Algorithms: How does Binary Search work on a sorted array [2, 5, 8, 12, 16, 23, 38] to find target 16? Steps: Step 1: Set low = 0, high = 6 (length 7). Array is sorted. Step 2: Find midpoint: mid = (low + high) // 2 = (0 + 6) // 2 = 3. Value at arr[3] is 12. Step 3: Compare target 16 with 12. Since 16 > 12, target must be in the right half. Set low = mid + 1 = 4. Step 4: New mid = (4 + 6) // 2 = 5. Value at arr[5] is 23. Step 5: Compare 16 with 23. Since 16 < 23, target must be in left half. Set high = mid - 1 = 4. Step 6: New mid = (4 + 4) // 2 = 4. Value at arr[4] is 16. Match found! Final answer: Target 16 found at index 4 in 3 iterations."
+  }
+]
