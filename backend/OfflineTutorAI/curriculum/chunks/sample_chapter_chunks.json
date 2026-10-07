@@ -1,0 +1,30 @@
+{
+  "source_file": "sample_chapter.txt",
+  "total_chunks": 2,
+  "chunks": [
+    {
+      "id": null,
+      "board": "CBSE",
+      "class": "Class 10",
+      "subject": "Science",
+      "chapter": "Chapter 10: Light - Reflection and Refraction",
+      "topic": "Topic: Reflection of Light and Spherical Mirrors",
+      "content": "A highly polished surface, such as a mirror, reflects most of the light falling on it. You are already familiar with the laws of reflection of light.\nLaws of reflection:\n(i) The angle of incidence is equal to the angle of reflection.\n(ii) The incident ray, the normal to the mirror at the point of incidence and the reflected ray, all lie in the same plane.",
+      "source_page": "1",
+      "chunk_id": "CBSE-Class10-SCI-SEG01-001",
+      "score": null
+    },
+    {
+      "id": null,
+      "board": "CBSE",
+      "class": "Class 10",
+      "subject": "Science",
+      "chapter": "Chapter 10: Light - Reflection and Refraction",
+      "topic": "Topic: Refraction of Light",
+      "content": "Light does not travel in the same direction in all media. It appears that when traveling obliquely from one medium to another, the direction of propagation of light in the second medium changes. This phenomenon is known as refraction of light.",
+      "source_page": "1",
+      "chunk_id": "CBSE-Class10-SCI-SEG02-001",
+      "score": null
+    }
+  ]
+}

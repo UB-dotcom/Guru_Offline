@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "title": "Class 7 General Curriculum Framework",
+    "source": "Class7_Curriculum.pdf",
+    "total_chunks": 13
+  },
+  "chunks": [
+    {
+      "curriculum_id": "general-class7-mathematics",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Mathematics",
+      "chapter": "Class 7 Mathematics Core Curriculum",
+      "topic": "Number Systems",
+      "content": "Integers, rational numbers, operations, fractions, and decimals.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-MAT-CH01-TP01-001"
+    },
+    {
+      "curriculum_id": "general-class7-mathematics",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Mathematics",
+      "chapter": "Class 7 Mathematics Core Curriculum",
+      "topic": "Algebra",
+      "content": "Algebraic expressions, framing equations, and solving simple linear equations.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-MAT-CH01-TP02-001"
+    },
+    {
+      "curriculum_id": "general-class7-mathematics",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Mathematics",
+      "chapter": "Class 7 Mathematics Core Curriculum",
+      "topic": "Geometry",
+      "content": "Lines and angles, triangles and their properties, congruence, and symmetry.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-MAT-CH01-TP03-001"
+    },
+    {
+      "curriculum_id": "general-class7-mathematics",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Mathematics",
+      "chapter": "Class 7 Mathematics Core Curriculum",
+      "topic": "Data Handling",
+      "content": "Collection, organization, central tendency (mean, median, mode), and bar graphs.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-MAT-CH01-TP04-001"
+    },
+    {
+      "curriculum_id": "general-class7-science",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Science",
+      "chapter": "Class 7 Science Core Curriculum",
+      "topic": "Physics",
+      "content": "Heat, motion and time, electric current and its effects, light and reflection.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-SCI-CH01-TP05-001"
+    },
+    {
+      "curriculum_id": "general-class7-science",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Science",
+      "chapter": "Class 7 Science Core Curriculum",
+      "topic": "Chemistry",
+      "content": "Acids, bases, salts, physical and chemical changes, and fiber to fabric.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-SCI-CH01-TP06-001"
+    },
+    {
+      "curriculum_id": "general-class7-science",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Science",
+      "chapter": "Class 7 Science Core Curriculum",
+      "topic": "Biology",
+      "content": "Nutrition in plants and animals, respiration in organisms, transportation, and reproduction in plants.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-SCI-CH01-TP07-001"
+    },
+    {
+      "curriculum_id": "general-class7-languageartsenglish",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Language Arts / English",
+      "chapter": "Class 7 Language Arts / English Core Curriculum",
+      "topic": "Reading & Comprehension",
+      "content": "Unseen passages, analytical reading, poetic devices, and central themes.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-LAN-CH01-TP08-001"
+    },
+    {
+      "curriculum_id": "general-class7-languageartsenglish",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Language Arts / English",
+      "chapter": "Class 7 Language Arts / English Core Curriculum",
+      "topic": "Writing Skills",
+      "content": "Formal letters, story writing, diary entries, and descriptive paragraphs.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-LAN-CH01-TP09-001"
+    },
+    {
+      "curriculum_id": "general-class7-languageartsenglish",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Language Arts / English",
+      "chapter": "Class 7 Language Arts / English Core Curriculum",
+      "topic": "Grammar",
+      "content": "Tenses, active/passive voice, direct/indirect speech, prepositions, and conjunctions.",
+      "source_page": "1",
+      "chunk_id": "GEN-7-LAN-CH01-TP10-001"
+    },
+    {
+      "curriculum_id": "general-class7-socialstudies",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Social Studies",
+      "chapter": "Class 7 Social Studies Core Curriculum",
+      "topic": "History",
+      "content": "Medieval history, regional cultures, rise of empires, and architectural developments.",
+      "source_page": "2",
+      "chunk_id": "GEN-7-SOC-CH01-TP11-001"
+    },
+    {
+      "curriculum_id": "general-class7-socialstudies",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Social Studies",
+      "chapter": "Class 7 Social Studies Core Curriculum",
+      "topic": "Geography",
+      "content": "Environment, inside our earth, air, water, human environment, and vegetation.",
+      "source_page": "2",
+      "chunk_id": "GEN-7-SOC-CH01-TP12-001"
+    },
+    {
+      "curriculum_id": "general-class7-socialstudies",
+      "board": "General",
+      "class": "Class 7",
+      "subject": "Social Studies",
+      "chapter": "Class 7 Social Studies Core Curriculum",
+      "topic": "Civics / Political Life",
+      "content": "Equality in democracy, role of government in health, state government, and gender issues.",
+      "source_page": "2",
+      "chunk_id": "GEN-7-SOC-CH01-TP13-001"
+    }
+  ]
+}
