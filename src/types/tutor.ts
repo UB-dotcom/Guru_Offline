@@ -24,6 +24,8 @@ export interface TutorMessage {
   latencyMs?: number;
   ramUsageMB?: number;
   isOffline?: boolean;
+  isStreaming?: boolean;
+  actionPills?: string[];
 }
 
 export interface AIServiceResponse {

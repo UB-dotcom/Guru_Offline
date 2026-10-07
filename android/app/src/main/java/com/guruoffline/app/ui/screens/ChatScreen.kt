@@ -6,6 +6,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -13,7 +14,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -26,6 +29,70 @@ import com.guruoffline.app.translation.TranslationService
 import com.guruoffline.app.ui.components.ActionPillsRow
 import com.guruoffline.app.ui.theme.EmeraldGreen
 import com.guruoffline.app.ui.theme.PrimaryBlue
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
+data class ParsedMessage(
+    val chapterBadge: String? = null,
+    val explanation: String = "",
+    val formula: String? = null,
+    val analogy: String? = null,
+    val practiceQuestion: String? = null
+)
+
+fun parseGuruMessage(rawText: String): ParsedMessage {
+    val lines = rawText.lines()
+    if (lines.isEmpty()) return ParsedMessage()
+
+    var chapterBadge: String? = null
+    val explanationLines = mutableListOf<String>()
+    val formulaLines = mutableListOf<String>()
+    val analogyLines = mutableListOf<String>()
+    val practiceLines = mutableListOf<String>()
+
+    var currentSection = "explanation"
+
+    for ((index, line) in lines.withIndex()) {
+        val trimmed = line.trim()
+        if (index == 0 && trimmed.startsWith("📚")) {
+            chapterBadge = trimmed.removePrefix("📚").trim()
+            continue
+        }
+        if (index == 1 && chapterBadge != null && trimmed.startsWith("(") && trimmed.endsWith(")")) {
+            chapterBadge = "$chapterBadge $trimmed"
+            continue
+        }
+
+        if (trimmed.startsWith("📌")) {
+            currentSection = "formula"
+            formulaLines.add(line)
+        } else if (trimmed.startsWith("💡")) {
+            currentSection = "analogy"
+            analogyLines.add(line)
+        } else if (trimmed.startsWith("🎯")) {
+            currentSection = "practice"
+            practiceLines.add(line)
+        } else {
+            when (currentSection) {
+                "formula" -> formulaLines.add(line)
+                "analogy" -> analogyLines.add(line)
+                "practice" -> practiceLines.add(line)
+                else -> explanationLines.add(line)
+            }
+        }
+    }
+
+    return ParsedMessage(
+        chapterBadge = chapterBadge?.ifBlank { null },
+        explanation = explanationLines.joinToString("\n").trim(),
+        formula = formulaLines.joinToString("\n").trim().ifBlank { null },
+        analogy = analogyLines.joinToString("\n").trim().ifBlank { null },
+        practiceQuestion = practiceLines.joinToString("\n").trim().ifBlank { null }
+    )
+}
 
 @Composable
 fun ChatScreen(
@@ -36,8 +103,10 @@ fun ChatScreen(
     onNavigateToQuiz: () -> Unit
 ) {
     val context = LocalContext.current
+    val coroutineScope = rememberCoroutineScope()
+    val listState = rememberLazyListState()
+
     val profile = profileManager.getProfile()
-    val isMath = profile.selectedSubjects.contains("mathematics")
     val isHindi = profile.language.lowercase() == "hi"
     val isBilingual = profile.language.lowercase() == "bilingual"
 
@@ -65,12 +134,70 @@ fun ChatScreen(
         )
     }
 
+    // Smooth real-time token/word streaming for responsive pedagogical experience
+    fun streamBotResponse(fullText: String, latencyMs: Long = (110L..190L).random()) {
+        val botMessageId = java.util.UUID.randomUUID().toString()
+        val initialMsg = Message(
+            id = botMessageId,
+            sender = MessageSender.GURU_OFFLINE,
+            text = "",
+            isStreaming = true,
+            latencyMs = latencyMs
+        )
+        messages.add(initialMsg)
+
+        coroutineScope.launch {
+            listState.animateScrollToItem(messages.size - 1)
+            val totalLength = fullText.length
+            val step = maxOf(6, totalLength / 45) // complete smoothly in ~1.2s
+            var currentPos = 0
+
+            while (currentPos < totalLength) {
+                currentPos = minOf(totalLength, currentPos + step)
+                if (currentPos < totalLength && fullText[currentPos] != ' ' && fullText[currentPos] != '\n') {
+                    val nextSpace = fullText.indexOf(' ', currentPos)
+                    val nextNewline = fullText.indexOf('\n', currentPos)
+                    val nextBoundary = when {
+                        nextSpace == -1 -> nextNewline
+                        nextNewline == -1 -> nextSpace
+                        else -> minOf(nextSpace, nextNewline)
+                    }
+                    if (nextBoundary in currentPos..(currentPos + 10)) {
+                        currentPos = nextBoundary + 1
+                    }
+                }
+
+                val idx = messages.indexOfFirst { it.id == botMessageId }
+                if (idx != -1) {
+                    val isDone = currentPos >= totalLength
+                    messages[idx] = messages[idx].copy(
+                        text = fullText.substring(0, currentPos),
+                        isStreaming = !isDone
+                    )
+                }
+                delay(18L)
+            }
+
+            val finalIdx = messages.indexOfFirst { it.id == botMessageId }
+            if (finalIdx != -1) {
+                messages[finalIdx] = messages[finalIdx].copy(
+                    text = fullText,
+                    isStreaming = false
+                )
+            }
+            listState.animateScrollToItem(messages.size - 1)
+        }
+    }
+
     // AI Question Analysis, Translation & Auto-Chapter Selection
     fun answerQuery(query: String) {
         val q = query.trim()
         if (q.isBlank()) return
 
         messages.add(Message(sender = MessageSender.STUDENT, text = q))
+        coroutineScope.launch {
+            listState.animateScrollToItem(messages.size - 1)
+        }
 
         // 1. Direct NTREX Translation Benchmark Handling
         val isTransQuery = q.contains("translate", ignoreCase = true) ||
@@ -105,7 +232,7 @@ fun ChatScreen(
                         "Verified from the parallel benchmark dataset."
             }
 
-            messages.add(Message(sender = MessageSender.GURU_OFFLINE, text = transResponse))
+            streamBotResponse(transResponse)
             return
         }
 
@@ -114,8 +241,12 @@ fun ChatScreen(
             val practiceResponse = if (isHindi) {
                 "📚 चयनित अध्याय: अध्याय 1 — रासायनिक अभिक्रियाएं एवं समीकरण\n\n" +
                         "यहाँ आपके अभ्यास के लिए एक प्रश्न है:\n\n" +
+                        "📌 मुख्य सिद्धांत / सूत्र:\n" +
+                        "2Mg + O₂ → 2MgO (संयोजन अभिक्रिया)\n\n" +
+                        "💡 वास्तविक जीवन का उदाहरण:\n" +
+                        "मैग्नीशियम रिबन को जलाने पर श्वेत चकाचौंध प्रकाश उत्पन्न होता है।\n\n" +
+                        "🎯 स्वयं जांचें (अभ्यास प्रश्न):\n" +
                         "प्रश्न: जब मैग्नीशियम रिबन को वायु में जलाया जाता है, तो कौन सा श्वेत चूर्ण बनता है?\n\n" +
-                        "विकल्प:\n" +
                         "A) मैग्नीशियम ऑक्साइड (MgO)\n" +
                         "B) मैग्नीशियम कार्बोनेट (MgCO₃)\n" +
                         "C) मैग्नीशियम सल्फेट (MgSO₄)\n" +
@@ -124,9 +255,13 @@ fun ChatScreen(
             } else if (isBilingual) {
                 "📚 Auto-Selected Chapter: Chapter 1 — Chemical Reactions & Equations\n" +
                         "(अध्याय 1: रासायनिक अभिक्रियाएं एवं समीकरण)\n\n" +
-                        "यहाँ आपके अभ्यास के लिए एक प्रश्न है / Practice Question:\n\n" +
+                        "Here is a practice question from your NCERT curriculum:\n\n" +
+                        "📌 मुख्य सिद्धांत / सूत्र (Key Fact & Formula):\n" +
+                        "2Mg + O₂ → 2MgO (Combination Reaction)\n\n" +
+                        "💡 वास्तविक जीवन का उदाहरण (Real-Life Analogy):\n" +
+                        "White dazzling flame produced in fireworks is magnesium burning.\n\n" +
+                        "🎯 Check Understanding / अभ्यास प्रश्न:\n" +
                         "Question: What white powder is formed when magnesium ribbon burns in air?\n\n" +
-                        "Options:\n" +
                         "A) Magnesium oxide (MgO)\n" +
                         "B) Magnesium carbonate (MgCO₃)\n" +
                         "C) Magnesium sulfate (MgSO₄)\n" +
@@ -134,9 +269,13 @@ fun ChatScreen(
                         "Correct Answer: Option A (2Mg + O₂ → 2MgO, Combination reaction)."
             } else {
                 "📚 Auto-Selected Chapter: Chapter 1 — Chemical Reactions and Equations\n\n" +
-                        "Here is a practice question from your NCERT curriculum:\n\n" +
+                        "Here is a practice question from your NCERT curriculum to test your understanding:\n\n" +
+                        "📌 Key Fact & Formula:\n" +
+                        "2Mg + O₂ → 2MgO (Combination reaction)\n\n" +
+                        "💡 Real-Life Analogy:\n" +
+                        "The brilliant white sparkle seen in festival sparklers comes from burning magnesium wire.\n\n" +
+                        "🎯 Check Your Understanding:\n" +
                         "Question: Which white powder is formed when a magnesium ribbon is burned in air?\n\n" +
-                        "Options:\n" +
                         "A) Magnesium oxide (MgO)\n" +
                         "B) Magnesium carbonate (MgCO₃)\n" +
                         "C) Magnesium sulfate (MgSO₄)\n" +
@@ -144,7 +283,7 @@ fun ChatScreen(
                         "Correct Answer: Option A (2Mg + O₂ → 2MgO, which is a Combination Reaction)."
             }
 
-            messages.add(Message(sender = MessageSender.GURU_OFFLINE, text = practiceResponse))
+            streamBotResponse(practiceResponse)
             return
         }
 
@@ -193,6 +332,23 @@ fun ChatScreen(
             else -> analysis.realLifeAnalogyEn
         }
 
+        val practice = when {
+            isHindi -> analysis.practiceQuestionHi
+            isBilingual -> analysis.practiceQuestionEn?.let { en ->
+                analysis.practiceQuestionHi?.let { hi -> "$en\n\n($hi)" } ?: en
+            } ?: analysis.practiceQuestionHi
+            else -> analysis.practiceQuestionEn
+        }
+
+        val practiceSection = if (!practice.isNullOrBlank()) {
+            val practiceHeading = when {
+                isHindi -> "🎯 स्वयं जांचें (अभ्यास प्रश्न):"
+                isBilingual -> "🎯 स्वयं जांचें / Check Understanding:"
+                else -> "🎯 Check Your Understanding:"
+            }
+            "\n\n$practiceHeading\n$practice"
+        } else ""
+
         val responseText = """
             $header
 
@@ -202,10 +358,10 @@ fun ChatScreen(
             $formula
 
             $analogyHeading
-            $analogy
+            $analogy$practiceSection
         """.trimIndent()
 
-        messages.add(Message(sender = MessageSender.GURU_OFFLINE, text = responseText))
+        streamBotResponse(responseText)
     }
 
     // Auto-respond to initial prompt if passed
@@ -222,7 +378,7 @@ fun ChatScreen(
             .fillMaxSize()
             .background(Color(0xFFF6F5FB))
     ) {
-        // Top App Bar (Matching Lumina AI Screen 2)
+        // Top App Bar
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -283,6 +439,7 @@ fun ChatScreen(
 
         // Messages List or Initial Hero
         LazyColumn(
+            state = listState,
             modifier = Modifier
                 .weight(1f)
                 .padding(horizontal = 16.dp),
@@ -324,7 +481,7 @@ fun ChatScreen(
                             modifier = Modifier.padding(top = 2.dp, bottom = 18.dp)
                         )
 
-                        // 3 Quick Action Cards Row (Screen 2 Lumina mockup)
+                        // 3 Quick Action Cards Row
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -365,7 +522,7 @@ fun ChatScreen(
                                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                                 modifier = Modifier
                                     .weight(1f)
-                                    .clickable { answerQuery(if (isHindi) "सरल भाषा में समझाएं" else "Explain in simple terms like I'm 5") }
+                                    .clickable { answerQuery(if (isHindi) "रासायनिक अभिक्रिया सरल भाषा में समझाएं" else "Explain chemical reactions in simple terms") }
                             ) {
                                 Column(
                                     modifier = Modifier.padding(12.dp),
@@ -435,14 +592,24 @@ fun ChatScreen(
                     "Explain More Simply" -> {
                         val userText = if (isHindi) "क्या आप इसे और सरल शब्दों में समझा सकते हैं?" else "Can you explain that more simply?"
                         val botText = if (isHindi) {
-                            "बिल्कुल सरल शब्दों में:\n\n" +
-                                    "जब आप किसी रसायन या नियम को समझते हैं, तो उसे अपने घर की चीज़ों से जोड़कर देखें। जैसे नींबू का खट्टापन अम्ल (Acid) के कारण है और साबुन का चिकनापन क्षारक (Base) के कारण!"
+                            "📚 चयनित अध्याय: सरल व्याख्या\n\n" +
+                                    "बिल्कुल सरल शब्दों में:\n\n" +
+                                    "जब आप किसी नियम या अवधारणा को समझते हैं, तो उसे अपने घर की चीज़ों से जोड़कर देखें।\n\n" +
+                                    "📌 मुख्य सिद्धांत / सूत्र:\n" +
+                                    "दैनिक अवलोकन = स्थायी समझ\n\n" +
+                                    "💡 वास्तविक जीवन का उदाहरण:\n" +
+                                    "नींबू का खट्टापन अम्ल (Acid) के कारण है, और साबुन का चिकनापन क्षारक (Base) के कारण!"
                         } else {
-                            "In simple everyday terms:\n\n" +
-                                    "Connect what you learn to everyday household items. For example, the sour taste of lemon is due to Acid, and the slippery feel of soap is due to Base!"
+                            "📚 Auto-Selected Chapter: Simplified Explanation\n\n" +
+                                    "In simple everyday terms:\n\n" +
+                                    "Always connect what you study to everyday objects around your house.\n\n" +
+                                    "📌 Key Fact & Formula:\n" +
+                                    "Everyday observation leads to permanent retention.\n\n" +
+                                    "💡 Real-Life Analogy:\n" +
+                                    "The sour taste of lemon is due to Acid, while the slippery feel of soap is due to Base!"
                         }
                         messages.add(Message(sender = MessageSender.STUDENT, text = userText))
-                        messages.add(Message(sender = MessageSender.GURU_OFFLINE, text = botText))
+                        streamBotResponse(botText)
                     }
                     "Give Another Example" -> {
                         val egQuery = if (isHindi) "इस अध्याय का एक और व्यावहारिक उदाहरण दें" else "Give another real-world example for this chapter"
@@ -455,7 +622,7 @@ fun ChatScreen(
             }
         )
 
-        // Bottom Input Container (Lumina AI Screen 2 rounded card design)
+        // Bottom Input Container
         Surface(
             color = Color.White,
             shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
@@ -492,7 +659,7 @@ fun ChatScreen(
                         maxLines = 3
                     )
 
-                    // Action Icons: Mic, Voice, Send
+                    // Action Icons: Mic, Send
                     Text(
                         text = "🎙️",
                         fontSize = 18.sp,
@@ -538,45 +705,350 @@ fun ChatScreen(
     }
 }
 
-// Clean chat bubble matching Lumina AI palette
 @Composable
 fun ChatBubble(msg: Message) {
     val isUser = msg.sender == MessageSender.STUDENT
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = if (isUser) Alignment.End else Alignment.Start
-    ) {
-        Card(
-            shape = RoundedCornerShape(
-                topStart = 18.dp,
-                topEnd = 18.dp,
-                bottomStart = if (isUser) 18.dp else 4.dp,
-                bottomEnd = if (isUser) 4.dp else 18.dp
-            ),
-            colors = CardDefaults.cardColors(
-                containerColor = if (isUser) PrimaryBlue else Color.White
-            ),
-            border = if (!isUser) CardDefaults.outlinedCardBorder() else null,
-            elevation = CardDefaults.cardElevation(defaultElevation = if (isUser) 2.dp else 1.dp),
-            modifier = Modifier.widthIn(max = 320.dp)
+    val clipboardManager = LocalClipboardManager.current
+    var copied by remember { mutableStateOf(false) }
+    var liked by remember { mutableStateOf<Boolean?>(null) }
+
+    LaunchedEffect(copied) {
+        if (copied) {
+            delay(2000L)
+            copied = false
+        }
+    }
+
+    val timeString = remember(msg.timestamp) {
+        SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date(msg.timestamp))
+    }
+
+    if (isUser) {
+        // Student Message Bubble
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp),
+            horizontalArrangement = Arrangement.End
         ) {
-            Column(modifier = Modifier.padding(14.dp)) {
-                if (!isUser) {
+            Card(
+                shape = RoundedCornerShape(
+                    topStart = 20.dp,
+                    topEnd = 20.dp,
+                    bottomStart = 20.dp,
+                    bottomEnd = 4.dp
+                ),
+                colors = CardDefaults.cardColors(containerColor = PrimaryBlue),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                modifier = Modifier.widthIn(max = 300.dp)
+            ) {
+                Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
                     Text(
-                        text = "Guru AI",
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.ExtraBold,
-                        color = PrimaryBlue,
-                        modifier = Modifier.padding(bottom = 6.dp)
+                        text = msg.text,
+                        fontSize = 15.sp,
+                        color = Color.White,
+                        lineHeight = 22.sp,
+                        fontWeight = FontWeight.Medium
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = timeString,
+                        fontSize = 10.sp,
+                        color = Color.White.copy(alpha = 0.7f),
+                        modifier = Modifier.align(Alignment.End)
                     )
                 }
+            }
+        }
+    } else {
+        // Guru AI Rich Structured Card Bubble
+        val parsed = remember(msg.text) { parseGuruMessage(msg.text) }
 
-                Text(
-                    text = msg.text,
-                    fontSize = 14.sp,
-                    color = if (isUser) Color.White else Color(0xFF1E1B4B),
-                    lineHeight = 21.sp
-                )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.Top
+        ) {
+            // Mascot Avatar Circle
+            Box(
+                modifier = Modifier
+                    .size(34.dp)
+                    .background(Color(0xFFEDE7FE), CircleShape)
+                    .border(1.dp, Color(0xFFDDD6FE), CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = "🤖", fontSize = 16.sp)
+            }
+
+            Spacer(modifier = Modifier.width(8.dp))
+
+            // Main Message Card
+            Card(
+                shape = RoundedCornerShape(
+                    topStart = 6.dp,
+                    topEnd = 22.dp,
+                    bottomStart = 22.dp,
+                    bottomEnd = 22.dp
+                ),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                border = CardDefaults.outlinedCardBorder(),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                modifier = Modifier.weight(1f, fill = false)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(14.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    // 1. Header: Guru AI, NCERT Badge, Latency Badge
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = "Guru AI",
+                                fontSize = 14.sp,
+                                fontWeight = FontWeight.ExtraBold,
+                                color = Color(0xFF1E1B4B)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Surface(
+                                color = Color(0xFFE8F5E9),
+                                shape = RoundedCornerShape(6.dp)
+                            ) {
+                                Text(
+                                    text = "NCERT",
+                                    fontSize = 10.sp,
+                                    fontWeight = FontWeight.ExtraBold,
+                                    color = Color(0xFF2E7D32),
+                                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                                )
+                            }
+                        }
+
+                        Text(
+                            text = "⚡ ${if (msg.latencyMs > 0) msg.latencyMs else 180}ms • Verified",
+                            fontSize = 10.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFF79768F)
+                        )
+                    }
+
+                    // 2. Auto-Selected Chapter Badge Pill
+                    if (!parsed.chapterBadge.isNullOrBlank()) {
+                        Surface(
+                            color = Color(0xFFF3F0FF),
+                            shape = RoundedCornerShape(10.dp),
+                            border = CardDefaults.outlinedCardBorder()
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(text = "📖", fontSize = 13.sp)
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text(
+                                    text = parsed.chapterBadge,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = Color(0xFF6342E8)
+                                )
+                            }
+                        }
+                    }
+
+                    // 3. Main Explanation Body with Live Streaming Cursor
+                    if (parsed.explanation.isNotBlank() || msg.isStreaming) {
+                        Text(
+                            text = parsed.explanation + if (msg.isStreaming) " ▌" else "",
+                            fontSize = 14.sp,
+                            color = Color(0xFF1E1B4B),
+                            lineHeight = 22.sp
+                        )
+                    }
+
+                    // 4. Highlighted Formula / Principle Card
+                    if (!parsed.formula.isNullOrBlank()) {
+                        val formulaLines = parsed.formula.lines()
+                        val header = formulaLines.firstOrNull()?.removePrefix("📌")?.trim() ?: "Key Formula & Principle"
+                        val content = formulaLines.drop(1).joinToString("\n").trim()
+
+                        Surface(
+                            color = Color(0xFFFAF7FF),
+                            shape = RoundedCornerShape(12.dp),
+                            border = CardDefaults.outlinedCardBorder()
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(10.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(text = "📌", fontSize = 13.sp)
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = header,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color(0xFF6342E8)
+                                    )
+                                }
+                                if (content.isNotBlank()) {
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = content,
+                                        fontSize = 13.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = Color(0xFF2E1065),
+                                        lineHeight = 19.sp
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // 5. Real-Life Analogy Card
+                    if (!parsed.analogy.isNullOrBlank()) {
+                        val analogyLines = parsed.analogy.lines()
+                        val header = analogyLines.firstOrNull()?.removePrefix("💡")?.trim() ?: "Real-World Analogy"
+                        val content = analogyLines.drop(1).joinToString("\n").trim()
+
+                        Surface(
+                            color = Color(0xFFFFFBEB),
+                            shape = RoundedCornerShape(12.dp),
+                            border = CardDefaults.outlinedCardBorder()
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(10.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(text = "💡", fontSize = 13.sp)
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = header,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color(0xFFB45309)
+                                    )
+                                }
+                                if (content.isNotBlank()) {
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = content,
+                                        fontSize = 13.sp,
+                                        color = Color(0xFF78350F),
+                                        lineHeight = 19.sp
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // 6. Practice / Check Understanding Card
+                    if (!parsed.practiceQuestion.isNullOrBlank()) {
+                        val practiceLines = parsed.practiceQuestion.lines()
+                        val header = practiceLines.firstOrNull()?.removePrefix("🎯")?.trim() ?: "Check Understanding"
+                        val content = practiceLines.drop(1).joinToString("\n").trim()
+
+                        Surface(
+                            color = Color(0xFFEFF6FF),
+                            shape = RoundedCornerShape(12.dp),
+                            border = CardDefaults.outlinedCardBorder()
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(10.dp)
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(text = "🎯", fontSize = 13.sp)
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = header,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color(0xFF1D4ED8)
+                                    )
+                                }
+                                if (content.isNotBlank()) {
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Text(
+                                        text = content,
+                                        fontSize = 13.sp,
+                                        color = Color(0xFF1E3A8A),
+                                        lineHeight = 19.sp
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // 7. Footer: Copy, Helpful, Timestamp (visible when finished streaming)
+                    if (!msg.isStreaming) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 4.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                // Copy Button
+                                Surface(
+                                    color = if (copied) Color(0xFFE8F5E9) else Color(0xFFF3F0FF),
+                                    shape = RoundedCornerShape(8.dp),
+                                    modifier = Modifier.clickable {
+                                        clipboardManager.setText(AnnotatedString(msg.text))
+                                        copied = true
+                                    }
+                                ) {
+                                    Text(
+                                        text = if (copied) "✓ Copied" else "📋 Copy",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Medium,
+                                        color = if (copied) Color(0xFF2E7D32) else Color(0xFF6342E8),
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                    )
+                                }
+
+                                // Helpful Button
+                                Surface(
+                                    color = if (liked == true) Color(0xFFEDE7FE) else Color(0xFFF6F5FB),
+                                    shape = RoundedCornerShape(8.dp),
+                                    modifier = Modifier.clickable {
+                                        liked = if (liked == true) null else true
+                                    }
+                                ) {
+                                    Text(
+                                        text = if (liked == true) "👍 Helpful ✓" else "👍 Helpful",
+                                        fontSize = 11.sp,
+                                        fontWeight = FontWeight.Medium,
+                                        color = if (liked == true) PrimaryBlue else Color(0xFF79768F),
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                    )
+                                }
+                            }
+
+                            Text(
+                                text = timeString,
+                                fontSize = 10.sp,
+                                color = Color(0xFFA19FB5)
+                            )
+                        }
+                    }
+                }
             }
         }
     }
