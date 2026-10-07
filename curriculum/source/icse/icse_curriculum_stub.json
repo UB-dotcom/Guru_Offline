@@ -1,0 +1,22 @@
+{
+  "board_id": "icse",
+  "state_id": null,
+  "class_level": 10,
+  "stream_id": null,
+  "subject": {
+    "code": "mathematics",
+    "name": "ICSE Mathematics",
+    "name_hi": "आईसीएसई गणित",
+    "icon": "📐",
+    "description": "Council for the Indian School Certificate Examinations (CISCE) Class 10 Syllabus - Pipeline ready for textbook ingestion",
+    "is_available": false
+  },
+  "module": {
+    "code": "icse10_math",
+    "name": "ICSE Class 10 Mathematics [Not Yet Ingested]",
+    "size_mb": 0,
+    "version": "1.0",
+    "author": "CISCE Board"
+  },
+  "chapters": []
+}

@@ -35,7 +35,7 @@ export const OTPScreen: React.FC<OTPScreenProps> = ({ navigation, route }) => {
   const handleVerify = async () => {
     const success = await verifyOTP(otp || '123456');
     if (success) {
-      navigation.navigate('Onboarding', { screen: 'ProfileSetup' });
+      navigation.navigate('Onboarding', { screen: 'LanguageSelection' });
     }
   };
 

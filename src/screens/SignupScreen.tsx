@@ -33,7 +33,7 @@ export const SignupScreen: React.FC<SignupScreenProps> = ({ navigation }) => {
     });
 
     if (success) {
-      navigation.navigate('Onboarding', { screen: 'EducationLevel' });
+      navigation.navigate('Onboarding', { screen: 'LanguageSelection' });
     }
   };
 

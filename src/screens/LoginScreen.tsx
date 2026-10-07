@@ -37,7 +37,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     });
 
     if (success) {
-      navigation.replace('Main');
+      navigation.navigate('Onboarding', { screen: 'LanguageSelection' });
     }
   };
 
@@ -155,7 +155,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.googleBtn}
-          onPress={() => navigation.replace('Main')}
+          onPress={() => navigation.navigate('Onboarding', { screen: 'LanguageSelection' })}
           accessibilityRole="button"
           accessibilityLabel="Continue with Google"
         >
@@ -164,7 +164,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.guestBtn}
-          onPress={() => navigation.replace('Main')}
+          onPress={() => navigation.navigate('Onboarding', { screen: 'LanguageSelection' })}
           accessibilityRole="button"
           accessibilityLabel="Continue as Guest Offline"
         >

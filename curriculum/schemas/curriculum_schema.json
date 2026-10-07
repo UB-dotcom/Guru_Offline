@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CurriculumPackageSource",
+  "description": "Schema for structured curriculum packages importable into Guru Offline SQLite database.",
+  "type": "object",
+  "required": ["board_id", "class_level", "subject", "chapters"],
+  "properties": {
+    "board_id": {
+      "type": "string",
+      "enum": ["cbse", "icse", "state"]
+    },
+    "state_id": {
+      "type": ["string", "null"]
+    },
+    "class_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "stream_id": {
+      "type": ["string", "null"],
+      "enum": ["science", "commerce", "arts", null]
+    },
+    "subject": {
+      "type": "object",
+      "required": ["code", "name"],
+      "properties": {
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "name_hi": { "type": "string" },
+        "icon": { "type": "string" },
+        "description": { "type": "string" },
+        "is_available": { "type": "boolean" }
+      }
+    },
+    "module": {
+      "type": "object",
+      "required": ["code", "name"],
+      "properties": {
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "size_mb": { "type": "integer" },
+        "version": { "type": "string" },
+        "author": { "type": "string" }
+      }
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["chapter_number", "title", "chunks"],
+        "properties": {
+          "id": { "type": "string" },
+          "chapter_number": { "type": "integer" },
+          "title": { "type": "string" },
+          "title_hi": { "type": "string" },
+          "description": { "type": "string" },
+          "is_available": { "type": "boolean" },
+          "chunks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["chunk_id", "topic", "content", "language"],
+              "properties": {
+                "chunk_id": { "type": "string" },
+                "language": { "type": "string", "enum": ["en", "hi", "bilingual"] },
+                "topic": { "type": "string" },
+                "content": { "type": "string" },
+                "content_hi": { "type": "string" },
+                "source_page": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

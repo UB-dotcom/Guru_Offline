@@ -17,10 +17,19 @@ import com.guruoffline.app.ui.components.OfflineBanner
 import com.guruoffline.app.ui.theme.EmeraldGreen
 import com.guruoffline.app.ui.theme.PrimaryBlue
 
+import com.guruoffline.app.profile.ProfileManager
+
 @Composable
-fun QuizScreen(onBack: () -> Unit) {
+fun QuizScreen(
+    profileManager: ProfileManager = remember { ProfileManager() },
+    onBack: () -> Unit
+) {
+    val profile = profileManager.getProfile()
+    val isMath = profile.selectedSubjects.contains("mathematics")
+    val moduleId = if (isMath) "class10_math" else "class10_science"
+
     val quizEngine = remember { QuizEngine() }
-    val questions = remember { quizEngine.getSampleQuiz("class10_science") }
+    val questions = remember(moduleId) { quizEngine.getSampleQuiz(moduleId) }
 
     var currentIdx by remember { mutableStateOf(0) }
     val userAnswers = remember { mutableStateMapOf<Int, String>() }
@@ -31,8 +40,6 @@ fun QuizScreen(onBack: () -> Unit) {
             .fillMaxSize()
             .background(Color(0xFFF8FAFC))
     ) {
-        OfflineBanner(isOffline = true)
-
         Column(modifier = Modifier.padding(20.dp)) {
             Row(
                 modifier = Modifier

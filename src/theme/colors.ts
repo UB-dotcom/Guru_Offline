@@ -1,42 +1,48 @@
 export const palette = {
-  // Primary: Professional, welcoming Blue/Indigo
-  primary: '#2563EB',
-  primaryDark: '#1D4ED8',
-  primaryLight: '#3B82F6',
-  primarySurface: '#EFF6FF',
+  // Primary: Radiant Violet / Electric Purple
+  primary: '#7C5CFC',
+  primaryDark: '#6734E8',
+  primaryLight: '#9B7EFC',
+  primarySurface: '#F0EDFF',
 
-  // Secondary: Educational Growth Emerald
-  secondary: '#059669',
-  secondaryDark: '#047857',
-  secondaryLight: '#10B981',
+  // Secondary: Growth Emerald
+  secondary: '#10B981',
+  secondaryDark: '#059669',
+  secondaryLight: '#34D399',
   secondarySurface: '#ECFDF5',
 
+  // Accents matching Lumina AI theme
+  accentLilac: '#EDE7FF',
+  streakFlame: '#FF7A45',
+  xpPurple: '#8B5CF6',
+  cyanAccent: '#00D2D3',
+
   // Warning & Danger
-  warning: '#D97706',
+  warning: '#F59E0B',
   warningSurface: '#FEF3C7',
-  danger: '#DC2626',
-  dangerLight: '#EF4444',
+  danger: '#EF4444',
+  dangerLight: '#F87171',
   dangerSurface: '#FEE2E2',
 
   // Offline / Connectivity
-  offlineBadgeBg: '#059669',
+  offlineBadgeBg: '#10B981',
   offlineBadgeText: '#FFFFFF',
-  onlineBadgeBg: '#2563EB',
+  onlineBadgeBg: '#7C5CFC',
   onlineBadgeText: '#FFFFFF',
 
   // Neutrals - Light Theme
   white: '#FFFFFF',
-  gray50: '#F8FAFC',
-  gray100: '#F1F5F9',
-  gray200: '#E2E8F0',
-  gray300: '#CBD5E1',
-  gray400: '#94A3B8',
-  gray500: '#64748B',
-  gray600: '#475569',
-  gray700: '#334155',
-  gray800: '#1E293B',
-  gray900: '#0F172A',
-  black: '#000000',
+  gray50: '#F6F5FB',
+  gray100: '#F0EDFB',
+  gray200: '#EDE9FE',
+  gray300: '#D8D4EE',
+  gray400: '#A19FB5',
+  gray500: '#79768F',
+  gray600: '#5A5770',
+  gray700: '#3D3A52',
+  gray800: '#2A273D',
+  gray900: '#1E1B4B',
+  black: '#0A081A',
 };
 
 export const lightColors = {
@@ -49,18 +55,23 @@ export const lightColors = {
   secondaryLight: palette.secondaryLight,
   secondarySurface: palette.secondarySurface,
 
-  background: palette.gray50,
+  accentLilac: palette.accentLilac,
+  streakFlame: palette.streakFlame,
+  xpPurple: palette.xpPurple,
+  cyanAccent: palette.cyanAccent,
+
+  background: '#F6F5FB',
   cardBackground: palette.white,
   surface: palette.white,
 
-  textPrimary: palette.gray900,
-  textSecondary: palette.gray500,
-  textMuted: palette.gray400,
+  textPrimary: '#1E1B4B',
+  textSecondary: '#79768F',
+  textMuted: '#A19FB5',
   textInverse: palette.white,
 
-  border: palette.gray200,
+  border: '#EDE9FE',
   borderFocus: palette.primary,
-  divider: palette.gray100,
+  divider: '#F0EDFB',
 
   offline: palette.secondary,
   online: palette.primary,
@@ -79,6 +90,11 @@ export const darkColors = {
   secondary: '#10B981',
   secondaryLight: '#34D399',
   secondarySurface: '#064E3B',
+
+  accentLilac: '#2D274E',
+  streakFlame: '#FF7A45',
+  xpPurple: '#A78BFA',
+  cyanAccent: '#22D3EE',
 
   background: '#0F172A',
   cardBackground: '#1E293B',

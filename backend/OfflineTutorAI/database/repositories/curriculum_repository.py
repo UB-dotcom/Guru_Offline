@@ -162,36 +162,76 @@ class CurriculumRepository:
             return []
         
         fts_query = " OR ".join([f'"{term}"*' for term in clean_terms])
-        
-        base_sql = """
-        SELECT c.*, fts.rank AS bm25_rank
-        FROM curriculum_chunks_fts fts
-        JOIN curriculum_chunks c ON c.id = fts.rowid
-        WHERE curriculum_chunks_fts MATCH ?
-        """
-        params = [fts_query]
-
-        if curriculum_id:
-            base_sql += " AND c.curriculum_id = ?"
-            params.append(curriculum_id)
-        else:
-            if class_level:
-                base_sql += " AND (c.class = ? OR c.class LIKE ?)"
-                params.extend([class_level, f"%{class_level}%"])
-            if board:
-                base_sql += " AND (c.board = ? OR c.board LIKE ?)"
-                params.extend([board, f"%{board}%"])
-            if subject:
-                base_sql += " AND (c.subject = ? OR c.subject LIKE ?)"
-                params.extend([subject, f"%{subject}%"])
-
-        base_sql += " ORDER BY fts.rank ASC LIMIT ?"
-        params.append(top_k)
-
         chunks = []
         conn = self.get_connection()
         try:
             cursor = conn.cursor()
+
+            # 1. Search modern content_chunks_fts table with strict curriculum isolation
+            try:
+                modern_sql = """
+                SELECT c.id, c.chunk_id, c.board_id as board, 'Class ' || c.class_level as class,
+                       c.subject_id as subject, c.chapter_id as chapter, c.topic, c.content,
+                       c.source_page, c.module_id as curriculum_id, fts.rank AS bm25_rank
+                FROM content_chunks_fts fts
+                JOIN content_chunks c ON c.id = fts.rowid
+                WHERE content_chunks_fts MATCH ?
+                """
+                modern_params = [fts_query]
+                if board:
+                    modern_sql += " AND (c.board_id = ? OR c.board_id LIKE ?)"
+                    modern_params.extend([board.lower(), f"%{board.lower()}%"])
+                if class_level:
+                    digits = ''.join(filter(str.isdigit, str(class_level)))
+                    if digits:
+                        modern_sql += " AND c.class_level = ?"
+                        modern_params.append(int(digits))
+                if subject:
+                    modern_sql += " AND (c.subject_id LIKE ? OR c.topic LIKE ?)"
+                    modern_params.extend([f"%{subject.lower()}%", f"%{subject}%"])
+
+                modern_sql += " ORDER BY fts.rank ASC LIMIT ?"
+                modern_params.append(top_k)
+
+                cursor.execute(modern_sql, modern_params)
+                rows = cursor.fetchall()
+                if rows:
+                    for row in rows:
+                        row_dict = dict(row)
+                        score = abs(float(row_dict.get("bm25_rank", 0.0)))
+                        chunk = CurriculumChunk.from_dict(row_dict)
+                        chunk.score = score
+                        chunks.append(chunk)
+                    return chunks
+            except Exception:
+                pass  # Fall through to legacy table
+
+            # 2. Search legacy curriculum_chunks_fts table
+            base_sql = """
+            SELECT c.*, fts.rank AS bm25_rank
+            FROM curriculum_chunks_fts fts
+            JOIN curriculum_chunks c ON c.id = fts.rowid
+            WHERE curriculum_chunks_fts MATCH ?
+            """
+            params = [fts_query]
+
+            if curriculum_id:
+                base_sql += " AND c.curriculum_id = ?"
+                params.append(curriculum_id)
+            else:
+                if class_level:
+                    base_sql += " AND (c.class = ? OR c.class LIKE ?)"
+                    params.extend([class_level, f"%{class_level}%"])
+                if board:
+                    base_sql += " AND (c.board = ? OR c.board LIKE ?)"
+                    params.extend([board, f"%{board}%"])
+                if subject:
+                    base_sql += " AND (c.subject = ? OR c.subject LIKE ?)"
+                    params.extend([subject, f"%{subject}%"])
+
+            base_sql += " ORDER BY fts.rank ASC LIMIT ?"
+            params.append(top_k)
+
             try:
                 cursor.execute(base_sql, params)
                 rows = cursor.fetchall()

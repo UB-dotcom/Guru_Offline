@@ -29,8 +29,6 @@ fun ProgressScreen(onBack: () -> Unit) {
             .fillMaxSize()
             .background(Color(0xFFF8FAFC))
     ) {
-        OfflineBanner(isOffline = true)
-
         Column(
             modifier = Modifier
                 .padding(20.dp)
@@ -56,7 +54,7 @@ fun ProgressScreen(onBack: () -> Unit) {
                 color = Color(0xFF0F172A)
             )
             Text(
-                text = "Saved 100% locally on this device",
+                text = "Saved locally on this device",
                 fontSize = 13.sp,
                 color = Color(0xFF64748B),
                 modifier = Modifier.padding(bottom = 20.dp)

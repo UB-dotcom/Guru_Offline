@@ -29,11 +29,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ navigation }) => {
     ]).start();
 
     const timer = setTimeout(() => {
-      if (isAuthenticated) {
-        navigation.replace('Main');
-      } else {
-        navigation.replace('Welcome');
-      }
+      navigation.replace('Auth');
     }, 1400);
 
     return () => clearTimeout(timer);
@@ -56,7 +52,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ navigation }) => {
         <Text style={styles.tagline}>Works without internet.</Text>
 
         <View style={styles.badge}>
-          <Text style={styles.badgeText}>📵 100% On-Device AI</Text>
+          <Text style={styles.badgeText}>⚡ AI Tutor</Text>
         </View>
       </Animated.View>
     </View>

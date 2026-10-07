@@ -27,12 +27,7 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
       >
         {!isStudent && (
           <View style={styles.guruHeader}>
-            <Text style={styles.guruName}>Guru (On-Device AI)</Text>
-            {message.isOffline && (
-              <View style={styles.offlineChip}>
-                <Text style={styles.offlineChipText}>📵 Offline</Text>
-              </View>
-            )}
+            <Text style={styles.guruName}>Guru AI</Text>
           </View>
         )}
 
@@ -44,14 +39,6 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
         >
           {message.text}
         </Text>
-
-        {!isStudent && message.latencyMs !== undefined && (
-          <View style={styles.telemetryRow}>
-            <Text style={styles.telemetryText}>
-              ⚡ {message.latencyMs}ms • RAM: {message.ramUsageMB} MB • Zero Cloud
-            </Text>
-          </View>
-        )}
       </View>
     </View>
   );

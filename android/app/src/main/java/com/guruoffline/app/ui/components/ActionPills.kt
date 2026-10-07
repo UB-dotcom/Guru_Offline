@@ -17,15 +17,28 @@ import com.guruoffline.app.ui.theme.PrimaryBlue
 
 @Composable
 fun ActionPillsRow(
+    language: String = "en",
     onActionClick: (String) -> Unit
 ) {
-    val actions = listOf(
-        "Explain More Simply",
-        "Give Another Example",
-        "Practice",
-        "Quiz",
-        "Ask Follow-up"
-    )
+    val isHindi = language.lowercase() == "hi"
+
+    val actions = if (isHindi) {
+        listOf(
+            Pair("Explain More Simply", "और सरल समझाएं"),
+            Pair("Give Another Example", "अन्य उदाहरण दें"),
+            Pair("Practice", "अभ्यास"),
+            Pair("Quiz", "क्विज़"),
+            Pair("Ask Follow-up", "अगला प्रश्न पूछें")
+        )
+    } else {
+        listOf(
+            Pair("Explain More Simply", "Explain More Simply"),
+            Pair("Give Another Example", "Give Another Example"),
+            Pair("Practice", "Practice"),
+            Pair("Quiz", "Quiz"),
+            Pair("Ask Follow-up", "Ask Follow-up")
+        )
+    }
 
     Row(
         modifier = Modifier
@@ -34,9 +47,9 @@ fun ActionPillsRow(
             .horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        actions.forEach { action ->
+        actions.forEach { (actionKey, actionLabel) ->
             OutlinedButton(
-                onClick = { onActionClick(action) },
+                onClick = { onActionClick(actionKey) },
                 shape = RoundedCornerShape(20.dp),
                 colors = ButtonDefaults.outlinedButtonColors(
                     contentColor = PrimaryBlue
@@ -44,7 +57,7 @@ fun ActionPillsRow(
                 contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp)
             ) {
                 Text(
-                    text = action,
+                    text = actionLabel,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold
                 )

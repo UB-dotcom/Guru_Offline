@@ -1,0 +1,361 @@
+{
+  "board_id": "cbse",
+  "state_id": null,
+  "class_level": 10,
+  "stream_id": null,
+  "subject": {
+    "code": "science",
+    "name": "Science",
+    "name_hi": "विज्ञान (Science)",
+    "icon": "🔬",
+    "description": "Official NCERT Class 10 Science: 13 Complete Chapters from jesc1dd.zip",
+    "is_available": true
+  },
+  "module": {
+    "code": "class10_science",
+    "name": "Class 10 Science - NCERT",
+    "size_mb": 42,
+    "version": "1.0",
+    "author": "NCERT / National Board"
+  },
+  "chapters": [
+    {
+      "id": "cbse-10-sci-ch01",
+      "chapter_number": 1,
+      "title": "Chemical Reactions and Equations",
+      "title_hi": "रासायनिक अभिक्रियाएं एवं समीकरण",
+      "description": "Chemical equations, balancing, combination, decomposition, displacement, double displacement, redox, corrosion & rancidity.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch01_01",
+          "language": "bilingual",
+          "topic": "Chemical Equations & Balancing",
+          "content": "A complete chemical equation represents reactants, products and their physical states symbolically. A chemical equation is balanced so that the number of atoms of each type is equal on both reactant and product sides (Law of Conservation of Mass). Example: 2Mg + O2 -> 2MgO.",
+          "content_hi": "एक पूर्ण रासायनिक समीकरण अभिकारकों, उत्पादों और उनकी भौतिक अवस्थाओं को प्रतीकात्मक रूप से दर्शाता है। द्रव्यमान संरक्षण के नियम को संतुष्ट करने के लिए समीकरण संतुलित किया जाता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 1, Page 4"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch01_02",
+          "language": "bilingual",
+          "topic": "Types of Chemical Reactions & Redox",
+          "content": "Types of reactions: 1. Combination (two reactants form one product), 2. Decomposition (single compound breaks down using heat, light or electricity), 3. Displacement (more reactive element displaces less reactive one, e.g. Fe + CuSO4 -> FeSO4 + Cu), 4. Double displacement (exchange of ions), 5. Redox (oxidation is gain of oxygen/loss of electrons; reduction is loss of oxygen/gain of electrons).",
+          "content_hi": "अभिक्रियाओं के प्रकार: संयोजन, वियोजन (अपघटन), विस्थापन, द्विविस्थापन, तथा उपचयन-अपचयन (रेडॉक्स) अभिक्रियाएँ।",
+          "source_page": "NCERT Class 10 Science, Chapter 1, Page 12"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch02",
+      "chapter_number": 2,
+      "title": "Acids, Bases and Salts",
+      "title_hi": "अम्ल, क्षारक एवं लवण",
+      "description": "Indicators, neutralisation, pH scale (0-14), tooth decay, salts, plaster of Paris, baking soda & bleaching powder.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch02_01",
+          "language": "bilingual",
+          "topic": "pH Scale and Acid-Base Strength",
+          "content": "Acid-base indicators show presence of acid/base. Acids taste sour, turn blue litmus red and produce H+ (aq) ions. Bases taste bitter, turn red litmus blue and produce OH- (aq) ions. pH scale ranges from 0 (very acidic) to 14 (very alkaline). Neutral solution has pH = 7. Living organisms survive within narrow pH range of 7.0 to 7.8.",
+          "content_hi": "अम्ल स्वाद में खट्टे होते हैं और नीले लिटमस को लाल करते हैं तथा H+ आयन देते हैं। क्षारक कड़वे होते हैं, लाल लिटमस को नीला करते हैं तथा OH- आयन देते हैं। pH स्केल 0 से 14 तक होता है; उदासीन विलयन का pH 7 होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 2, Page 25"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch02_02",
+          "language": "bilingual",
+          "topic": "Common Salts & Plaster of Paris",
+          "content": "Neutralisation reaction: Acid + Base -> Salt + Water. Important salts include Bleaching powder (CaOCl2), Baking soda (NaHCO3 used in antacids and baking), Washing soda (Na2CO3.10H2O), and Plaster of Paris (CaSO4.1/2H2O which sets hard on adding water to form Gypsum CaSO4.2H2O).",
+          "content_hi": "उदासीनीकरण अभिक्रिया: अम्ल + क्षारक -> लवण + जल। प्लास्टर ऑफ पेरिस (CaSO4.1/2H2O) जल मिलाने पर जिप्सम बनकर कठोर हो जाता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 2, Page 31"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch03",
+      "chapter_number": 3,
+      "title": "Metals and Non-metals",
+      "title_hi": "धातु एवं अधातु",
+      "description": "Physical properties, reactivity series, ionic bond formation, properties of ionic compounds, metallurgy & corrosion prevention.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch03_01",
+          "language": "bilingual",
+          "topic": "Properties of Metals & Reactivity Series",
+          "content": "Metals are lustrous, malleable, ductile and good conductors of heat and electricity. Non-metals are poor conductors (except graphite). Reactivity series arranges metals in order of decreasing reactivity: K > Na > Ca > Mg > Al > Zn > Fe > Pb > [H] > Cu > Hg > Ag > Au. Highly reactive metals like Na and K react vigorously with cold water and are stored in kerosene.",
+          "content_hi": "धातुएं आघातवर्ध्य, तन्य तथा ऊष्मा व विद्युत की सुचालक होती हैं। सक्रियता श्रेणी: K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Hg > Ag > Au। सोडियम और पोटैशियम को केरोसिन में डुबोकर रखा जाता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 3, Page 45"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch03_02",
+          "language": "bilingual",
+          "topic": "Ionic Compounds & Corrosion Prevention",
+          "content": "Ionic compounds are formed by transfer of electrons from a metal to a non-metal. Properties: high melting and boiling points, hard and brittle, conduct electricity in molten or solution state but not in solid state. Corrosion of iron (rusting) requires both air (oxygen) and water. Rusting is prevented by painting, oiling, galvanising (coating with zinc) or alloying (stainless steel).",
+          "content_hi": "आयनिक यौगिक इलेक्ट्रॉनों के स्थानांतरण से बनते हैं। इनके गलनांक व क्वथनांक उच्च होते हैं और ये गलित अवस्था या जलीय विलयन में विद्युत चालन करते हैं। लोहे को जंग से बचाने के लिए यशदलेपन (जस्तीकरण/Galvanisation) किया जाता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 3, Page 53"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch04",
+      "chapter_number": 4,
+      "title": "Carbon and its Compounds",
+      "title_hi": "कार्बन एवं उसके यौगिक",
+      "description": "Covalent bonding, tetravalency, catenation, saturated/unsaturated hydrocarbons, functional groups, ethanol, ethanoic acid, soaps.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch04_01",
+          "language": "bilingual",
+          "topic": "Covalent Bonding, Catenation & Tetravalency",
+          "content": "Carbon has atomic number 6 with valency 4 (tetravalent). It forms covalent bonds by sharing electrons. Carbon shows versatile nature due to: 1. Catenation (ability to form long chains with other carbon atoms), 2. Tetravalency (bonding with 4 other atoms). Hydrocarbons can be saturated (single bonds, alkanes CnH2n+2) or unsaturated (double bonds alkenes CnH2n; triple bonds alkynes CnH2n-2).",
+          "content_hi": "कार्बन सहसंयोजी आबंध बनाता है। शृंखलन (Catenation) और चतुःसंयोजकता (Tetravalency) के कारण कार्बन के लाखों यौगिक बनते हैं। संतृप्त हाइड्रोकार्बन (Alkanes) और असंतृप्त हाइड्रोकार्बन (Alkenes, Alkynes) होते हैं।",
+          "source_page": "NCERT Class 10 Science, Chapter 4, Page 62"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch04_02",
+          "language": "bilingual",
+          "topic": "Functional Groups & Soaps / Detergents",
+          "content": "Functional groups include Alcohol (-OH), Aldehyde (-CHO), Ketone (-CO-), Carboxylic acid (-COOH). Ethanol (C2H5OH) and Ethanoic acid (CH3COOH) undergo esterification. Soaps are sodium or potassium salts of long-chain carboxylic acids. Soap molecules form spherical micelles where the hydrophobic hydrocarbon tail traps grease/dirt in the center and the hydrophilic ionic head points outward in water.",
+          "content_hi": "साबुन लंबी शृंखला वाले कार्बोक्सिलिक अम्लों के सोडियम या पोटैशियम लवण होते हैं। साबुन के अणु मिसेल (Micelle) संरचना बनाते हैं जिससे मैल/ग्रीस साफ होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 4, Page 74"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch05",
+      "chapter_number": 5,
+      "title": "Life Processes",
+      "title_hi": "जैव प्रक्रम",
+      "description": "Autotrophic nutrition, human digestive system, respiration (aerobic/anaerobic), double circulation, xylem/phloem, nephron excretion.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch05_01",
+          "language": "bilingual",
+          "topic": "Photosynthesis, Nutrition & Respiration",
+          "content": "Life processes include nutrition, respiration, transportation, and excretion. In autotrophic nutrition, green plants produce glucose by photosynthesis: 6CO2 + 6H2O -> C6H12O6 + 6O2 using chlorophyll and sunlight. Respiration breaks down glucose: in cytoplasm glucose converts to pyruvate; in mitochondria aerobic respiration with oxygen yields 38 ATP + CO2 + H2O; anaerobic in yeast yields ethanol + CO2 + 2 ATP.",
+          "content_hi": "प्रकाश संश्लेषण: 6CO2 + 6H2O -> C6H12O6 + 6O2। वायवीय श्वसन माइटोकॉन्ड्रिया में ऑक्सीजन की उपस्थिति में होता है और 38 ATP ऊर्जा उत्पन्न करता है। अवायवीय श्वसन में यीस्ट में एथेनॉल बनता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 5, Page 98"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch05_02",
+          "language": "bilingual",
+          "topic": "Transportation (Heart) & Excretion (Kidney Nephrons)",
+          "content": "In humans, the 4-chambered heart pumps blood in double circulation. Xylem transports water and minerals upward; phloem translocates food (sucrose). Excretion removes nitrogenous wastes like urea. Kidneys contain filtration units called nephrons. Urine is formed through glomerular filtration, tubular reabsorption, and secretion.",
+          "content_hi": "मानव हृदय चार कोष्ठों वाला होता है जिसमें दोहरा परिसंचरण (Double Circulation) होता है। जाइलम जल और खनिज का वहन करता है; फ्लोएम भोजन का वहन करता है। वृक्क (Kidney) की कार्यात्मक इकाई नेफ्रॉन (Nephron) है।",
+          "source_page": "NCERT Class 10 Science, Chapter 5, Page 110"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch06",
+      "chapter_number": 6,
+      "title": "Control and Coordination",
+      "title_hi": "नियंत्रण एवं समन्वय",
+      "description": "Nervous system, neuron, synapse, reflex arc, human brain, plant hormones (auxin, cytokinin), endocrine glands (insulin, thyroxine).",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch06_01",
+          "language": "bilingual",
+          "topic": "Nervous System, Reflex Arc & Human Brain",
+          "content": "The functional unit of nervous system is the neuron (dendrite, cell body, axon, synapse). Electrical impulses cross synapses via neurotransmitters. A reflex arc allows quick involuntary response without brain intervention: Receptor -> Sensory neuron -> Spinal cord -> Motor neuron -> Effector muscle. The human brain has 3 parts: Forebrain (cerebrum for thinking), Midbrain, and Hindbrain (cerebellum for balance, medulla for involuntary actions like blood pressure and salivation).",
+          "content_hi": "तंत्रिका तंत्र की इकाई न्यूरॉन है। प्रतिवर्ती चाप (Reflex arc) मेरुदंड द्वारा त्वरित अनैच्छिक प्रतिक्रिया देता है। मस्तिष्क के तीन भाग हैं: प्रमस्तिष्क (सोचना), अनुमस्तिष्क (संतुलन) और मेडुला (अनैच्छिक क्रियाएं)।",
+          "source_page": "NCERT Class 10 Science, Chapter 6, Page 115"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch06_02",
+          "language": "bilingual",
+          "topic": "Plant Hormones & Animal Endocrine Glands",
+          "content": "Plant hormones (phytohormones): Auxin (promotes cell elongation toward light - phototropism), Gibberellin (stem growth), Cytokinin (promotes cell division), Abscisic acid (inhibits growth, causes wilting of leaves). In animals, endocrine glands secrete hormones into blood: Thyroid secretes Thyroxine (regulates metabolism, requires iodine), Pancreas secretes Insulin (regulates blood sugar; deficiency causes diabetes), Adrenal secretes Adrenaline (fight-or-flight response).",
+          "content_hi": "पादप हार्मोन: ऑक्सिन (प्रकाशानुवर्तन), साइटोकाइनिन (कोशिका विभाजन), ऐब्सिसिक अम्ल (वृद्धि रोधक)। अग्न्याशय इंसुलिन स्रावित करता है जो रक्त में शर्करा स्तर नियंत्रित करता है। थायरॉइड ग्रंथि थायरॉक्सिन स्रावित करती है जिसके लिए आयोडीन आवश्यक है।",
+          "source_page": "NCERT Class 10 Science, Chapter 6, Page 124"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch07",
+      "chapter_number": 7,
+      "title": "How do Organisms Reproduce?",
+      "title_hi": "जीव जनन कैसे करते हैं",
+      "description": "Asexual reproduction (binary fission, budding, spore formation), sexual reproduction in plants (flower parts, pollination), human reproduction.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch07_01",
+          "language": "bilingual",
+          "topic": "Asexual Reproduction & Flower Pollination",
+          "content": "Asexual reproduction involves one parent: Binary fission (Amoeba), Multiple fission (Plasmodium), Budding (Hydra, Yeast), Regeneration (Planaria), Vegetative propagation (Bryophyllum leaves, rose). In sexual reproduction in flowers, stamen is male organ (pollen in anther) and carpel/pistil is female organ (stigma, style, ovary with ovule). Pollination transfers pollen grains from anther to stigma. Fertilisation forms a zygote.",
+          "content_hi": "अलैंगिक जनन: द्विखंडन (अमीबा), मुकुलन (यीस्ट, हाइड्रा), पुनरुद्भवन (प्लेनेरिया)। फूल में पुंकेसर नर जननांग और स्त्रीकेसर मादा जननांग है। परागण द्वारा परागकण वर्तिकाग्र पर पहुँचते हैं और निषेचन के बाद युग्मनज बनता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 7, Page 133"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch07_02",
+          "language": "bilingual",
+          "topic": "Human Reproduction & Contraception",
+          "content": "Male reproductive system includes testes (produce sperms and testosterone), vas deferens, and urethra. Female system includes ovaries (produce eggs and estrogen/progesterone), fallopian tubes (fertilisation site), and uterus (embryo implantation via placenta). Menstruation occurs monthly if egg is not fertilised. Contraceptive methods prevent unwanted pregnancy: barrier (condoms), chemical (oral pills), IUDs (Copper-T), and surgical (vasectomy, tubectomy).",
+          "content_hi": "मानव में नर युग्मक शुक्राणु वृषण में और मादा युग्मक अंडाणु अंडाशय में बनते हैं। निषेचन अंडवाहिनी (Fallopian tube) में होता है। गर्भनिरोधक विधियाँ: रोध विधि, रासायनिक गोलियां, कॉपर-टी तथा शल्य क्रिया (नसबंदी)।",
+          "source_page": "NCERT Class 10 Science, Chapter 7, Page 140"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch08",
+      "chapter_number": 8,
+      "title": "Heredity",
+      "title_hi": "आनुवंशिकता (Heredity)",
+      "description": "Mendel laws of inheritance, monohybrid cross 3:1 ratio, dihybrid cross 9:3:3:1 ratio, sex determination (XX vs XY chromosomes).",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch08_01",
+          "language": "bilingual",
+          "topic": "Mendel Laws of Inheritance & Monohybrid Cross",
+          "content": "Heredity is transmission of traits from parents to offspring. Gregor Johann Mendel, father of genetics, used garden pea (Pisum sativum). In a monohybrid cross crossing pure tall (TT) and pure dwarf (tt), the F1 generation were all tall (Tt). In F2 generation, phenotypic ratio was 3 Tall : 1 Dwarf, and genotypic ratio was 1 TT : 2 Tt : 1 tt. The dominant trait (Tall) expresses even with single copy; recessive trait (Dwarf) expresses only in homozygous condition (tt).",
+          "content_hi": "आनुवंशिकी के जनक ग्रेगर मेंडल ने मटर के पौधे (Pisum sativum) पर प्रयोग किए। एकसंकर संकरण (Monohybrid cross) में F2 पीढ़ी का लक्षणप्ररूपी अनुपात 3:1 और जीनप्ररूपी अनुपात 1:2:1 होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 8, Page 143"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch08_02",
+          "language": "bilingual",
+          "topic": "Sex Determination in Humans",
+          "content": "In human beings, sex is determined genetically. Humans have 23 pairs of chromosomes, of which 22 pairs are autosomes and 1 pair is sex chromosomes. Females have a perfect pair of XX sex chromosomes. Males have a mismatched pair XY. Mother always donates an X chromosome. Father donates either X (resulting in girl child XX) or Y (resulting in boy child XY) with 50% probability each.",
+          "content_hi": "मानव में लिंग निर्धारण गुणसूत्रों द्वारा होता है। स्त्रियों में XX और पुरुषों में XY गुणसूत्र होते हैं। पिता से X गुणसूत्र मिलने पर लड़की और Y गुणसूत्र मिलने पर लड़का पैदा होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 8, Page 145"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch09",
+      "chapter_number": 9,
+      "title": "Light – Reflection and Refraction",
+      "title_hi": "प्रकाश – परावर्तन तथा अपवर्तन",
+      "description": "Spherical mirrors, mirror formula, magnification, refraction, Snell law, lens formula, power of a lens in dioptres.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch09_01",
+          "language": "bilingual",
+          "topic": "Spherical Mirrors, Mirror Formula & Magnification",
+          "content": "Light travels in straight lines. Laws of reflection: angle of incidence i = angle of reflection r. Concave mirrors form real and inverted images (except when object is between pole and focus, forming virtual and erect image). Convex mirrors always form virtual, erect, and diminished images, used as vehicle rear-view mirrors. Mirror Formula: 1/f = 1/v + 1/u. Magnification m = -v/u = h_prime/h.",
+          "content_hi": "गोलीय दर्पण सूत्र: 1/f = 1/v + 1/u। आवर्धन m = -v/u = h'/h। उत्तल दर्पण सदैव आभासी, सीधा व छोटा प्रतिबिम्ब बनाते हैं इसलिए वाहनों में पश्च-दृश्य दर्पण के रूप में उपयोग होते हैं।",
+          "source_page": "NCERT Class 10 Science, Chapter 9, Page 168"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch09_02",
+          "language": "bilingual",
+          "topic": "Refraction, Snell Law, Lens Formula & Power",
+          "content": "Refraction is bending of light as it passes obliquely from one transparent medium to another. Snell Law: sin(i) / sin(r) = constant = refractive index n. Lens Formula: 1/f = 1/v - 1/u. Magnification m = v/u. Power of lens P = 1/f (f in meters), measured in Dioptres (D). Convex lens has positive power (+D, converging); concave lens has negative power (-D, diverging).",
+          "content_hi": "स्नेल का नियम: sin i / sin r = अपवर्तनांक n। लेंस सूत्र: 1/f = 1/v - 1/u। लेंस की क्षमता P = 1/f (मीटर में), मात्रक डायोप्टर (D) है। उत्तल लेंस की क्षमता धनात्मक और अवतल लेंस की क्षमता ऋणात्मक होती है।",
+          "source_page": "NCERT Class 10 Science, Chapter 9, Page 182"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch10",
+      "chapter_number": 10,
+      "title": "The Human Eye and the Colourful World",
+      "title_hi": "मानव नेत्र तथा रंगबिरंगा संसार",
+      "description": "Human eye, power of accommodation, myopia, hypermetropia, prism dispersion (VIBGYOR), atmospheric refraction, scattering & Tyndall effect.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch10_01",
+          "language": "bilingual",
+          "topic": "Defects of Vision: Myopia & Hypermetropia",
+          "content": "The eye lens forms an inverted real image on the retina. Power of accommodation is ability to adjust focal length using ciliary muscles. Near point of normal human eye is 25 cm. Defects of vision: 1. Myopia (near-sightedness): nearby objects clear, distant objects blurred, image forms in front of retina, corrected by Concave lens. 2. Hypermetropia (far-sightedness): distant objects clear, nearby objects blurred, image forms behind retina, corrected by Convex lens. 3. Presbyopia: age-related loss of accommodation, corrected by bifocal lens.",
+          "content_hi": "निकट दृष्टि दोष (Myopia) में दूर की वस्तुएं स्पष्ट नहीं दिखतीं, निवारण के लिए अवतल लेंस (Concave lens) प्रयुक्त होता है। दूर दृष्टि दोष (Hypermetropia) में निकट की वस्तुएं स्पष्ट नहीं दिखतीं, निवारण के लिए उत्तल लेंस (Convex lens) प्रयुक्त होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 10, Page 189"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch10_02",
+          "language": "bilingual",
+          "topic": "Prism Dispersion, Atmospheric Refraction & Scattering",
+          "content": "Dispersion of light: splitting of white light into 7 colors (VIBGYOR: Violet, Indigo, Blue, Green, Yellow, Orange, Red) through a glass prism. Red light bends the least, violet bends the most. Rainbow is formed by dispersion, refraction, and internal reflection in raindrops. Atmospheric refraction causes twinkling of stars and advance sunrise / delayed sunset by 2 minutes each. Scattering of light by fine particles causes Tyndall effect; blue sky is due to shorter wavelength blue light scattering more than red light.",
+          "content_hi": "श्वेत प्रकाश का प्रिज्म द्वारा 7 रंगों (VIBGYOR) में विभाजन वर्ण-विक्षेपण (Dispersion) कहलाता है। वायुमंडलीय अपवर्तन के कारण तारे टिमटिमाते हैं। प्रकाश के प्रकीर्णन (Scattering) के कारण आकाश नीला दिखाई देता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 10, Page 194"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch11",
+      "chapter_number": 11,
+      "title": "Electricity",
+      "title_hi": "विद्युत (Electricity)",
+      "description": "Electric current, potential difference, Ohm law (V = IR), factors affecting resistance, series and parallel circuits, Joule law of heating (H = I^2Rt), power.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch11_01",
+          "language": "bilingual",
+          "topic": "Ohm Law, Electric Current & Resistance",
+          "content": "Electric current I = Q/t, measured in Amperes (A) by an ammeter connected in series. Potential difference V = W/Q, measured in Volts (V) by a voltmeter connected in parallel. Ohm Law states V = IR at constant temperature. Resistance R depends on length l, area of cross-section A, and resistivity rho: R = rho * l / A. In series combination, R_total = R1 + R2 + R3; in parallel combination, 1/R_total = 1/R1 + 1/R2 + 1/R3.",
+          "content_hi": "ओम का नियम: V = IR। प्रतिरोध R = rho * l / A। श्रेणीक्रम संयोजन: R = R1 + R2 + R3। पार्श्वक्रम (समानांतर) संयोजन: 1/R = 1/R1 + 1/R2 + 1/R3। विद्युत धारा का मात्रक एम्पीयर (A) तथा विभवांतर का वोल्ट (V) है।",
+          "source_page": "NCERT Class 10 Science, Chapter 11, Page 204"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch11_02",
+          "language": "bilingual",
+          "topic": "Joule Heating Effect & Electric Power",
+          "content": "Joule Law of Heating: heat produced in a resistor is H = I^2 * R * t. Applications include electric heaters, toasters, and electric fuses (low melting point alloy protects circuits). Electric power P = V * I = I^2 * R = V^2 / R, measured in Watts (W). 1 kilowatt-hour (1 kWh) = 1 unit = 3.6 x 10^6 Joules.",
+          "content_hi": "जूल का तापन नियम: H = I²Rt। विद्युत शक्ति P = VI = I²R = V²/R (मात्रक वाट W)। 1 यूनिट = 1 kWh = 3.6 × 10⁶ जूल। विद्युत फ्यूज परिपथ की सुरक्षा करता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 11, Page 218"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch12",
+      "chapter_number": 12,
+      "title": "Magnetic Effects of Electric Current",
+      "title_hi": "विद्युत धारा के चुंबकीय प्रभाव",
+      "description": "Magnetic field lines, right-hand thumb rule, solenoid, Fleming left-hand rule, electric motor, electromagnetic induction, domestic circuits.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch12_01",
+          "language": "bilingual",
+          "topic": "Magnetic Field, Right-Hand Thumb Rule & Solenoid",
+          "content": "A current-carrying conductor produces a magnetic field around it (Oersted experiment). Magnetic field lines emerge from North pole and enter South pole outside a magnet, forming continuous closed loops. They never intersect each other. Right-Hand Thumb Rule: thumb in current direction, curled fingers show direction of magnetic field lines. A solenoid is a coil of many circular turns of insulated copper wire; inside a solenoid, magnetic field is uniform and parallel.",
+          "content_hi": "विद्युत धारावाही चालक चुंबकीय क्षेत्र उत्पन्न करता है। चुंबकीय क्षेत्र रेखाएँ उत्तरी ध्रुव से निकलकर दक्षिणी ध्रुव में प्रवेश करती हैं और कभी एक-दूसरे को प्रतिच्छेद नहीं करतीं। परिनालिका (Solenoid) के भीतर चुंबकीय क्षेत्र एकसमान होता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 12, Page 225"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch12_02",
+          "language": "bilingual",
+          "topic": "Fleming Left-Hand Rule & Domestic Electric Circuits",
+          "content": "A current-carrying conductor in a magnetic field experiences a mechanical force. Fleming Left-Hand Rule: stretch thumb (Motion/Force), forefinger (Field), and middle finger (Current) mutually perpendicular (FBI rule). Used in electric motors (converts electrical energy to mechanical energy). Domestic circuit: Live wire (red/brown, 220V), Neutral wire (black/blue, 0V), Earth wire (green/yellow, connects metal casing to earth for shock protection). Potential difference is 220V, frequency 50Hz in India.",
+          "content_hi": "फ्लेमिंग का वाम-हस्त (बायाँ हाथ) नियम: अँगूठा (बल/गति), तर्जनी (चुंबकीय क्षेत्र) और मध्यमा (विद्युत धारा) परस्पर लंबवत होते हैं। इसका उपयोग विद्युत मोटर में होता है। घरेलू परिपथ में 220V, 50Hz प्रत्यावर्ती धारा (AC) होती है। भूसंपर्क तार (Earth wire) बिजली के झटके से बचाता है।",
+          "source_page": "NCERT Class 10 Science, Chapter 12, Page 232"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-sci-ch13",
+      "chapter_number": 13,
+      "title": "Our Environment",
+      "title_hi": "हमारा पर्यावरण",
+      "description": "Ecosystem biotic/abiotic components, food chains, 10% energy law, biological magnification, ozone layer depletion, waste management.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_sci_ch13_01",
+          "language": "bilingual",
+          "topic": "Ecosystem, Food Chains & 10 Percent Energy Law",
+          "content": "An ecosystem consists of biotic components (producers, consumers, decomposers) and abiotic components (air, water, soil, sunlight). Food chain shows sequential energy transfer: Producers (plants) -> Primary consumers (herbivores) -> Secondary consumers -> Tertiary consumers. 10 Percent Law (Lindeman): only 10% of energy entering a trophic level is transferred to next level; 90% is lost as heat. Biological Magnification: progressive accumulation of non-biodegradable harmful chemicals (like DDT pesticides) at higher trophic levels, with humans having highest concentration.",
+          "content_hi": "पारितंत्र में जैव और अजैव घटक होते हैं। 10 प्रतिशत नियम: एक पोषी स्तर से अगले पोषी स्तर में केवल 10% ऊर्जा ही स्थानांतरित होती है। जैव-आवर्धन (Biological Magnification): आहार शृंखला के शीर्ष स्तर (मानव) में हानिकारक कीटनाशकों का सर्वाधिक सांद्रण हो जाना।",
+          "source_page": "NCERT Class 10 Science, Chapter 13, Page 260"
+        },
+        {
+          "chunk_id": "cbse_10_sci_ch13_02",
+          "language": "bilingual",
+          "topic": "Ozone Layer Depletion & Waste Management",
+          "content": "Ozone (O3) in the stratosphere shields Earth from deadly ultraviolet (UV) radiation from the sun, which causes skin cancer and cataract in humans. UV breaks O2 into free oxygen O, which combines with O2 to form O3: O2 + UV -> O + O; O + O2 -> O3. Ozone depletion is caused by chlorofluorocarbons (CFCs) used in refrigerants and fire extinguishers. Waste is categorized into biodegradable (decomposed by bacteria) and non-biodegradable (plastic, glass requiring recycling).",
+          "content_hi": "ओजोन (O3) परत समताप मंडल में सूर्य से आने वाली हानिकारक पराबैंगनी (UV) विकिरण से रक्षा करती है। क्लोरोफ्लोरोकार्बन (CFCs) ओजोन परत को क्षति पहुँचाते हैं। कचरा प्रबंधन: जैव-निम्नीकरणीय और अजैव-निम्नीकरणीय कचरे का अलग निस्तारण।",
+          "source_page": "NCERT Class 10 Science, Chapter 13, Page 263"
+        }
+      ]
+    }
+  ]
+}

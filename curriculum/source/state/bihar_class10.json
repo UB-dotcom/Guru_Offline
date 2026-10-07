@@ -1,0 +1,22 @@
+{
+  "board_id": "state",
+  "state_id": "bihar",
+  "class_level": 10,
+  "stream_id": null,
+  "subject": {
+    "code": "mathematics",
+    "name": "BSEB Mathematics (बिहार राज्य बोर्ड)",
+    "name_hi": "गणित (बिहार राज्य बोर्ड)",
+    "icon": "📐",
+    "description": "Bihar School Examination Board (BSEB) Class 10 - Ingestion pipeline registered, awaiting regional textbook upload",
+    "is_available": false
+  },
+  "module": {
+    "code": "bseb10_math",
+    "name": "BSEB Class 10 Mathematics [Not Yet Ingested]",
+    "size_mb": 0,
+    "version": "1.0",
+    "author": "Bihar State Textbook Publishing Corporation"
+  },
+  "chapters": []
+}

@@ -17,6 +17,7 @@ import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { useTutorStore } from '../store/tutorStore';
 import { useModuleStore } from '../store/moduleStore';
+import { useProfileStore } from '../store/profileStore';
 import { TutorActionType } from '../types/tutor';
 
 interface TutorScreenProps {
@@ -26,6 +27,7 @@ interface TutorScreenProps {
 export const TutorScreen: React.FC<TutorScreenProps> = ({ navigation }) => {
   const { messages, isThinking, currentContext, askGuru, clearChat } = useTutorStore();
   const { activeModuleId, modules } = useModuleStore();
+  const { profile } = useProfileStore();
   const [inputText, setInputText] = useState('');
   const scrollRef = useRef<ScrollView>(null);
 
@@ -68,13 +70,16 @@ export const TutorScreen: React.FC<TutorScreenProps> = ({ navigation }) => {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 0}
     >
+
       {/* Top Header Bar */}
       <View style={styles.topHeader}>
         <View style={styles.headerInfo}>
           <Text style={styles.moduleName}>{activeModule.title}</Text>
           <View style={styles.offlineBadgeRow}>
             <Text style={styles.offlineDot}>●</Text>
-            <Text style={styles.offlineStatus}>OFFLINE • ON-DEVICE AI</Text>
+            <Text style={styles.offlineStatus}>
+              Class {profile.classLevel} • {profile.board.toUpperCase()}{profile.state ? ` (${profile.state.toUpperCase()})` : ''} • {profile.language === 'hi' ? 'Hindi' : profile.language === 'bilingual' ? 'Bilingual' : 'English'}
+            </Text>
           </View>
         </View>
 
@@ -116,6 +121,30 @@ export const TutorScreen: React.FC<TutorScreenProps> = ({ navigation }) => {
           </View>
         )}
       </ScrollView>
+
+      {/* Quick Suggestions Chips */}
+      <View style={styles.suggestionsBar}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.suggestionsContent}>
+          <TouchableOpacity
+            style={styles.suggestionChip}
+            onPress={() => handleSend('Quadratic equation ko simple language mein samjhao.')}
+          >
+            <Text style={styles.suggestionChipText}>✨ Quadratic equation samjhao (सरल भाषा)</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.suggestionChip}
+            onPress={() => handleSend('द्विघाती सूत्र x = (-b ± √D) / 2a और विविक्तकर क्या है?')}
+          >
+            <Text style={styles.suggestionChipText}>📐 D = b² - 4ac सूत्र</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.suggestionChip}
+            onPress={() => handleSend('Give me an easy practice question from Class 10 Math')}
+          >
+            <Text style={styles.suggestionChipText}>✏️ Easy question</Text>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
 
       {/* Action Buttons Row */}
       <View style={styles.actionsBar}>
@@ -329,5 +358,44 @@ const styles = StyleSheet.create({
     color: palette.white,
     fontSize: 16,
     fontWeight: '900',
+  },
+  persistentOfflineBanner: {
+    backgroundColor: '#0F172A',
+    paddingVertical: 5,
+    paddingHorizontal: spacing.base,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  persistentOfflineText: {
+    ...typography.caption,
+    color: '#38BDF8',
+    fontWeight: '800',
+    fontSize: 11,
+    letterSpacing: 0.5,
+  },
+  suggestionsBar: {
+    backgroundColor: palette.gray50,
+    paddingVertical: 6,
+    borderTopWidth: 1,
+    borderTopColor: palette.gray200,
+  },
+  suggestionsContent: {
+    paddingHorizontal: spacing.base,
+    gap: spacing.xs,
+  },
+  suggestionChip: {
+    backgroundColor: palette.white,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 5,
+    borderRadius: spacing.radiusFull,
+    borderWidth: 1,
+    borderColor: palette.primary,
+    marginRight: spacing.xs,
+  },
+  suggestionChipText: {
+    ...typography.caption,
+    color: palette.primary,
+    fontWeight: '700',
+    fontSize: 11,
   },
 });

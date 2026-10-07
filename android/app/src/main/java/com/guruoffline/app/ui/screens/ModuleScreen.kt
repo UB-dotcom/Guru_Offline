@@ -17,49 +17,43 @@ import androidx.compose.ui.unit.sp
 import com.guruoffline.app.model.CurriculumModule
 import com.guruoffline.app.ui.components.OfflineBanner
 import com.guruoffline.app.ui.theme.EmeraldGreen
+import com.guruoffline.app.profile.ProfileManager
 import com.guruoffline.app.ui.theme.PrimaryBlue
 
 @Composable
-fun ModuleScreen(onBack: () -> Unit) {
-    val modules = remember {
-        mutableStateListOf(
-            CurriculumModule(
-                id = "class10_math",
-                name = "Class 10 Mathematics",
-                classLevel = "10",
-                subject = "Mathematics",
-                sizeMb = 72,
-                topics = listOf("Algebra", "Trigonometry", "Quadratics", "Arithmetic Progressions"),
-                isInstalled = true
-            ),
-            CurriculumModule(
-                id = "class10_science",
-                name = "Class 10 Science",
-                classLevel = "10",
-                subject = "Science",
-                sizeMb = 81,
-                topics = listOf("Chemical Reactions", "Acids & Bases", "Electricity", "Newton's Laws"),
-                isInstalled = true
-            ),
-            CurriculumModule(
-                id = "class5_math",
-                name = "Class 5 Mathematics",
-                classLevel = "5",
-                subject = "Mathematics",
-                sizeMb = 45,
-                topics = listOf("Large Numbers", "Fractions", "Perimeter & Area", "Speed & Time"),
-                isInstalled = false
-            ),
-            CurriculumModule(
-                id = "bca_cs",
-                name = "BCA / Computer Science",
-                classLevel = "College",
-                subject = "Computer Science",
-                sizeMb = 65,
-                topics = listOf("Python Basics", "OOP", "Stacks & Queues", "Algorithms"),
-                isInstalled = false
+fun ModuleScreen(
+    profileManager: ProfileManager = remember { ProfileManager() },
+    onBack: () -> Unit
+) {
+    val profile = profileManager.getProfile()
+    val modules = remember(profile.selectedSubjects, profile.classLevel) {
+        val list = mutableListOf<CurriculumModule>()
+        // All user selected subjects are installed
+        profile.selectedSubjects.forEach { sub ->
+            val displayName = sub.replace("_", " ").replaceFirstChar { it.uppercase() }
+            val topics = when (sub.lowercase()) {
+                "mathematics" -> listOf("Algebra", "Trigonometry", "Quadratics", "Arithmetic Progressions")
+                "science" -> listOf("Chemical Reactions", "Acids & Bases", "Electricity", "Newton's Laws")
+                "physics" -> listOf("Electrostatics", "Current Electricity", "Magnetism", "Optics")
+                "chemistry" -> listOf("Solutions", "Electrochemistry", "Chemical Kinetics", "Coordination")
+                "biology" -> listOf("Reproduction", "Genetics & Evolution", "Biotechnology", "Ecology")
+                "english" -> listOf("First Flight", "Footprints Without Feet", "Grammar & Composition")
+                "social_science", "history" -> listOf("Nationalism in Europe", "Nationalism in India", "Resources & Development")
+                else -> listOf("Chapter 1: Foundations", "Chapter 2: Core Concepts", "Chapter 3: Advanced Topics")
+            }
+            list.add(
+                CurriculumModule(
+                    id = "class${profile.classLevel}_$sub",
+                    name = "Class ${profile.classLevel} $displayName",
+                    classLevel = "${profile.classLevel}",
+                    subject = displayName,
+                    sizeMb = when (sub) { "science" -> 81; "mathematics" -> 72; "physics" -> 68; "chemistry" -> 64; else -> 45 },
+                    topics = topics,
+                    isInstalled = true
+                )
             )
-        )
+        }
+        mutableStateListOf<CurriculumModule>().apply { addAll(list) }
     }
 
     Column(
@@ -67,8 +61,6 @@ fun ModuleScreen(onBack: () -> Unit) {
             .fillMaxSize()
             .background(Color(0xFFF8FAFC))
     ) {
-        OfflineBanner(isOffline = false)
-
         Column(modifier = Modifier.padding(20.dp)) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -91,7 +83,7 @@ fun ModuleScreen(onBack: () -> Unit) {
                 color = Color(0xFF0F172A)
             )
             Text(
-                text = "Download while online to study anytime without internet",
+                text = "Class ${profile.classLevel} ${profile.board} • Download packages for offline study",
                 fontSize = 13.sp,
                 color = Color(0xFF64748B),
                 modifier = Modifier.padding(bottom = 16.dp)

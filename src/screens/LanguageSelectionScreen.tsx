@@ -11,18 +11,27 @@ interface LanguageSelectionScreenProps {
   navigation: any;
 }
 
-const LANGUAGES: { id: AppLanguage; title: string; subtitle: string; flag: string }[] = [
-  {
-    id: 'en',
-    title: 'English',
-    subtitle: 'Standard Indian School Curriculum',
-    flag: '🇬🇧',
-  },
+const LANGUAGES: { id: AppLanguage; title: string; subtitle: string; flag: string; badge: string }[] = [
   {
     id: 'hi',
     title: 'हिंदी (Hindi)',
-    subtitle: 'राष्ट्रीय शैक्षिक अनुसंधान एवं प्रशिक्षण परिषद',
+    subtitle: 'राष्ट्रीय शैक्षिक अनुसंधान एवं प्रशिक्षण परिषद (NCERT) माध्यम',
     flag: '🇮🇳',
+    badge: 'लोकप्रिय',
+  },
+  {
+    id: 'bilingual',
+    title: 'Hinglish / Bilingual',
+    subtitle: 'सरल हिंदी व्याख्या + English Technical & Formula Terms',
+    flag: '🇮🇳 🇬🇧',
+    badge: 'अनुशंसित (Recommended)',
+  },
+  {
+    id: 'en',
+    title: 'English',
+    subtitle: 'Standard National Indian Curriculum Medium',
+    flag: '🇬🇧',
+    badge: 'Standard',
   },
 ];
 
@@ -36,16 +45,21 @@ export const LanguageSelectionScreen: React.FC<LanguageSelectionScreenProps> = (
   };
 
   const handleContinue = () => {
-    navigation.navigate('ModuleSelection');
+    navigation.navigate('BoardSelection');
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.stepBadge}>STEP 4 OF 5</Text>
+        <View style={styles.badgeRow}>
+          <Text style={styles.stepBadge}>STEP 1 OF 6</Text>
+          <View style={styles.offlineBadge}>
+            <Text style={styles.offlineBadgeText}>⚡ OFFLINE MODE</Text>
+          </View>
+        </View>
         <Text style={styles.title}>Preferred Language</Text>
         <Text style={styles.subtitle}>
-          Choose the language for AI explanations and textbooks
+          Choose your learning medium for AI tutor explanations and textbooks
         </Text>
       </View>
 
@@ -65,9 +79,18 @@ export const LanguageSelectionScreen: React.FC<LanguageSelectionScreenProps> = (
               <Text style={styles.flagEmoji}>{item.flag}</Text>
 
               <View style={styles.textCol}>
-                <Text style={[styles.langTitle, isSelected && styles.langTitleSelected]}>
-                  {item.title}
-                </Text>
+                <View style={styles.titleRow}>
+                  <Text style={[styles.langTitle, isSelected && styles.langTitleSelected]}>
+                    {item.title}
+                  </Text>
+                  {item.badge && (
+                    <View style={[styles.pillBadge, isSelected && styles.pillBadgeSelected]}>
+                      <Text style={[styles.pillBadgeText, isSelected && styles.pillBadgeTextSelected]}>
+                        {item.badge}
+                      </Text>
+                    </View>
+                  )}
+                </View>
                 <Text style={styles.langSubtitle}>{item.subtitle}</Text>
               </View>
 
@@ -80,7 +103,7 @@ export const LanguageSelectionScreen: React.FC<LanguageSelectionScreenProps> = (
       </View>
 
       <PrimaryButton
-        title="Continue"
+        title="Continue to Board Selection"
         onPress={handleContinue}
         style={styles.continueBtn}
       />
@@ -98,11 +121,28 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: spacing.base,
   },
+  badgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: spacing.xs,
+  },
   stepBadge: {
     ...typography.caption,
     color: palette.primary,
     fontWeight: '800',
-    marginBottom: spacing.xs,
+  },
+  offlineBadge: {
+    backgroundColor: palette.warning,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+    borderRadius: spacing.radiusSm,
+  },
+  offlineBadgeText: {
+    ...typography.caption,
+    color: palette.white,
+    fontWeight: '700',
+    fontSize: 10,
   },
   title: {
     ...typography.h1,
@@ -125,18 +165,24 @@ const styles = StyleSheet.create({
     marginBottom: spacing.base,
     borderWidth: 2,
     borderColor: palette.gray200,
-    minHeight: spacing.minTouchTarget + 20,
+    minHeight: spacing.minTouchTarget + 24,
   },
   cardSelected: {
     borderColor: palette.primary,
     backgroundColor: palette.primarySurface,
   },
   flagEmoji: {
-    fontSize: 32,
+    fontSize: 28,
     marginRight: spacing.base,
   },
   textCol: {
     flex: 1,
+  },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: spacing.xs,
   },
   langTitle: {
     ...typography.h3,
@@ -146,10 +192,28 @@ const styles = StyleSheet.create({
     color: palette.primary,
     fontWeight: '800',
   },
+  pillBadge: {
+    backgroundColor: palette.gray100,
+    paddingHorizontal: spacing.xs,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  pillBadgeSelected: {
+    backgroundColor: palette.primary,
+  },
+  pillBadgeText: {
+    ...typography.caption,
+    fontSize: 10,
+    color: palette.gray600,
+    fontWeight: '700',
+  },
+  pillBadgeTextSelected: {
+    color: palette.white,
+  },
   langSubtitle: {
     ...typography.bodySmall,
     color: palette.gray500,
-    marginTop: 2,
+    marginTop: 4,
   },
   checkCircle: {
     width: 26,
@@ -159,6 +223,7 @@ const styles = StyleSheet.create({
     borderColor: palette.gray300,
     alignItems: 'center',
     justifyContent: 'center',
+    marginLeft: spacing.sm,
   },
   checkCircleSelected: {
     borderColor: palette.primary,

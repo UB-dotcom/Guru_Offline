@@ -19,6 +19,10 @@ import { AIInfoScreen } from '../screens/AIInfoScreen';
 import { EducationLevelScreen } from '../screens/EducationLevelScreen';
 import { ClassSelectionScreen } from '../screens/ClassSelectionScreen';
 import { LanguageSelectionScreen } from '../screens/LanguageSelectionScreen';
+import { BoardSelectionScreen } from '../screens/BoardSelectionScreen';
+import { StateSelectionScreen } from '../screens/StateSelectionScreen';
+import { StreamSelectionScreen } from '../screens/StreamSelectionScreen';
+import { SubjectSelectionScreen } from '../screens/SubjectSelectionScreen';
 import { ModuleSelectionScreen } from '../screens/ModuleSelectionScreen';
 import { ModuleDownloadScreen } from '../screens/ModuleDownloadScreen';
 import { palette } from '../theme/colors';
@@ -26,34 +30,49 @@ import { palette } from '../theme/colors';
 const Tab = createBottomTabNavigator<MainTabParamList>();
 const Stack = createStackNavigator<MainStackParamList>();
 
-const TabIcon: React.FC<{ focused: boolean; emoji: string; label: string }> = ({
+const TabIcon: React.FC<{ focused: boolean; emoji: string; label: string; isCenter?: boolean }> = ({
   focused,
   emoji,
   label,
-}) => (
-  <View style={tabStyles.container}>
-    <Text style={[tabStyles.emoji, focused && tabStyles.emojiFocused]}>{emoji}</Text>
-    <Text style={[tabStyles.label, focused ? tabStyles.labelFocused : tabStyles.labelUnfocused]}>
-      {label}
-    </Text>
-  </View>
-);
+  isCenter = false,
+}) => {
+  if (isCenter) {
+    return (
+      <View style={tabStyles.centerBtnContainer}>
+        <View style={tabStyles.centerBtnGlow}>
+          <Text style={tabStyles.centerEmoji}>{emoji}</Text>
+        </View>
+      </View>
+    );
+  }
+
+  return (
+    <View style={tabStyles.container}>
+      <Text style={[tabStyles.emoji, focused && tabStyles.emojiFocused]}>{emoji}</Text>
+      <Text style={[tabStyles.label, focused ? tabStyles.labelFocused : tabStyles.labelUnfocused]}>
+        {label}
+      </Text>
+    </View>
+  );
+};
 
 const tabStyles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 4,
+    paddingTop: 6,
   },
   emoji: {
     fontSize: 20,
     marginBottom: 2,
+    opacity: 0.65,
   },
   emojiFocused: {
     transform: [{ scale: 1.15 }],
+    opacity: 1,
   },
   label: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '700',
   },
   labelFocused: {
@@ -61,6 +80,30 @@ const tabStyles = StyleSheet.create({
   },
   labelUnfocused: {
     color: palette.gray500,
+  },
+  centerBtnContainer: {
+    top: -12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  centerBtnGlow: {
+    width: 54,
+    height: 54,
+    borderRadius: 27,
+    backgroundColor: palette.primary,
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 8,
+    shadowColor: palette.primary,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 10,
+    borderWidth: 3,
+    borderColor: palette.white,
+  },
+  centerEmoji: {
+    fontSize: 24,
+    color: palette.white,
   },
 });
 
@@ -71,21 +114,36 @@ const BottomTabs: React.FC = () => {
       screenOptions={{
         headerShown: true,
         headerStyle: {
-          backgroundColor: palette.white,
-          elevation: 2,
-          shadowOpacity: 0.08,
+          backgroundColor: '#F6F5FB',
+          elevation: 0,
+          shadowOpacity: 0,
+          borderBottomWidth: 1,
+          borderBottomColor: '#EDE9FE',
         },
         headerTitleStyle: {
           fontWeight: '800',
-          color: palette.gray900,
+          color: '#1E1B4B',
+          fontSize: 18,
         },
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: palette.white,
-          height: 60,
-          borderTopColor: palette.gray200,
-          borderTopWidth: 1,
-          elevation: 8,
+          position: 'absolute',
+          bottom: 12,
+          left: 16,
+          right: 16,
+          height: 64,
+          borderRadius: 32,
+          backgroundColor: '#FFFFFF',
+          borderTopWidth: 0,
+          borderWidth: 1,
+          borderColor: '#EDE9FE',
+          elevation: 10,
+          shadowColor: '#7C5CFC',
+          shadowOffset: { width: 0, height: 6 },
+          shadowOpacity: 0.12,
+          shadowRadius: 16,
+          paddingBottom: 6,
+          paddingTop: 6,
         },
       }}
     >
@@ -102,22 +160,22 @@ const BottomTabs: React.FC = () => {
         component={ModulesScreen}
         options={{
           title: 'Curriculum Modules',
-          tabBarIcon: ({ focused }) => <TabIcon focused={focused} emoji="📚" label="Modules" />,
+          tabBarIcon: ({ focused }) => <TabIcon focused={focused} emoji="📖" label="Modules" />,
         }}
       />
       <Tab.Screen
         name="TutorTab"
         component={TutorScreen}
         options={{
-          title: 'AI Tutor (On-Device)',
-          tabBarIcon: ({ focused }) => <TabIcon focused={focused} emoji="🤖" label="Tutor" />,
+          title: 'Guru AI Tutor',
+          tabBarIcon: ({ focused }) => <TabIcon focused={focused} emoji="✨" label="Tutor" isCenter />,
         }}
       />
       <Tab.Screen
         name="ProgressTab"
         component={ProgressScreen}
         options={{
-          title: 'Learning Progress',
+          title: 'My Progress',
           tabBarIcon: ({ focused }) => <TabIcon focused={focused} emoji="📊" label="Progress" />,
         }}
       />
@@ -217,7 +275,27 @@ export const MainNavigator: React.FC = () => {
       <Stack.Screen
         name="LanguageSelection"
         component={LanguageSelectionScreen}
-        options={{ title: 'Select Medium' }}
+        options={{ title: 'Select Language' }}
+      />
+      <Stack.Screen
+        name="BoardSelection"
+        component={BoardSelectionScreen}
+        options={{ title: 'Select Board' }}
+      />
+      <Stack.Screen
+        name="StateSelection"
+        component={StateSelectionScreen}
+        options={{ title: 'Select State' }}
+      />
+      <Stack.Screen
+        name="StreamSelection"
+        component={StreamSelectionScreen}
+        options={{ title: 'Select Stream' }}
+      />
+      <Stack.Screen
+        name="SubjectSelection"
+        component={SubjectSelectionScreen}
+        options={{ title: 'Manage Subjects' }}
       />
       <Stack.Screen
         name="ModuleSelection"

@@ -6,6 +6,7 @@ import { palette } from '../theme/colors';
 import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { useModuleStore } from '../store/moduleStore';
+import { downloadService } from '../services/downloadService';
 
 interface ModuleDownloadScreenProps {
   navigation: any;
@@ -27,21 +28,27 @@ export const ModuleDownloadScreen: React.FC<ModuleDownloadScreenProps> = ({
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    downloadModule(moduleId);
+    let isCancelled = false;
 
-    const interval = setInterval(() => {
-      setProgressPercent((prev) => {
-        if (isPaused || isError) return prev;
-        if (prev >= 100) {
-          clearInterval(interval);
-          return 100;
+    downloadService.startDownload(
+      moduleId,
+      currentModule.sizeMB * 1024 * 1024,
+      (state) => {
+        if (isCancelled) return;
+        setProgressPercent(state.progress);
+        if (state.status === 'paused') setIsPaused(true);
+        if (state.status === 'error') setIsError(true);
+        if (state.status === 'completed') {
+          setProgressPercent(100);
+          downloadModule(moduleId);
         }
-        return prev + 12;
-      });
-    }, 400);
+      }
+    );
 
-    return () => clearInterval(interval);
-  }, [moduleId, isPaused, isError]);
+    return () => {
+      isCancelled = true;
+    };
+  }, [moduleId]);
 
   const downloadedMB = Math.round((progressPercent / 100) * currentModule.sizeMB);
 

@@ -28,7 +28,9 @@ CRITICAL INSTRUCTIONS:
         retrieved_chunks: List[CurriculumChunk],
         language: str = "en",
         conversation_history: Optional[List[Dict[str, str]]] = None,
-        subject: Optional[str] = None
+        subject: Optional[str] = None,
+        board: Optional[str] = None,
+        class_level: Optional[int] = None
     ) -> Dict[str, str]:
         """
         Builds system prompt and formatted user prompt.
@@ -37,9 +39,10 @@ CRITICAL INSTRUCTIONS:
             Dict containing 'system_prompt' and 'user_prompt'.
         """
         # Format System Prompt
+        curriculum_tag = f" for {board or 'CBSE'} Class {class_level or 10}"
         system_prompt = self.SYSTEM_PROMPT_TEMPLATE.format(
             language=language.upper() if language else "ENGLISH"
-        )
+        ) + f"\nContext: Offline Tutor{curriculum_tag}.\n"
 
         # Format Curriculum Context
         if retrieved_chunks:

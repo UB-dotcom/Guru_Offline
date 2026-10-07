@@ -9,12 +9,16 @@ export type AuthStackParamList = {
 };
 
 export type OnboardingStackParamList = {
-  ProfileSetup: undefined;
-  EducationLevel: undefined;
-  ClassSelection: undefined;
   LanguageSelection: undefined;
+  BoardSelection: undefined;
+  StateSelection: undefined;
+  ClassSelection: undefined;
+  StreamSelection: undefined;
+  SubjectSelection: undefined;
   ModuleSelection: undefined;
   ModuleDownload: { selectedModuleIds: string[] };
+  ProfileSetup?: undefined;
+  EducationLevel?: undefined;
 };
 
 export type MainTabParamList = {
@@ -35,11 +39,15 @@ export type MainStackParamList = {
   Settings: undefined;
   Storage: undefined;
   AIInfo: undefined;
-  EducationLevel: undefined;
-  ClassSelection: undefined;
-  LanguageSelection: undefined;
-  ModuleSelection: undefined;
-  ModuleDownload: { selectedModuleIds: string[] };
+  EducationLevel?: undefined;
+  ClassSelection?: undefined;
+  LanguageSelection?: undefined;
+  BoardSelection?: undefined;
+  StateSelection?: undefined;
+  StreamSelection?: undefined;
+  SubjectSelection?: undefined;
+  ModuleSelection?: undefined;
+  ModuleDownload?: { selectedModuleIds: string[] };
   Tutor: { initialPrompt?: string; context?: string } | undefined;
   Modules: undefined;
 };

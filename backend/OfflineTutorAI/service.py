@@ -62,16 +62,24 @@ class TutorService:
         question: str,
         subject: Optional[str] = None,
         language: str = "en",
-        conversation_history: Optional[List[Dict[str, str]]] = None
+        conversation_history: Optional[List[Dict[str, str]]] = None,
+        board: Optional[str] = "CBSE",
+        class_level: Optional[int] = 10,
+        state: Optional[str] = None,
+        stream: Optional[str] = None
     ) -> TutorResponse:
         """
         Main API interface for asking tutoring questions offline.
         
         Args:
             question: Student's query string.
-            subject: Optional subject filter (e.g. 'Science', 'Physics').
-            language: Preferred language code (e.g. 'en', 'hi', 'hinglish').
+            subject: Optional subject filter (e.g. 'Science', 'Physics', 'Mathematics').
+            language: Preferred language code (e.g. 'en', 'hi', 'bilingual').
             conversation_history: List of previous chat turn dicts [{"role": "user"/"assistant", "content": "..."}].
+            board: Education board (CBSE, ICSE, STATE).
+            class_level: Class level (1-12).
+            state: State name for State Board.
+            stream: Senior secondary stream (Science, Commerce, Arts).
             
         Returns:
             TutorResponse object containing answer text, sources, chunks, and metadata.
@@ -108,7 +116,9 @@ class TutorService:
             retrieved_chunks=retrieved_chunks,
             language=language,
             conversation_history=conversation_history,
-            subject=subject
+            subject=subject,
+            board=board,
+            class_level=class_level
         )
 
         # Step 5: Local SLM Inference

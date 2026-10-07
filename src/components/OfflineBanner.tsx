@@ -10,49 +10,9 @@ interface OfflineBannerProps {
   text?: string;
 }
 
-export const OfflineBanner: React.FC<OfflineBannerProps> = ({ showToggle = false, text }) => {
-  const { isOfflineMode, toggleOfflineMode } = useModuleStore();
-
-  return (
-    <View
-      style={[
-        styles.container,
-        isOfflineMode ? styles.offlineBg : styles.onlineBg,
-      ]}
-      accessibilityRole="header"
-      accessibilityLabel={
-        isOfflineMode
-          ? 'Offline mode active, AI is running on this device'
-          : 'Online mode active, downloads available'
-      }
-    >
-      <View style={styles.textRow}>
-        <Text style={styles.icon}>{isOfflineMode ? '📵' : '🌐'}</Text>
-        <View style={styles.contentColumn}>
-          <Text style={styles.title}>
-            {text || (isOfflineMode ? 'OFFLINE MODE' : 'ONLINE MODE')}
-          </Text>
-          <Text style={styles.subtitle}>
-            {isOfflineMode
-              ? 'AI is running on this device • Zero data used'
-              : 'Connected • Module downloads enabled'}
-          </Text>
-        </View>
-      </View>
-
-      {showToggle && (
-        <TouchableOpacity
-          onPress={toggleOfflineMode}
-          style={styles.toggleBtn}
-          accessibilityLabel="Toggle network mode"
-        >
-          <Text style={styles.toggleText}>
-            {isOfflineMode ? 'Go Online' : 'Go Offline'}
-          </Text>
-        </TouchableOpacity>
-      )}
-    </View>
-  );
+export const OfflineBanner: React.FC<OfflineBannerProps> = () => {
+  // Offline mode banner removed from top header per user specification
+  return null;
 };
 
 const styles = StyleSheet.create({

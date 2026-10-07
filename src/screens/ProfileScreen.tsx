@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { useProfileStore } from '../store/profileStore';
 import { useAuthStore } from '../store/authStore';
-import { PrimaryButton } from '../components/PrimaryButton';
-import { SecondaryButton } from '../components/SecondaryButton';
 import { OfflineBanner } from '../components/OfflineBanner';
 import { palette } from '../theme/colors';
 import { typography } from '../theme/typography';
@@ -38,6 +36,25 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
     );
   };
 
+  const getLanguageLabel = () => {
+    if (profile.language === 'hi') return 'हिंदी (Hindi)';
+    if (profile.language === 'bilingual') return 'Hinglish / Bilingual';
+    return 'English';
+  };
+
+  const getBoardLabel = () => {
+    if (profile.board === 'cbse') return 'CBSE (NCERT)';
+    if (profile.board === 'icse') return 'ICSE / CISCE';
+    return `State Board${profile.state ? ` (${profile.state.toUpperCase()})` : ''}`;
+  };
+
+  const formattedSubjects =
+    profile.selectedSubjects && profile.selectedSubjects.length > 0
+      ? profile.selectedSubjects
+          .map((s) => s.charAt(0).toUpperCase() + s.slice(1).replace('_', ' '))
+          .join(', ')
+      : 'Mathematics, Science';
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <OfflineBanner text="Active Offline Profile" />
@@ -50,99 +67,127 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
 
         <Text style={styles.studentName}>{profile.name}</Text>
         <Text style={styles.classBadge}>
-          Class {profile.classNumber} • {profile.language === 'en' ? 'English' : 'Hindi'}
+          Class {profile.classLevel} • {getBoardLabel()} • {getLanguageLabel()}
         </Text>
 
         <View style={styles.badgeRow}>
           <View style={styles.statusBadge}>
             <Text style={styles.statusBadgeText}>
-              {user?.isGuest ? 'Guest Mode' : 'Offline Verified'}
+              {user?.isGuest ? 'Guest Mode' : '✓ Offline Verified'}
             </Text>
           </View>
         </View>
       </View>
 
-      {/* Curriculum Details Card */}
-      <View style={styles.sectionCard}>
-        <Text style={styles.sectionHeader}>Curriculum Information</Text>
-
-        <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Education Stage</Text>
-          <Text style={styles.infoVal}>
-            {profile.educationLevel === 'secondary'
-              ? 'Secondary (9th - 10th)'
-              : profile.educationLevel === 'primary'
-              ? 'Primary (1st - 5th)'
-              : profile.educationLevel === 'middle'
-              ? 'Middle (6th - 8th)'
-              : 'Senior Secondary'}
-          </Text>
+      {/* MY LEARNING PROFILE CARD (Requirement 20) */}
+      <View style={styles.learningProfileCard}>
+        <View style={styles.learningProfileHeader}>
+          <Text style={styles.learningProfileTitle}>🎓 My Learning Profile</Text>
+          <View style={styles.verifiedChip}>
+            <Text style={styles.verifiedChipText}>Syllabus Locked</Text>
+          </View>
         </View>
 
-        <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Selected Class</Text>
-          <Text style={styles.infoVal}>Class {profile.classNumber}</Text>
+        <View style={styles.profileFieldRow}>
+          <Text style={styles.fieldLabel}>Language:</Text>
+          <Text style={styles.fieldValue}>{getLanguageLabel()}</Text>
         </View>
 
-        <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Primary Medium</Text>
-          <Text style={styles.infoVal}>
-            {profile.language === 'en' ? 'English (EN)' : 'Hindi (हिंदी)'}
-          </Text>
+        <View style={styles.profileFieldRow}>
+          <Text style={styles.fieldLabel}>Board:</Text>
+          <Text style={styles.fieldValue}>{getBoardLabel()}</Text>
         </View>
 
-        <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Active Module</Text>
-          <Text style={styles.infoVal}>NCERT Class 10 Syllabus</Text>
+        {profile.state && (
+          <View style={styles.profileFieldRow}>
+            <Text style={styles.fieldLabel}>State:</Text>
+            <Text style={styles.fieldValue}>{profile.state.toUpperCase()}</Text>
+          </View>
+        )}
+
+        <View style={styles.profileFieldRow}>
+          <Text style={styles.fieldLabel}>Class:</Text>
+          <Text style={styles.fieldValue}>Class {profile.classLevel}</Text>
+        </View>
+
+        {profile.stream && (
+          <View style={styles.profileFieldRow}>
+            <Text style={styles.fieldLabel}>Stream:</Text>
+            <Text style={styles.fieldValue}>{profile.stream.toUpperCase()}</Text>
+          </View>
+        )}
+
+        <View style={styles.profileFieldRow}>
+          <Text style={styles.fieldLabel}>Subjects:</Text>
+          <Text style={styles.fieldValue}>{formattedSubjects}</Text>
+        </View>
+
+        {/* 4 Interactive Buttons to Update Profile */}
+        <View style={styles.profileActionsGrid}>
+          <TouchableOpacity
+            style={styles.actionBtn}
+            onPress={() => navigation.navigate('LanguageSelection')}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.actionBtnIcon}>🌐</Text>
+            <Text style={styles.actionBtnText}>Change Language</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.actionBtn}
+            onPress={() => navigation.navigate('BoardSelection')}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.actionBtnIcon}>🏛️</Text>
+            <Text style={styles.actionBtnText}>Change Board</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.actionBtn}
+            onPress={() => navigation.navigate('ClassSelection')}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.actionBtnIcon}>🎒</Text>
+            <Text style={styles.actionBtnText}>Change Class</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.actionBtn}
+            onPress={() => navigation.navigate('SubjectSelection')}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.actionBtnIcon}>📚</Text>
+            <Text style={styles.actionBtnText}>Manage Subjects</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
       {/* On-Device Diagnostics Summary */}
       <View style={styles.sectionCard}>
-        <Text style={styles.sectionHeader}>Device Footprint & Storage</Text>
+        <Text style={styles.sectionHeader}>On-Device AI Engine</Text>
 
         <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>On-Device AI Engine</Text>
+          <Text style={styles.infoKey}>Local SLM</Text>
           <Text style={[styles.infoVal, { color: palette.secondary }]}>
-            SmolLM INT4 (Active)
+            SmolLM-135M INT4 (On-Device)
           </Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Total Guru Footprint</Text>
-          <Text style={styles.infoVal}>318 MB</Text>
+          <Text style={styles.infoKey}>Retrieval Engine</Text>
+          <Text style={styles.infoVal}>Local BM25 + SQLite FTS5</Text>
         </View>
 
         <View style={styles.infoRow}>
-          <Text style={styles.infoKey}>Offline Capability</Text>
+          <Text style={styles.infoKey}>Offline Status</Text>
           <Text style={[styles.infoVal, { color: palette.primary }]}>
-            100% Functional
+            Zero-Cloud Local Functioning
           </Text>
         </View>
       </View>
 
       {/* Quick Navigation Menu */}
       <View style={styles.menuCard}>
-        <TouchableOpacity
-          style={styles.menuItem}
-          onPress={() => navigation.navigate('EducationLevel')}
-        >
-          <Text style={styles.menuItemText}>📚 Change Education Level & Class</Text>
-          <Text style={styles.chevron}>›</Text>
-        </TouchableOpacity>
-
-        <View style={styles.menuDivider} />
-
-        <TouchableOpacity
-          style={styles.menuItem}
-          onPress={() => navigation.navigate('LanguageSelection')}
-        >
-          <Text style={styles.menuItemText}>🌐 Change Medium of Learning</Text>
-          <Text style={styles.chevron}>›</Text>
-        </TouchableOpacity>
-
-        <View style={styles.menuDivider} />
-
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => navigation.navigate('Storage')}
@@ -157,129 +202,192 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
           style={styles.menuItem}
           onPress={() => navigation.navigate('AIInfo')}
         >
-          <Text style={styles.menuItemText}>🤖 On-Device AI Engine Info</Text>
-          <Text style={styles.chevron}>›</Text>
-        </TouchableOpacity>
-
-        <View style={styles.menuDivider} />
-
-        <TouchableOpacity
-          style={styles.menuItem}
-          onPress={() => navigation.navigate('Settings')}
-        >
-          <Text style={styles.menuItemText}>⚙️ App Settings & Diagnostics</Text>
+          <Text style={styles.menuItemText}>🤖 On-Device AI Benchmarks</Text>
           <Text style={styles.chevron}>›</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Logout Action */}
-      <SecondaryButton
-        title="Switch Profile / Sign Out"
-        onPress={handleLogout}
-        style={styles.logoutBtn}
-      />
+      {/* Logout Button */}
+      <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
+        <Text style={styles.logoutBtnText}>Switch Profile / Logout</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    backgroundColor: palette.gray50,
     padding: spacing.base,
+    backgroundColor: palette.gray50,
     paddingBottom: spacing.xxl,
   },
   profileCard: {
     backgroundColor: palette.white,
+    borderRadius: spacing.radiusBase,
     padding: spacing.lg,
-    borderRadius: spacing.radiusLg,
     alignItems: 'center',
-    marginVertical: spacing.md,
+    marginBottom: spacing.md,
     borderWidth: 1,
     borderColor: palette.gray200,
   },
   avatarCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 72,
+    height: 72,
+    borderRadius: 36,
     backgroundColor: palette.primarySurface,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: spacing.sm,
-    borderWidth: 2,
-    borderColor: palette.primaryLight,
   },
   avatarEmoji: {
-    fontSize: 40,
+    fontSize: 36,
   },
   studentName: {
     ...typography.h2,
     color: palette.gray900,
-    marginBottom: 2,
   },
   classBadge: {
-    ...typography.bodySecondary,
-    color: palette.gray600,
-    marginBottom: spacing.xs,
+    ...typography.bodySmall,
+    color: palette.gray500,
+    marginTop: 2,
+    textAlign: 'center',
   },
   badgeRow: {
-    flexDirection: 'row',
-    marginTop: 4,
+    marginTop: spacing.sm,
   },
   statusBadge: {
-    backgroundColor: palette.secondarySurface,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 4,
-    borderRadius: spacing.radiusPill,
-    borderWidth: 1,
-    borderColor: palette.secondaryLight,
+    backgroundColor: '#DCFCE7',
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 3,
+    borderRadius: spacing.radiusSm,
   },
   statusBadgeText: {
     ...typography.caption,
+    color: '#166534',
+    fontWeight: '700',
+  },
+  learningProfileCard: {
+    backgroundColor: palette.white,
+    borderRadius: spacing.radiusBase,
+    padding: spacing.base,
+    marginBottom: spacing.md,
+    borderWidth: 1.5,
+    borderColor: palette.primary,
+  },
+  learningProfileHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: spacing.sm,
+    paddingBottom: spacing.xs,
+    borderBottomWidth: 1,
+    borderBottomColor: palette.gray200,
+  },
+  learningProfileTitle: {
+    ...typography.h3,
+    color: palette.gray900,
+  },
+  verifiedChip: {
+    backgroundColor: palette.primarySurface,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  verifiedChipText: {
+    fontSize: 10,
     fontWeight: '800',
-    color: palette.secondaryDark,
+    color: palette.primary,
+  },
+  profileFieldRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: palette.gray100,
+  },
+  fieldLabel: {
+    ...typography.body,
+    fontWeight: '600',
+    color: palette.gray600,
+    width: 90,
+  },
+  fieldValue: {
+    ...typography.body,
+    fontWeight: '700',
+    color: palette.gray900,
+    flex: 1,
+    textAlign: 'right',
+  },
+  profileActionsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginTop: spacing.md,
+    gap: spacing.xs,
+  },
+  actionBtn: {
+    width: '48%',
+    backgroundColor: palette.gray50,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.xs,
+    borderRadius: spacing.radiusSm,
+    borderWidth: 1,
+    borderColor: palette.gray300,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    marginBottom: spacing.xs,
+  },
+  actionBtnIcon: {
+    fontSize: 14,
+  },
+  actionBtnText: {
+    ...typography.caption,
+    fontWeight: '700',
+    color: palette.gray800,
+    fontSize: 11,
   },
   sectionCard: {
     backgroundColor: palette.white,
-    padding: spacing.base,
     borderRadius: spacing.radiusBase,
+    padding: spacing.base,
     marginBottom: spacing.md,
     borderWidth: 1,
     borderColor: palette.gray200,
   },
   sectionHeader: {
-    ...typography.h4,
+    ...typography.h3,
     color: palette.gray900,
-    marginBottom: spacing.sm,
+    marginBottom: spacing.xs,
   },
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: spacing.xs,
+    paddingVertical: 4,
   },
   infoKey: {
-    ...typography.bodySecondary,
+    ...typography.bodySmall,
     color: palette.gray600,
   },
   infoVal: {
-    ...typography.body,
+    ...typography.bodySmall,
     fontWeight: '700',
     color: palette.gray900,
   },
   menuCard: {
     backgroundColor: palette.white,
     borderRadius: spacing.radiusBase,
-    marginBottom: spacing.md,
     borderWidth: 1,
     borderColor: palette.gray200,
+    marginBottom: spacing.md,
     overflow: 'hidden',
   },
   menuItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: spacing.base,
-    minHeight: 52,
+    padding: spacing.base,
   },
   menuItemText: {
     ...typography.body,
@@ -287,15 +395,25 @@ const styles = StyleSheet.create({
     color: palette.gray800,
   },
   chevron: {
-    fontSize: 20,
+    fontSize: 18,
     color: palette.gray400,
-    fontWeight: '700',
   },
   menuDivider: {
     height: 1,
-    backgroundColor: palette.gray100,
+    backgroundColor: palette.gray200,
   },
   logoutBtn: {
+    backgroundColor: palette.white,
+    borderRadius: spacing.radiusBase,
+    padding: spacing.md,
+    borderWidth: 1,
+    borderColor: palette.danger,
+    alignItems: 'center',
     marginTop: spacing.xs,
+  },
+  logoutBtnText: {
+    color: palette.danger,
+    fontWeight: '700',
+    fontSize: 14,
   },
 });

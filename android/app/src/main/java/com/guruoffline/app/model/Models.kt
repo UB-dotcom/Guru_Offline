@@ -32,6 +32,9 @@ data class CurriculumModule(
     val name: String,
     @SerializedName("class") val classLevel: String,
     val subject: String,
+    val board: String = "CBSE",
+    val state: String? = null,
+    val stream: String? = null,
     val language: String = "English",
     val version: String = "1.0",
     @SerializedName("size_mb") val sizeMb: Int,
@@ -47,7 +50,12 @@ data class QuizQuestion(
     val question: String,
     val options: List<String>,
     val correct: String,
-    val explanation: String
+    val explanation: String,
+    val board: String = "CBSE",
+    val classLevel: Int = 10,
+    val subject: String = "mathematics",
+    val language: String = "hi",
+    val difficulty: String = "easy"
 )
 
 data class QuizResult(
@@ -65,17 +73,31 @@ data class PracticeQuestion(
     val question: String,
     val options: List<String>,
     @SerializedName("correct_option") val correctOption: String,
-    val explanation: String
+    val explanation: String,
+    val board: String = "CBSE",
+    val classLevel: Int = 10,
+    val subject: String = "mathematics",
+    val language: String = "hi",
+    val difficulty: String = "easy"
 )
 
 data class StudentProfile(
+    val id: String = "student_101",
     val studentName: String = "Student",
+    val language: String = "hi", // "en", "hi", "bilingual"
+    val board: String = "CBSE",  // "CBSE", "ICSE", "STATE"
+    val state: String? = null,   // "bihar", "up", etc.
+    val classLevel: Int = 10,
+    val stream: String? = null,  // "science", "commerce", "arts"
+    val selectedSubjects: List<String> = listOf("mathematics", "science"),
+    val downloadedModules: List<String> = listOf("class10_math"),
+    // Backward compatibility
     val gradeLevel: Int = 10,
     val activeModuleId: String = "class10_math",
-    val preferredLanguage: String = "English",
-    val questionsAnsweredCount: Int = 0,
-    val quizzesCompletedCount: Int = 0,
-    val currentStreakDays: Int = 1
+    val preferredLanguage: String = "Hindi",
+    val questionsAnsweredCount: Int = 64,
+    val quizzesCompletedCount: Int = 12,
+    val currentStreakDays: Int = 5
 )
 
 data class DevicePerformance(

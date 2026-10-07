@@ -12,20 +12,24 @@ class ModuleManager(private val baseDir: File) {
     private val availableModules = mutableListOf(
         CurriculumModule(
             id = "class10_math",
-            name = "Class 10 Mathematics",
+            name = "Class 10 Mathematics - NCERT",
             classLevel = "10",
             subject = "Mathematics",
-            sizeMb = 72,
-            topics = listOf("Real Numbers", "Quadratic Equations", "Arithmetic Progressions", "Trigonometry", "Coordinate Geometry"),
+            board = "CBSE",
+            language = "Hindi",
+            sizeMb = 35,
+            topics = listOf("Quadratic Equations", "Real Numbers", "Polynomials", "Coordinate Geometry", "Trigonometry"),
             isInstalled = true
         ),
         CurriculumModule(
             id = "class10_science",
-            name = "Class 10 Science",
+            name = "Class 10 Science - NCERT",
             classLevel = "10",
             subject = "Science",
-            sizeMb = 81,
-            topics = listOf("Chemical Reactions", "Acids and Bases", "Life Processes", "Light", "Electricity", "Newton's Laws"),
+            board = "CBSE",
+            language = "Hindi",
+            sizeMb = 42,
+            topics = listOf("Chemical Reactions and Equations", "Light - Reflection and Refraction", "Electricity", "Acids Bases Salts", "Life Processes"),
             isInstalled = true
         ),
         CurriculumModule(
@@ -33,6 +37,8 @@ class ModuleManager(private val baseDir: File) {
             name = "Class 5 Mathematics",
             classLevel = "5",
             subject = "Mathematics",
+            board = "CBSE",
+            language = "English",
             sizeMb = 45,
             topics = listOf("Large Numbers", "Fractions", "Shapes & Angles", "Perimeter & Area", "Speed Distance Time"),
             isInstalled = false
@@ -42,6 +48,8 @@ class ModuleManager(private val baseDir: File) {
             name = "BCA / CS Programming",
             classLevel = "College/BCA",
             subject = "Computer Science",
+            board = "State",
+            language = "English",
             sizeMb = 65,
             topics = listOf("Python Basics", "OOP Concepts", "Stacks & Queues", "Search & Sort Algorithms"),
             isInstalled = false
@@ -51,6 +59,21 @@ class ModuleManager(private val baseDir: File) {
     fun getModules(): List<CurriculumModule> = availableModules.toList()
 
     fun getInstalledModules(): List<CurriculumModule> = availableModules.filter { it.isInstalled }
+
+    fun getModulesForProfile(
+        board: String = "CBSE",
+        state: String? = null,
+        classLevel: Int = 10,
+        stream: String? = null,
+        language: String = "Hindi"
+    ): List<CurriculumModule> {
+        val targetBoard = board.uppercase()
+        val targetClass = classLevel.toString()
+        val filtered = availableModules.filter { mod ->
+            mod.board.uppercase() == targetBoard && mod.classLevel == targetClass
+        }
+        return if (filtered.isNotEmpty()) filtered else availableModules.filter { it.classLevel == targetClass }
+    }
 
     fun downloadModule(moduleId: String): Flow<Int> = flow {
         val target = availableModules.find { it.id == moduleId } ?: return@flow

@@ -1,0 +1,101 @@
+{
+  "board_id": "cbse",
+  "state_id": null,
+  "class_level": 10,
+  "stream_id": null,
+  "subject": {
+    "code": "mathematics",
+    "name": "Mathematics",
+    "name_hi": "गणित (Mathematics)",
+    "icon": "📐",
+    "description": "NCERT Class 10 Mathematics: Real Numbers, Polynomials, Quadratic Equations, Coordinate Geometry, Trigonometry",
+    "is_available": true
+  },
+  "module": {
+    "code": "class10_math",
+    "name": "Class 10 Mathematics - NCERT",
+    "size_mb": 35,
+    "version": "1.0",
+    "author": "NCERT / National Board"
+  },
+  "chapters": [
+    {
+      "id": "cbse-10-math-ch04",
+      "chapter_number": 4,
+      "title": "Quadratic Equations",
+      "title_hi": "द्विघात समीकरण (Quadratic Equations)",
+      "description": "Standard form, discriminant, nature of roots, factorization, quadratic formula, and parabolic trajectories.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_math_ch04_01",
+          "language": "bilingual",
+          "topic": "Standard Form & Definition",
+          "content": "A quadratic equation in variable x is an equation of the form ax² + bx + c = 0, where a, b, c are real numbers and a ≠ 0. The highest degree/power of x is 2.",
+          "content_hi": "द्विघात समीकरण ax² + bx + c = 0 के रूप का एक समीकरण है, जहाँ a, b, c वास्तविक संख्याएँ हैं और a ≠ 0 है। चर x की उच्चतम घात 2 होती है।",
+          "source_page": "NCERT Class 10 Math, Chapter 4, Page 71"
+        },
+        {
+          "chunk_id": "cbse_10_math_ch04_02",
+          "language": "bilingual",
+          "topic": "Discriminant & Nature of Roots",
+          "content": "For ax² + bx + c = 0, the discriminant D = b² - 4ac determines the nature of the roots:\n1. If D > 0: Two distinct real roots exist.\n2. If D = 0: Two equal (coincident) real roots exist (x = -b/2a).\n3. If D < 0: No real roots exist.",
+          "content_hi": "विविक्तकर (Discriminant) D = b² - 4ac मूलों की प्रकृति निर्धारित करता है:\n1. यदि D > 0: दो भिन्न वास्तविक मूल होते हैं।\n2. यदि D = 0: दो बराबर वास्तविक मूल होते हैं (x = -b/2a)।\n3. यदि D < 0: कोई वास्तविक मूल नहीं होता है।",
+          "source_page": "NCERT Class 10 Math, Chapter 4, Page 88"
+        },
+        {
+          "chunk_id": "cbse_10_math_ch04_03",
+          "language": "bilingual",
+          "topic": "Quadratic Formula & Solving Methods",
+          "content": "Methods to solve quadratic equations: 1. Factorization Method (splitting the middle term bx into two terms whose product is ac and sum is b). 2. Sridharacharya Quadratic Formula: x = (-b ± √(b² - 4ac)) / (2a).",
+          "content_hi": "द्विघात समीकरण हल करने की विधियाँ: 1. गुणनखंड विधि (मध्य पद को विभाजित करना)। 2. श्रीधराचार्य द्विघाती सूत्र: x = (-b ± √(b² - 4ac)) / (2a)।",
+          "source_page": "NCERT Class 10 Math, Chapter 4, Page 80"
+        },
+        {
+          "chunk_id": "cbse_10_math_ch04_04",
+          "language": "bilingual",
+          "topic": "Real-Life Application & Parabola Trajectory",
+          "content": "In real life, projectile motions follow a parabolic trajectory modeled by quadratic equation y = -ax² + bx + c. When a basketball is shot towards the hoop, its flight path through the air curves as a parabola.",
+          "content_hi": "असली ज़िंदगी में, जब कोई खिलाड़ी बास्केटबॉल को टोकरी (hoop) की ओर फेंकता है, तो हवा में गेंद का मार्ग एक परवलय (Parabola) बनाता है। यह वक्र पथ द्विघात समीकरण y = -ax² + bx + c द्वारा दर्शाया जाता है!",
+          "source_page": "NCERT Class 10 Math, Chapter 4 Applications, Page 85"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-math-ch01",
+      "chapter_number": 1,
+      "title": "Real Numbers",
+      "title_hi": "वास्तविक संख्याएँ (Real Numbers)",
+      "description": "Fundamental Theorem of Arithmetic, prime factorization, LCM and HCF, irrational numbers proofs.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_math_ch01_01",
+          "language": "bilingual",
+          "topic": "Fundamental Theorem of Arithmetic",
+          "content": "Fundamental Theorem of Arithmetic: Every composite number can be uniquely expressed as a product of prime numbers, regardless of order. For any two positive integers a and b: HCF(a, b) × LCM(a, b) = a × b.",
+          "content_hi": "अंकगणित की आधारभूत प्रमेय: प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में अद्वितीय रूप से व्यक्त किया जा सकता है। दो संख्याओं के लिए: HCF(a, b) × LCM(a, b) = a × b।",
+          "source_page": "NCERT Class 10 Math, Chapter 1, Page 8"
+        }
+      ]
+    },
+    {
+      "id": "cbse-10-math-ch02",
+      "chapter_number": 2,
+      "title": "Polynomials",
+      "title_hi": "बहुपद (Polynomials)",
+      "description": "Geometrical meaning of zeroes of a polynomial, relationship between zeroes and coefficients.",
+      "is_available": true,
+      "chunks": [
+        {
+          "chunk_id": "cbse_10_math_ch02_01",
+          "language": "bilingual",
+          "topic": "Zeroes and Coefficients of Quadratic Polynomial",
+          "content": "For a quadratic polynomial p(x) = ax² + bx + c with zeroes α and β: Sum of zeroes α + β = -b/a. Product of zeroes αβ = c/a.",
+          "content_hi": "द्विघात बहुपद ax² + bx + c के शून्यकों α और β के लिए: शून्यकों का योगफल α + β = -b/a, शून्यकों का गुणनफल αβ = c/a।",
+          "source_page": "NCERT Class 10 Math, Chapter 2, Page 28"
+        }
+      ]
+    }
+  ]
+}

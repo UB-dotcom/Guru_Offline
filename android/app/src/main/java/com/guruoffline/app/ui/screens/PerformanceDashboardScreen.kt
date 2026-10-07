@@ -24,8 +24,6 @@ fun PerformanceDashboardScreen(onBack: () -> Unit) {
             .fillMaxSize()
             .background(Color(0xFFF8FAFC))
     ) {
-        OfflineBanner(isOffline = true)
-
         Column(
             modifier = Modifier
                 .padding(20.dp)

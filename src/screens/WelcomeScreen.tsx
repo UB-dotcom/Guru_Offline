@@ -51,14 +51,26 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
 
       <View style={styles.actionsSection}>
         <PrimaryButton
-          title="Get Started"
-          onPress={() => navigation.navigate('Onboarding', { screen: 'ProfileSetup' })}
+          title="Create Account / Get Started"
+          onPress={() => {
+            if (navigation.canGoBack?.() || navigation.getState?.()?.routeNames?.includes('Signup')) {
+              navigation.navigate('Signup');
+            } else {
+              navigation.navigate('Auth', { screen: 'Signup' });
+            }
+          }}
           style={styles.mainBtn}
         />
 
         <SecondaryButton
           title="Login"
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => {
+            if (navigation.canGoBack?.() || navigation.getState?.()?.routeNames?.includes('Login')) {
+              navigation.navigate('Login');
+            } else {
+              navigation.navigate('Auth', { screen: 'Login' });
+            }
+          }}
           style={styles.loginBtn}
         />
       </View>

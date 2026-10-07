@@ -76,9 +76,13 @@ class LocalTutorHandler(BaseHTTPRequestHandler):
 
         # /ask_tutor (Standard React Native integration endpoint)
         if self.path in ('/ask_tutor', '/api/tutor/ask'):
-            question = data.get('question', '')
+            question = data.get('question', '') or data.get('query', '')
             subject = data.get('subject')
             language = data.get('language', 'en')
+            board = data.get('board', 'CBSE')
+            state = data.get('state')
+            class_level = data.get('classLevel') or data.get('class_level', 10)
+            stream = data.get('stream')
             conversation_history = data.get('conversation_history', [])
 
             if not question:
@@ -91,7 +95,11 @@ class LocalTutorHandler(BaseHTTPRequestHandler):
                     question=question,
                     subject=subject,
                     language=language,
-                    conversation_history=conversation_history
+                    conversation_history=conversation_history,
+                    board=board,
+                    class_level=class_level,
+                    state=state,
+                    stream=stream
                 )
 
                 response_payload = {
