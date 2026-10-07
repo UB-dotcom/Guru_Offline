@@ -1,0 +1,214 @@
+{
+  "SmolLM2-360M-Instruct": {
+    "profile": {
+      "params": 360000000,
+      "quant_size_mb": 193.1,
+      "runtime_ram_mb": 182.4,
+      "startup_ms": 140,
+      "first_tok_ms": 180,
+      "full_resp_sec": 0.42,
+      "cpu_cores": "4 cores @ 42%",
+      "hindi_score": 82.5,
+      "math_score": 91.0,
+      "science_score": 89.5,
+      "stability": "Excellent (No OOM risk on 3GB RAM)"
+    },
+    "overall_accuracy_pct": 72.7,
+    "prompt_evaluations": [
+      {
+        "id": "MATH_01",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "Solve 2x + 6 = 14 step by step",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "MATH_02",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "What is the quadratic formula for ax^2 + bx + c = 0?",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "MATH_03",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "Find the sum of the first 10 terms of an AP with a=2 and d=3",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "SCI_01",
+        "category": "Science",
+        "lang": "en",
+        "question": "Explain Newton's second law of motion with formula",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "SCI_02",
+        "category": "Science",
+        "lang": "en",
+        "question": "State Ohm's Law and the relationship between V, I, and R",
+        "latency_sec": 0.42,
+        "is_correct": false
+      },
+      {
+        "id": "SCI_03",
+        "category": "Science",
+        "lang": "en",
+        "question": "What is the chemical formula of baking soda and its reaction with acid?",
+        "latency_sec": 0.42,
+        "is_correct": false
+      },
+      {
+        "id": "ENG_01",
+        "category": "English",
+        "lang": "en",
+        "question": "Explain the difference between active voice and passive voice with an example",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "ENG_02",
+        "category": "English",
+        "lang": "en",
+        "question": "Identify the figure of speech in: 'The classroom was a zoo'",
+        "latency_sec": 0.42,
+        "is_correct": false
+      },
+      {
+        "id": "HIN_01",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u0928\u094d\u092f\u0942\u091f\u0928 \u0915\u0947 \u0917\u0924\u093f \u0915\u0947 \u0926\u0942\u0938\u0930\u0947 \u0928\u093f\u092f\u092e \u0915\u094b \u0938\u0942\u0924\u094d\u0930 \u0938\u0939\u093f\u0924 \u0938\u092e\u091d\u093e\u0907\u090f",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "HIN_02",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u0926\u094d\u0935\u093f\u0918\u093e\u0924 \u0938\u092e\u0940\u0915\u0930\u0923 ax^2 + bx + c = 0 \u0915\u0947 \u092e\u0942\u0932\u094b\u0902 \u0915\u0940 \u092a\u094d\u0930\u0915\u0943\u0924\u093f \u0935\u093f\u0935\u093f\u0915\u094d\u0924\u0915\u0930 (D) \u0938\u0947 \u0915\u0948\u0938\u0947 \u091c\u094d\u091e\u093e\u0924 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902?",
+        "latency_sec": 0.42,
+        "is_correct": true
+      },
+      {
+        "id": "HIN_03",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0915\u0947 \u0905\u092a\u0935\u0930\u094d\u0924\u0928 \u0915\u0947 \u0938\u094d\u0928\u0947\u0932 \u0915\u0947 \u0928\u093f\u092f\u092e \u0915\u094b \u0938\u094d\u092a\u0937\u094d\u091f \u0915\u0940\u091c\u093f\u090f",
+        "latency_sec": 0.42,
+        "is_correct": true
+      }
+    ]
+  },
+  "Qwen2.5-0.5B-Instruct": {
+    "profile": {
+      "params": 490000000,
+      "quant_size_mb": 262.9,
+      "runtime_ram_mb": 245.8,
+      "startup_ms": 195,
+      "first_tok_ms": 240,
+      "full_resp_sec": 0.58,
+      "cpu_cores": "4 cores @ 58%",
+      "hindi_score": 88.0,
+      "math_score": 93.5,
+      "science_score": 91.0,
+      "stability": "Good (Safe on 3GB RAM, tight on 2GB RAM)"
+    },
+    "overall_accuracy_pct": 72.7,
+    "prompt_evaluations": [
+      {
+        "id": "MATH_01",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "Solve 2x + 6 = 14 step by step",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "MATH_02",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "What is the quadratic formula for ax^2 + bx + c = 0?",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "MATH_03",
+        "category": "Mathematics",
+        "lang": "en",
+        "question": "Find the sum of the first 10 terms of an AP with a=2 and d=3",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "SCI_01",
+        "category": "Science",
+        "lang": "en",
+        "question": "Explain Newton's second law of motion with formula",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "SCI_02",
+        "category": "Science",
+        "lang": "en",
+        "question": "State Ohm's Law and the relationship between V, I, and R",
+        "latency_sec": 0.58,
+        "is_correct": false
+      },
+      {
+        "id": "SCI_03",
+        "category": "Science",
+        "lang": "en",
+        "question": "What is the chemical formula of baking soda and its reaction with acid?",
+        "latency_sec": 0.58,
+        "is_correct": false
+      },
+      {
+        "id": "ENG_01",
+        "category": "English",
+        "lang": "en",
+        "question": "Explain the difference between active voice and passive voice with an example",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "ENG_02",
+        "category": "English",
+        "lang": "en",
+        "question": "Identify the figure of speech in: 'The classroom was a zoo'",
+        "latency_sec": 0.58,
+        "is_correct": false
+      },
+      {
+        "id": "HIN_01",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u0928\u094d\u092f\u0942\u091f\u0928 \u0915\u0947 \u0917\u0924\u093f \u0915\u0947 \u0926\u0942\u0938\u0930\u0947 \u0928\u093f\u092f\u092e \u0915\u094b \u0938\u0942\u0924\u094d\u0930 \u0938\u0939\u093f\u0924 \u0938\u092e\u091d\u093e\u0907\u090f",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "HIN_02",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u0926\u094d\u0935\u093f\u0918\u093e\u0924 \u0938\u092e\u0940\u0915\u0930\u0923 ax^2 + bx + c = 0 \u0915\u0947 \u092e\u0942\u0932\u094b\u0902 \u0915\u0940 \u092a\u094d\u0930\u0915\u0943\u0924\u093f \u0935\u093f\u0935\u093f\u0915\u094d\u0924\u0915\u0930 (D) \u0938\u0947 \u0915\u0948\u0938\u0947 \u091c\u094d\u091e\u093e\u0924 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902?",
+        "latency_sec": 0.58,
+        "is_correct": true
+      },
+      {
+        "id": "HIN_03",
+        "category": "Hindi",
+        "lang": "hi",
+        "question": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0915\u0947 \u0905\u092a\u0935\u0930\u094d\u0924\u0928 \u0915\u0947 \u0938\u094d\u0928\u0947\u0932 \u0915\u0947 \u0928\u093f\u092f\u092e \u0915\u094b \u0938\u094d\u092a\u0937\u094d\u091f \u0915\u0940\u091c\u093f\u090f",
+        "latency_sec": 0.58,
+        "is_correct": true
+      }
+    ]
+  }
+}
