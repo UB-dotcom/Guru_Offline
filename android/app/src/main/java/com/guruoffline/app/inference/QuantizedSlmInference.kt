@@ -35,7 +35,6 @@ class QuantizedSlmInference(
 
         // Measure starting runtime memory
         val runtime = Runtime.getRuntime()
-        val memBeforeMb = (runtime.totalMemory() - runtime.freeMemory()) / (1024f * 1024f)
 
         val fullText = synthesizeAnswer(query, retrievedChunks, mode)
         val words = fullText.split(" ")

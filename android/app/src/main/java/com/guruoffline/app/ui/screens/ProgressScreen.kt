@@ -1,6 +1,7 @@
 package com.guruoffline.app.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -35,6 +36,19 @@ fun ProgressScreen(onBack: () -> Unit) {
                 .padding(20.dp)
                 .verticalScroll(rememberScrollState())
         ) {
+            Row(
+                modifier = Modifier
+                    .padding(bottom = 12.dp)
+                    .clickable { onBack() }
+            ) {
+                Text(
+                    text = "← Back",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = PrimaryBlue
+                )
+            }
+
             Text(
                 text = "My Learning Progress",
                 fontSize = 24.sp,
@@ -78,7 +92,7 @@ fun ProgressScreen(onBack: () -> Unit) {
                         Spacer(modifier = Modifier.height(8.dp))
 
                         LinearProgressIndicator(
-                            progress = sub.completedPercentage / 100f,
+                            progress = { sub.completedPercentage / 100f },
                             color = PrimaryBlue,
                             trackColor = Color(0xFFE2E8F0),
                             modifier = Modifier

@@ -1,6 +1,7 @@
 package com.guruoffline.app.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -69,6 +70,20 @@ fun ModuleScreen(onBack: () -> Unit) {
         OfflineBanner(isOffline = false)
 
         Column(modifier = Modifier.padding(20.dp)) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .padding(bottom = 12.dp)
+                    .clickable { onBack() }
+            ) {
+                Text(
+                    text = "← Back",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = PrimaryBlue
+                )
+            }
+
             Text(
                 text = "Curriculum Modules",
                 fontSize = 24.sp,

@@ -33,6 +33,19 @@ fun PracticeScreen(onBack: () -> Unit) {
         OfflineBanner(isOffline = true)
 
         Column(modifier = Modifier.padding(20.dp)) {
+            Row(
+                modifier = Modifier
+                    .padding(bottom = 12.dp)
+                    .clickable { onBack() }
+            ) {
+                Text(
+                    text = "← Back",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = PrimaryBlue
+                )
+            }
+
             Text(
                 text = "Practice Mode",
                 fontSize = 24.sp,

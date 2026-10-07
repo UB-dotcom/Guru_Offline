@@ -6,6 +6,7 @@ import com.guruoffline.app.model.QuizResult
 
 class QuizEngine {
 
+    @Suppress("UNUSED_PARAMETER")
     fun getSampleQuiz(moduleId: String): List<QuizQuestion> {
         return listOf(
             QuizQuestion(
@@ -78,6 +79,7 @@ class QuizEngine {
         )
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun getSamplePractice(moduleId: String): PracticeQuestion {
         return PracticeQuestion(
             id = "PR-01",

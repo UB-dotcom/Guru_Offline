@@ -1,6 +1,7 @@
 package com.guruoffline.app.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -30,6 +31,19 @@ fun PerformanceDashboardScreen(onBack: () -> Unit) {
                 .padding(20.dp)
                 .verticalScroll(rememberScrollState())
         ) {
+            Row(
+                modifier = Modifier
+                    .padding(bottom = 12.dp)
+                    .clickable { onBack() }
+            ) {
+                Text(
+                    text = "← Back",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = PrimaryBlue
+                )
+            }
+
             Text(
                 text = "Device Performance",
                 fontSize = 24.sp,
@@ -52,17 +66,17 @@ fun PerformanceDashboardScreen(onBack: () -> Unit) {
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     MetricRow(label = "Quantized Model", value = "SmolLM-135M-Q4 (INT4)")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Model File Size", value = "72.4 MB")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Runtime Process RAM", value = "145.2 MB")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Inference Response Time", value = "0.28 seconds")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Token Generation Speed", value = "16.5 tokens/sec")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Network Status", value = "📵 OFFLINE (0 kbps)")
-                    Divider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
+                    HorizontalDivider(color = Color(0xFFF1F5F9), modifier = Modifier.padding(vertical = 10.dp))
                     MetricRow(label = "Active Module", value = "Class 10 Science")
                 }
             }

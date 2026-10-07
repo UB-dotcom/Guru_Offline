@@ -1,6 +1,7 @@
 package com.guruoffline.app.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -56,7 +57,9 @@ fun ChatScreen(
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFF0F172A),
-                modifier = Modifier.padding(end = 12.dp)
+                modifier = Modifier
+                    .clickable { onBack() }
+                    .padding(end = 12.dp)
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
