@@ -12,6 +12,8 @@ import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { useModuleStore } from '../store/moduleStore';
 import { useTutorStore } from '../store/tutorStore';
+import { useProfileStore } from '../store/profileStore';
+import { filterModulesForProfile } from '../services/curriculumCatalog';
 
 interface ReaderScreenProps {
   navigation: any;
@@ -25,9 +27,22 @@ export const ReaderScreen: React.FC<ReaderScreenProps> = ({
   const moduleId = route.params?.moduleId || 'class10_math';
   const initialChapterId = route.params?.chapterId || 'ch04';
   const { modules } = useModuleStore();
+  const { profile } = useProfileStore();
   const { setContext } = useTutorStore();
 
-  const currentModule = modules.find((m) => m.id === moduleId) || modules[0];
+  const allAvailable = filterModulesForProfile(
+    modules,
+    profile.board,
+    profile.state,
+    profile.classLevel,
+    profile.stream,
+    [],
+    profile.language
+  );
+  const currentModule =
+    modules.find((m) => m.id === moduleId) ||
+    allAvailable.find((m) => m.id === moduleId) ||
+    modules[0];
   const [chapterIdx, setChapterIdx] = useState(
     Math.max(
       0,

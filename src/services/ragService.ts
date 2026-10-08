@@ -1,5 +1,6 @@
 import { NativeModules, Platform } from 'react-native';
 import { AppLanguage, BoardType, StreamType } from '../types/student';
+import { useAdminCurriculumStore } from './adminCurriculumStore';
 
 export interface RAGSearchRequest {
   query: string;
@@ -308,7 +309,22 @@ class RAGService {
     const targetSubject = (subject || 'mathematics').toLowerCase();
     const targetBoard = board.toLowerCase();
 
-    const candidatePool = CURRICULUM_CHUNKS.filter((chunk) => {
+    const adminChunks = useAdminCurriculumStore.getState().chunks.map((ac) => ({
+      chunkId: ac.chunkId,
+      board: ac.board as BoardType,
+      classLevel: ac.classLevel,
+      subject: ac.subjectId,
+      chapter: `Chapter ${ac.chapterNumber}: ${ac.chapterTitle}`,
+      topic: ac.topic,
+      content: ac.content,
+      contentHindi: ac.contentHi,
+      score: 0.95,
+      sourcePage: ac.sourcePage,
+    }));
+
+    const fullSource = [...CURRICULUM_CHUNKS, ...adminChunks];
+
+    const candidatePool = fullSource.filter((chunk) => {
       // Must match class level
       if (chunk.classLevel !== classLevel) return false;
 

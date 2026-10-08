@@ -600,6 +600,56 @@ class LocalRagRetriever(private val baseModulesDir: File? = null) {
                 )
             }
 
+            // Admin Ingested Subject: Robotics & Automation
+            q.contains("robot") || q.contains("microcontroller") || q.contains("ultrasonic") ||
+            q.contains("h-bridge") || q.contains("motor driver") || q.contains("सेंसर") || q.contains("माइक्रोकंट्रोलर") -> {
+                AutoChapterAnalysis(
+                    chapterNumber = 1,
+                    chapterTitle = "Sensors and Microcontrollers",
+                    chapterTitleHi = "सेंसर एवं माइक्रोकंट्रोलर",
+                    subject = "Robotics & Automation",
+                    explanationEn = "A microcontroller serves as the single-chip processing brain of an autonomous robot, interfacing with input sensors and motor outputs.\n\n" +
+                            "• Ultrasonic Sensor (HC-SR04): Emits 40kHz acoustic pulses to calculate distance via echolocation time-of-flight.\n" +
+                            "• H-Bridge Motor Driver (L298N): Protects low-current microcontroller GPIO pins and enables bidirectional motor drive via PWM speed control.",
+                    explanationHi = "माइक्रोकंट्रोलर एक ऑटोनॉमस रोबोट का मुख्य मस्तिष्क होता है जो सेंसर से इनपुट लेकर मोटर को कमांड देता है।\n\n" +
+                            "• अल्ट्रासोनिक दूरी सेंसर: ध्वनि तरंगों की प्रतिध्वनि (इकोलोकेशन) द्वारा बाधा की दूरी मापता है।\n" +
+                            "• एच-ब्रिज मोटर ड्राइवर: माइक्रोकंट्रोलर के नाजुक पिनों को सुरक्षित रखते हुए मोटर को दोनों दिशाओं में घुमाने और गति नियंत्रित करने में सक्षम बनाता है।",
+                    formulaOrKeyFactEn = "Distance = (Time of Flight * Speed of Sound 343 m/s) / 2 | PWM Duty Cycle % = (Ton / Tperiod) * 100",
+                    formulaOrKeyFactHi = "दूरी = (समय × ध्वनि की चाल 343 m/s) / 2 | PWM ड्यूटी साइकिल % = (Ton / Tperiod) × 100",
+                    realLifeAnalogyEn = "Bats navigating pitch-black caves using echolocation mirrors ultrasonic obstacle sensing.",
+                    realLifeAnalogyHi = "चमगादड़ द्वारा अंधेरी गुफाओं में इकोलोकेशन (ध्वनि परावर्तन) से रास्ता खोजना अल्ट्रासोनिक सेंसर का प्राकृतिक रूप है।",
+                    practiceQuestionEn = "Question: What component isolates a microcontroller from the high inductive current of DC motors?\nOptions: A) H-Bridge Motor Driver  B) Chassis  C) Resistor  D) Wheel\nCorrect Answer: Option A.",
+                    practiceQuestionHi = "प्रश्न: डीसी मोटर के उच्च करंट से माइक्रोकंट्रोलर की सुरक्षा के लिए किसका उपयोग किया जाता है?\nविकल्प: A) एच-ब्रिज मोटर ड्राइवर  B) चेसिस  C) प्रतिरोधक  D) पहिया\nसही उत्तर: विकल्प A।"
+                )
+            }
+
+            // Admin Ingested Subject: Astronomy & Space Dynamics
+            q.contains("kepler") || q.contains("escape velocity") || q.contains("orbit") ||
+            q.contains("planetary motion") || q.contains("केपलर") || q.contains("पलायन वेग") || q.contains("ग्रह") -> {
+                AutoChapterAnalysis(
+                    chapterNumber = 1,
+                    chapterTitle = "Orbital Mechanics and Keplerian Motion",
+                    chapterTitleHi = "कक्षीय यांत्रिकी एवं ग्रहों की गति",
+                    subject = "Astronomy & Space Dynamics",
+                    explanationEn = "Governs celestial orbital mechanics under gravitational forces.\n\n" +
+                            "• Kepler's 1st Law (Orbits): All planets travel in elliptical orbits with the Sun at one focus.\n" +
+                            "• Kepler's 2nd Law (Areas): The radius vector sweeps out equal areas in equal intervals of time (fastest at perihelion).\n" +
+                            "• Kepler's 3rd Law (Periods): T² ∝ r³.\n" +
+                            "• Escape Velocity: The minimum speed needed to escape Earth's gravity without propulsion (ve ≈ 11.2 km/s).",
+                    explanationHi = "गुरुत्वाकर्षण के प्रभाव में खगोलीय पिंडों और उपग्रहों की गति के सिद्धांत:\n\n" +
+                            "• केपलर का प्रथम नियम (कक्षाओं का नियम): सभी ग्रह सूर्य के चारों ओर दीर्घवृत्ताकार कक्षाओं में घूमते हैं।\n" +
+                            "• केपलर का द्वितीय नियम (क्षेत्रीय चाल का नियम): ग्रह को सूर्य से मिलाने वाली रेखा समान समय में समान क्षेत्रफल तय करती है।\n" +
+                            "• केपलर का तृतीय नियम (परिक्रमण काल का नियम): T² ∝ r³।\n" +
+                            "• पलायन वेग: वह न्यूनतम वेग जिससे फेंके जाने पर पिंड पृथ्वी के गुरुत्वाकर्षण से बाहर निकल जाए (ve ≈ 11.2 km/s)।",
+                    formulaOrKeyFactEn = "Kepler's Third Law: T² / r³ = 4π² / (G * M) | Escape Velocity: Ve = √(2GM / R) ≈ 11.2 km/s",
+                    formulaOrKeyFactHi = "केपलर का तृतीय नियम: T² / r³ = 4π² / (G × M) | पलायन वेग: Ve = √(2gR) ≈ 11.2 km/s",
+                    realLifeAnalogyEn = "A spinning figure skater pulling their arms inward speeds up, mirroring planets accelerating when closest to the Sun.",
+                    realLifeAnalogyHi = "घूमती हुई स्केटर द्वारा हाथ सिकोड़ने पर गति तेज होना, सूर्य के निकट आने पर ग्रह की गति बढ़ने जैसा है।",
+                    practiceQuestionEn = "Question: What is the approximate escape velocity from the surface of Earth?\nOptions: A) 11.2 km/s  B) 3.0 × 10⁸ m/s  C) 9.8 m/s  D) 1.6 km/s\nCorrect Answer: Option A.",
+                    practiceQuestionHi = "प्रश्न: पृथ्वी की सतह से पलायन वेग का मान लगभग कितना होता है?\nविकल्प: A) 11.2 km/s  B) 3.0 × 10⁸ m/s  C) 9.8 m/s  D) 1.6 km/s\nसही उत्तर: विकल्प A।"
+                )
+            }
+
             // Mathematics Chapter 4: Quadratic Equations
             q.contains("quadratic") || q.contains("discriminant") || q.contains("roots") || q.contains("parabola") ||
             q.contains("द्विघात") || q.contains("samjhao") || q.contains("b² - 4ac") -> {

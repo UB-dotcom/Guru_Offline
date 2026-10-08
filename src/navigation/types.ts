@@ -50,6 +50,7 @@ export type MainStackParamList = {
   ModuleDownload?: { selectedModuleIds: string[] };
   Tutor: { initialPrompt?: string; context?: string } | undefined;
   Modules: undefined;
+  AdminDashboard: undefined;
 };
 
 export type RootStackParamList = {

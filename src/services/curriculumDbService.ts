@@ -9,6 +9,7 @@
 import { Board, StateOption, BoardType, StreamType, AppLanguage } from '../types/student';
 import { CurriculumSubject } from '../types/curriculum';
 import { LearningModule, Chapter } from '../types/module';
+import { useAdminCurriculumStore } from './adminCurriculumStore';
 
 // Load database snapshot generated from SQLite curriculum.db
 // Fallback to empty structure if unavailable
@@ -150,10 +151,10 @@ export function getDbSubjectsForProfile(
     return true;
   });
 
-  return matched.map((s) => {
+  const baseMapped: CurriculumSubject[] = matched.map((s) => {
     const chCount = chapters.filter((ch) => ch.subject_id === s.id && ch.is_available === 1).length;
     return {
-      id: s.code, // e.g. 'mathematics', 'physics', 'accountancy'
+      id: s.code, // e.g. 'mathematics', 'science', 'physics'
       name: isHindi && s.name_hi ? s.name_hi : s.name,
       icon: s.icon || '📚',
       description: s.description || `${s.name} Curriculum`,
@@ -161,6 +162,22 @@ export function getDbSubjectsForProfile(
       totalSizeMB: s.code.includes('math') ? 35 : s.code.includes('science') || s.code.includes('physics') || s.code.includes('chem') ? 42 : 30
     };
   });
+
+  // Include admin-added curriculum subjects matching the profile
+  const adminSubs = useAdminCurriculumStore.getState().getSubjectsForProfile(board, classLevel, stream, state);
+  const adminMapped: CurriculumSubject[] = adminSubs.map((s) => ({
+    id: s.code,
+    name: isHindi && s.nameHi ? s.nameHi : s.name,
+    icon: s.icon || '📚',
+    description: s.description,
+    chapterCount: s.chapterCount || 1,
+    totalSizeMB: s.sizeMB || 28,
+  }));
+
+  const existingCodes = new Set(baseMapped.map((s) => s.id));
+  const uniqueAdmin = adminMapped.filter((s) => !existingCodes.has(s.id));
+
+  return [...baseMapped, ...uniqueAdmin];
 }
 
 /**
@@ -193,7 +210,7 @@ export function getDbModulesForProfile(
     return true;
   });
 
-  return available.map((m) => {
+  const baseModules = available.map((m) => {
     const subj = dbSubjects.find((s) => s.id === m.subject_id);
     const relatedChapters = dbChapters.filter((c: any) => c.subject_id === m.subject_id && c.is_available === 1);
     const mappedChapters: Chapter[] = relatedChapters.map((c: any, idx: number) => ({
@@ -225,6 +242,46 @@ export function getDbModulesForProfile(
       updatedAt: '2026-10-07',
     };
   });
+
+  // Include admin-added curriculum modules
+  const adminSubs = useAdminCurriculumStore.getState().getSubjectsForProfile(board, classLevel, stream, state);
+  const matchingAdminSubs = adminSubs.filter((s) => selectedSubjects.length === 0 || selectedSubjects.includes(s.code));
+
+  const adminModules: LearningModule[] = matchingAdminSubs.map((s) => {
+    const chunks = useAdminCurriculumStore.getState().getChunksForSubject(s.code);
+    const mappedChapters: Chapter[] = [
+      {
+        id: 'ch01',
+        chapterNumber: 1,
+        title: isHindi && s.nameHi ? s.nameHi : `${s.name} - Chapter 1`,
+        summary: s.description,
+        content: chunks.map((c) => `${c.topic}:\n${isHindi ? c.contentHi : c.content}`).join('\n\n'),
+        formulas: chunks.map((c) => c.keyFactEn).filter(Boolean),
+        status: 'current',
+        progressPercent: 35,
+      },
+    ];
+
+    return {
+      id: `class${classLevel}_${s.code}`,
+      title: s.name,
+      classNumber: classLevel,
+      subject: s.name,
+      totalChapters: mappedChapters.length,
+      sizeMB: s.sizeMB,
+      downloaded: true,
+      downloadProgress: 100,
+      isDownloading: false,
+      isPaused: false,
+      version: '1.0',
+      curriculumCode: `class${classLevel}_${s.code}`,
+      description: s.description,
+      chapters: mappedChapters,
+      updatedAt: '2026-10-08',
+    };
+  });
+
+  return [...baseModules, ...adminModules];
 }
 
 /**
@@ -242,7 +299,7 @@ export function queryDbChunks(filter: {
   const targetBoard = filter.board.toLowerCase();
   const targetSubject = filter.subject ? filter.subject.toLowerCase() : null;
 
-  return chunks.filter((c) => {
+  const baseFiltered = chunks.filter((c) => {
     // 1. Board filter
     if (c.board_id.toLowerCase() !== targetBoard) return false;
 
@@ -260,4 +317,32 @@ export function queryDbChunks(filter: {
 
     return true;
   });
+
+  // Include admin-added chunks
+  const adminChunks = useAdminCurriculumStore.getState().chunks;
+  const adminMatched: DbChunkRow[] = adminChunks
+    .filter((ac) => {
+      if (ac.board.toLowerCase() !== targetBoard && targetBoard !== 'state') return false;
+      if (ac.classLevel !== filter.classLevel) return false;
+      if (targetSubject && !ac.subjectId.toLowerCase().includes(targetSubject)) return false;
+      return true;
+    })
+    .map((ac, idx) => ({
+      id: 90000 + idx,
+      chunk_id: ac.chunkId,
+      module_id: `class${ac.classLevel}_${ac.subjectId}`,
+      chapter_id: ac.chapterId,
+      subject_id: ac.subjectId,
+      board_id: ac.board,
+      state_id: null,
+      class_level: ac.classLevel,
+      stream_id: ac.stream || null,
+      language: ac.language,
+      topic: ac.topic,
+      content: ac.content,
+      content_hi: ac.contentHi,
+      source_page: ac.sourcePage,
+    }));
+
+  return [...baseFiltered, ...adminMatched];
 }

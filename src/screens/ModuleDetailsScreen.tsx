@@ -6,6 +6,8 @@ import { palette } from '../theme/colors';
 import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { useModuleStore } from '../store/moduleStore';
+import { useProfileStore } from '../store/profileStore';
+import { filterModulesForProfile } from '../services/curriculumCatalog';
 import { Chapter } from '../types/module';
 
 interface ModuleDetailsScreenProps {
@@ -19,7 +21,21 @@ export const ModuleDetailsScreen: React.FC<ModuleDetailsScreenProps> = ({
 }) => {
   const moduleId = route.params?.moduleId || 'class10_math';
   const { modules } = useModuleStore();
-  const currentModule = modules.find((m) => m.id === moduleId) || modules[0];
+  const { profile } = useProfileStore();
+
+  const allAvailable = filterModulesForProfile(
+    modules,
+    profile.board,
+    profile.state,
+    profile.classLevel,
+    profile.stream,
+    [],
+    profile.language
+  );
+  const currentModule =
+    modules.find((m) => m.id === moduleId) ||
+    allAvailable.find((m) => m.id === moduleId) ||
+    modules[0];
 
   const handleSelectChapter = (ch: Chapter) => {
     navigation.navigate('Reader', {

@@ -25,6 +25,7 @@ import { StreamSelectionScreen } from '../screens/StreamSelectionScreen';
 import { SubjectSelectionScreen } from '../screens/SubjectSelectionScreen';
 import { ModuleSelectionScreen } from '../screens/ModuleSelectionScreen';
 import { ModuleDownloadScreen } from '../screens/ModuleDownloadScreen';
+import { AdminDashboardScreen } from '../screens/AdminDashboardScreen';
 import { palette } from '../theme/colors';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
@@ -306,6 +307,11 @@ export const MainNavigator: React.FC = () => {
         name="ModuleDownload"
         component={ModuleDownloadScreen}
         options={{ title: 'Download Manager' }}
+      />
+      <Stack.Screen
+        name="AdminDashboard"
+        component={AdminDashboardScreen}
+        options={{ title: 'Curriculum Admin Studio', headerShown: false }}
       />
     </Stack.Navigator>
   );

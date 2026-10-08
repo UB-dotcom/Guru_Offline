@@ -13,6 +13,7 @@ import { typography } from '../theme/typography';
 import { spacing } from '../theme/spacing';
 import { useProfileStore } from '../store/profileStore';
 import { useModuleStore } from '../store/moduleStore';
+import { useAdminCurriculumStore } from '../services/adminCurriculumStore';
 
 interface HomeScreenProps {
   navigation: any;
@@ -72,6 +73,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   // Subject metadata helper
   const getSubjectMeta = (code: string) => {
+    // Check admin-added curriculum subjects first
+    const adminSub = useAdminCurriculumStore.getState().getSubject(code);
+    if (adminSub) {
+      return {
+        emoji: adminSub.icon || '📚',
+        name: isHindi && adminSub.nameHi ? adminSub.nameHi : adminSub.name,
+        desc: `${adminSub.chunkCount} Chunks Ready`,
+      };
+    }
+
     switch (code.toLowerCase()) {
       case 'mathematics':
         return { emoji: '📐', name: isHindi ? 'गणित (Mathematics)' : 'Mathematics', desc: `Class ${profile.classLevel} NCERT` };
@@ -206,15 +217,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           borderColor: palette.gray200,
         };
       default:
+        const adminSub = useAdminCurriculumStore.getState().getSubject(subCode);
         const meta = getSubjectMeta(subCode);
         return {
           badge: `${meta.name.toUpperCase()} • CHAPTER 1`,
           badgeColor: '#EFF6FF',
           badgeTextColor: palette.primary,
-          progress: '20%',
-          percentNum: 20,
-          title: `${meta.name} — Core Concepts`,
-          desc: isHindi ? 'कक्षा के महत्वपूर्ण सिद्धांत व अभ्यास' : 'Core curriculum principles and key exercises',
+          progress: '25%',
+          percentNum: 25,
+          title: adminSub ? `${adminSub.name} — Core Concepts` : `${meta.name} — Core Concepts`,
+          desc: adminSub ? adminSub.description : (isHindi ? 'कक्षा के महत्वपूर्ण सिद्धांत व अभ्यास' : 'Core curriculum principles and key exercises'),
           moduleId: `class${profile.classLevel}_${subCode}`,
           chapterId: 'ch01',
           askPrompt: isHindi ? `${meta.name} के मुख्य सिद्धांतों को सरल हिंदी में समझाएं।` : `Explain the core concepts of ${meta.name} step by step.`,
@@ -250,14 +262,24 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
             </View>
           </View>
 
-          <TouchableOpacity
-            style={styles.notifBtn}
-            onPress={() => navigation.navigate('Settings')}
-            activeOpacity={0.75}
-          >
-            <Text style={styles.notifIcon}>🔔</Text>
-            <View style={styles.notifDot} />
-          </TouchableOpacity>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <TouchableOpacity
+              style={styles.adminHeaderBtn}
+              onPress={() => navigation.navigate('AdminDashboard')}
+              activeOpacity={0.75}
+            >
+              <Text style={styles.adminHeaderBtnText}>🛠️ Admin</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.notifBtn}
+              onPress={() => navigation.navigate('Settings')}
+              activeOpacity={0.75}
+            >
+              <Text style={styles.notifIcon}>🔔</Text>
+              <View style={styles.notifDot} />
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* Board & Class Pill Badge */}
@@ -551,6 +573,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#79768F',
     marginTop: 1,
+  },
+  adminHeaderBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderRadius: 14,
+    backgroundColor: '#EDE7FF',
+    borderWidth: 1,
+    borderColor: '#7C5CFC',
+  },
+  adminHeaderBtnText: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: '#6734E8',
   },
   notifBtn: {
     width: 40,

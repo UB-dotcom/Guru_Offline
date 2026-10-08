@@ -115,6 +115,33 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation }) =>
         </TouchableOpacity>
       </View>
 
+      {/* Admin Studio Section */}
+      <View style={[styles.section, { borderColor: '#7C5CFC', borderWidth: 1.5, backgroundColor: '#FAF8FF' }]}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+          <Text style={[styles.sectionTitle, { color: palette.primary, marginBottom: 0 }]}>
+            🛠️ Admin & Curriculum Studio
+          </Text>
+          <View style={{ backgroundColor: '#EDE7FF', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 6 }}>
+            <Text style={{ fontSize: 10, fontWeight: '800', color: palette.primary }}>SQLITE FTS5</Text>
+          </View>
+        </View>
+
+        <TouchableOpacity
+          style={styles.clickableRow}
+          onPress={() => navigation.navigate('AdminDashboard')}
+        >
+          <View style={{ flex: 1, paddingRight: 8 }}>
+            <Text style={[styles.rowTitle, { color: palette.primary, fontWeight: '800' }]}>
+              Curriculum Admin Console
+            </Text>
+            <Text style={styles.rowDesc}>
+              Add custom subjects, auto-chunk curriculum into SQLite, & simulate Guru AI RAG responses
+            </Text>
+          </View>
+          <Text style={[styles.chevron, { color: palette.primary }]}>›</Text>
+        </TouchableOpacity>
+      </View>
+
       {/* Hardware & Diagnostics Section */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Hardware & Storage</Text>
